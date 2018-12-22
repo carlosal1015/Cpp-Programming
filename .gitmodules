@@ -1,0 +1,12 @@
+[submodule "Malik2ndEdition"]
+	path = Malik2ndEdition
+	url = https://github.com/ianschafer/Malik
+[submodule "Malik5thEdition"]
+	path = Malik5thEdition
+	url = https://github.com/mhoad/cpp_book
+[submodule "Malik6thEdition"]
+	path = Malik6thEdition
+	url = https://github.com/pyjac/CppProgrammingExercises
+[submodule "Cengage-C-Plus-Plus"]
+	path = Cengage-C-Plus-Plus
+	url = https://github.com/jled7/Cengage-C-Plus-Plus
