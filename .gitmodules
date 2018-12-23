@@ -13,3 +13,6 @@
 [submodule "cplusplus-begginers"]
 	path = cplusplus-begginers
 	url = https://github.com/caveofprogramming/cplusplus-beginners
+[submodule "draft"]
+	path = draft
+	url = https://github.com/cplusplus/draft.git

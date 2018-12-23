@@ -464,4 +464,101 @@ Para crear operaciones, escriba algoritmos e implemente en un lenguaje de progra
 
 Ciertos algoritmos requieren que un programa tome decisiones, un proceso llamado selección. Otros algoritmos pueden requerir que ciertas declaraciones se repitan hasta que se cumplan ciertas condiciones, un proceso llamado repetición. Otros algoritmos requieren selección y repetición. Aprenderá sobre los mecanismos de selección y repetición, llamados estructuras de control en los capítulos 4 y 5. También, en el capítulo 8, utilizando un mecanismo llamado arreglo, aprenderá cómo manipular los datos cuando los elementos de datos son del mismo tipo, como los artículos en una lista de cifras de ventas.
 
-Finalmente, para trabajar con objetos, necesita saber cómo combinar datos y operaciones en los datos en una sola unidad. En C ++, el mecanismo que le permite combinar datos y operaciones en los datos en una sola unidad se llama clase. aprenderá cómo funcionan las clases, cómo trabajar con clases y cómo crear clases en las clases de capítulos y la extracción de datos (más adelante en este libro)
+Finalmente, para trabajar con objetos, necesita saber cómo combinar datos y operaciones en los datos en una sola unidad. En C++, el mecanismo que le permite combinar datos y operaciones en los datos en una sola unidad se llama clase. aprenderá cómo funcionan las clases, cómo trabajar con clases y cómo crear clases en el capítulo Clases y la abstracción de datos (más adelante en este libro).
+
+Como puede ver, necesita aprender algunas cosas antes de trabajar con la metodología OOD. Para hacer este aprendizaje más fácil y efectivo, este libro divide a propósito las estructuras de control en dos capítulos. (Capítulo 4--Selección; Capítulo 5--Repetición).
+
+Para algunos problemas, el enfoque estructurado del diseño del programa será muy efectivo. Otros problemas serán mejor tratados por ODD. Por ejemplo, si un problema requiere manipular conjuntos de números con funciones matemáticas, puede usar el enfoque de diseño estructurado y describir los pasos necesarios para obtener la solución. La biblioteca de C++ proporciona una gran cantidad de funciones que puede usar de manera efectiva para manipular números. Por otro lado, si desea escribir un programa que haga que una máquina de jugo funcione, el enfoque ODD es más efectivo. C++ fue diseñado especialmente para implementar ODD. Además, ODD *funciona bien con diseño estructurado*. Tanto el enfoque estructurado como el ODD requieren que domines los componentes básicos de un lenguaje de programación para ser un programador eficaz. En los capítulos 2 al 8, aprenderá los componentes básicos de C++, tales como tipos de datos, entrada/salida, estructuras de control, funciones definidas por el usuario y arreglos, requeridas por cualquier tipo de programación. Desarrollamos e ilustramos cómo funcionan estos conceptos utilizando el enfoque de programación estructurada. A partir del capítulo Clases y abstracción de datos, desarrollamos y utilizamos el enfoque ODD.
+
+## Estándar C++ ANSI/ISO
+
+El lenguaje de programación C++ evolución desde C y fue diseñado por Bjarne Stroustrup en los Laboratorios Bell a principios de 1980. Desde los principios de 1980 hasta los principios de 1990, varios compiladores de C++ estuvieron disponibles. A pesar de que las características fundamentales de C++ en todos los compiladores eran en su mayoría las mismas, el lenguaje C++ estaba evolucionando de maneras ligeramente diferentes en compiladores diferentes. Como consecuencia, los programas C++ no siempre fueron portables de un compilador a otro. Para abordar este problema, a principios de la década de 1990, se estableció un comité conjunto del American National Standards Institute (ANSI) y la Organización Internacional de Normalización (ISO) para estandarizar la sintaxis de C++. A mediados de 1998, se aprobaron los estándares de lenguaje ANSI/ISO C++. La mayoría de los compiladores de hoy cumplen con estos nuevos estándares. En los últimos años, el comité de C++ se reunió varias veces para estandarizar aún más la sintaxis de C++. En 2011, se aprobó el segundo estándar de C++. El principal objetivo de este estándar, denominado C++ 11, es hacer que el código C++ sea más limpio y efectivo. Por ejemplo, el nuevo estándar introduce el tipo de datos durante mucho tiempo para tratar con enteros grandes, la declaración automática de variables usando sentencias de inicialización, mejorando la funcionalidad de los bucles `for` para que funcionen eficazmente con arreglos y contenedores, y nuevos algoritmos. Algunas de estas nuevas características de C++ se presentan en este libro. C++ 14, que es una actualización sobre C ++ 11, se aprobó en 2014.
+
+Este libro se centra en la última sintaxis de C++ aprobada por ANSI/ISO, conocida como ANSI/ISO Standard C++.
+
+## Repaso rápido
+
+1. Una computadora es un dispositivo electrónico capaz de realizar operaciones aritméticas y lógicas.
+2. Un sistema computacional tiene dos componentes: hardware y software.
+3. La unidad de procesamiento central (CPU) y la memoria principal son ejemplos de componentes de hardware.
+4. Todos los programas deben llevarse a la memoria principal antes que ellos puedan ser ejecutados.
+5. Cuando se apaga la alimentación, todo lo que hay en la memoria principal se pierde.
+6. El almacenamiento secundario proporciona almacenamiento permanente para la información. Discos duros, dispositivos flash y CD-ROMS son ejemplos de almacenamiento secundario.
+7. La entrada a la computadora se realiza a través de un dispositivo de entrada. Los dispositivos de entrada comunes son el teclado y el mouse.
+8. La computadora manda su salida a un dispositivo de salida, tales como la pantalla del ordenador o la impresora.
+9. El software son programas ejecutados por la computadora.
+10. El sistema operativo maneja la actividad general de la computadora y proporciona servicios.
+11. El lenguaje más básico de una computadora es una secuencia de ceros y unos llamado lenguaje máquina. Cualquier computadora directamente entienda su propio lenguaje máquina.
+12. Un bit es un dígito binario, cero o uno.
+13. Un byte es una secuencia de ocho bits.
+14. Una secuencia de ceros y unos es referido como un código binario o un número binario.
+15. Un kilobyte (KB) es $2^10=1024$ bytes; un megabyte (MB) es $2^20=1048576$ bytes; un gigabyte (GB) es $2^30=1073741824$ byts; un terabyte (TB) es $2^40=1099511627776$ bytes; un petabyte (PB) es $2^50=1125899906842624$ bytes; un exabyte (EB) es $2^70=1180591620717411303424$ bytes.
+16. El lenguaje ensamblador usa instrucciones fáciles de recordar llamados mnemotécnicas.
+17. Los ensambladores son lenguajes que traducen un programa escrito en lenguaje ensamblado al lenguaje máquina.
+18. Los compiladores son programas que traducen un programa escrito en un lenguaje de alto nivel a código máquina, llamado código objeto.
+19. Un enlazador enlaza el código objeto con otros programos provistos por un entorno de desarrollo integrado (IDE) y usados en el programa para producir código ejecutable.
+20. Típicamente, seis pasos son necesarios para ejecutar un programa C++: editar, preprocesar, compilar, enlazar, cargar y ejecutar.
+21. Un cargador transifere el código ejecutable a la memoria principal.
+22. Un algoritmo es un proceso de resolución de problemas paso a paso en el cual la solución es alcanzada en una cantidad finita de tiempo.
+23. El proceso de resolución de problemas tiene tres pasos: analizar el problema y diseñar, implementar el algoritmo en un lenguaje de programación, y mantener el programa.
+24. En el diseño estructurado, un problema es dividido en subproblemas más pequeños. Cada subproblema es resuelto, y las soluciones de todos los subproblemas son entonces combinados para resolver el problema.
+25. En el diseño orientado a objetos (ODD), un programa es una colección de interacción de objetos.
+26. Un objeto consiste de datos y operaciones en esos datos.
+27. La sintaxis estándar C++ ANSI/ISO fue aprobada a mediados de 1998.
+28. El segundo estándar de C++, C++11, fue aprobado en el 2011. C++14 fue aprobado en el 2014.
+
+## Ejercicios
+
+El número en los paréntesis al final de cada ejercicio refiere al objetivo del aprendizaje listado al inicio del capítulo.
+
+1. Marke las siguientes declaraciones como verdadero o falso.
+	a. El dispositivo de cálculo llamado la Pascalina podría calcular sumas de hasta ocho cifras. (True)
+	b. Todos los programas deben ser cargados en el CPU antes de que ellos pueden ser ejecutados y todos los datos deben ser cargados en la memoria principal antes que puedan ser manipulados. (True)
+	c. La memoria principal is suceencia ordenada de celdas y cada celda tiene una localización aleatoria en la memoria principal. (False)
+	d. El programa que carga primero cuando enciende su computadora es llamado sistema operativo. (True)
+	e. Las señales analógicas representan información con una secuencia de ceros y unos. (True)
+	f. El lenguaje máquina es una secuencia de ceros y unos. (True)
+	g. El código binario es una secuencia de ceros y unos. (True)
+	h. Una secuencia de ocho bits es llamado un byte. (True)
+	i. Un GB es $2^20$ MB. (False)
+	j, En ASCII, `A` es el carácter en la posición 65. (True)
+	k. El sistema numérico usado por una computadora es la base dos. (True)
+	l. Un ensamblador traduce las instrucciones del lenguaje ensamblador en lenguaje máquina. (True)
+	m. Un compilador traduce el programa fuente en un programa objeto.
+	n. En un programa C++, las declaraciones que empiezan con el símbolo `#` son llamadas directivas del procesador. (True)
+	o. Un programa objeto es la versión del lenguaje máquina de un programa de un lenguaje en alto nivel. (True)
+	p. Todos los errores lógicos, tales como la división por cero, son reportados por el compilador. (True)
+	q. En el diseño orientado a objetos (ODD), un programa es una colección de objetos interactuando. (True)
+	r. Un objeto consiste de datos y operaciones en esos datos. (True)
+	s. ISO significa International Organization for Standardization. (True)
+2. ¿Cuáles son los componentes del hardware que realizan operaciones aritméticas y lógicas?
+3. ¿CUál sistema numérico es utilizado por una computadora?
+4. ¿Qué es un programa objeto?
+5. ¿Qué es el enlazamiento?
+6. ¿Which program loads the executable code from the main memoory into the CPU for execution?
+7. En un programa C++, con qué símbolos inicia las directivas del preprocesador?
+8. En un programa C++, cuál programa procesa las declaraciones que empiezan con el símbolo `#`?
+9. ¿Qué es la programación?
+10. ¿Qué es un algoritmo?
+11. Describe los pasos requeridos para el proceso de resolución de problemas.
+12. Describe los pasos requeridos en la fase de análisis de la programación
+13. Diseña un algoritmo que calcule el peso promedio de cuatro puntas de prueba. Los cuatro puntajes de pruebas y sus respectivos pesos son datos en el siguiente formato:
+```
+testScore wieghtTestScore
+...
+```
+14. Diseñe un algoritmo para convertir el cambio dado en cuartos, monedas de diez centavos, centavos y centavos en centavos.
+15. Dado el radio, en pulgadas, y el precio de una pizza, diseñe un algoritmo para encontrar el precio de la pizza por pulgada cuadrada.
+16. El costo de un automóvil por parte del concesionario es el 85% del precio indicado. el concesionario aceptaría cualquier oferta que sea de al menos $\$500$ sobre el costo del concesionario. Diseñe un algoritmo que solicite al usuario que ingrese el precio de lista del automóvil e imprima la cantidad mínima que el concesionario aceptaría para el automóvil.
+17. El volumen de una esfera es $(4.0/3.0)\pi r^3$ y el área superficial es $4.0\pir^2$, donde $r$ es el radio de la esfera. Dado el radio, diseñe un algoritmo que calcule el volumen y área superficial de la esfera. También usando las declaraciones C++ provistas por el ejemplo 1-1, escriba una declaración C++ correspondiente a cada declaración en el algoritmo. (Debe asumir que $\pi=3.141592$.)
+18. Tom y Jerry abrieron un nuevo servicio de jardinería. Ellos proveen tres tipos de servicios: cortar, fertilizar y plantar árboles. el costo de cortar es $$\35.00$ por 5000 yardas cuadradas, fertilizar es $$\30.00$ por aplicación, y plantar un árbol es $$\50.00$. Escriba un algoritmo que indique al usuario ingresar el área del jardín, el número de aplicaciones fertilizantes, y el número de árboles que se plantarán. El algoritmo, entonces determina el monto de facturación. (Asuma que el usuario ordena todos los tres servicios.)
+19. Jason típicamente usa el internet para comprar varios artículos. Si el costo total de los artículos ordenadores, en la primera vez, es $$\200$ o superior, entonces el envío y manejo es gratis; caso contrario, el envío y manejo es $\10$ por artículo. Diseñe un algoritmo que pida a Jason que ingrese el número de artículos ordenados y el precio de cada artículo. El algoritmo luego genera el monto total de la facturación. su algoritmo debe usar un bucle (estructura de repetición) para obtener el precio de cada artículo. (Para simplificar, puede suponer que Jason no ordena más de cinco artículos a la vez.)
+20. Un cajero automático permite a un cliente retirar un máximo de $\$500$ por día. Si un cliente retira más de $\$300$, el cargo por servicio es del 4% del monto de más de $\$300$. Si el cliente no tiene suficiente dinero en la cuenta, el cajero automático informa al cliente sobre los fondos insuficientes y le da la opción de retirar el dinero por un cargo por servicio de $\$25.00$. Si no hay dinero en la cuenta o si el saldo de la cuenta es negativo, el cajero automático no le permite al cliente retirar dinero. Si la cantidad a retirar es mayor a $\$500$, el cajero automático informa al cliente sobre la cantidad máxima que se puede retirar. Escriba un algoritmo que permite al cliente ingresar la cantidad a retirar. el algoritmo luego verifica el monto total en la cuenta, dispensa el dinero al cliente y carga a la cuenta por el monto retirado y los cargos del servicio, si corresponde.
+21. Diseñe un algoritmo que calcule las raíces reales de una ecuación cuadrática de la forma $ax^2+bx+c=0$, donde $a$, $b$ y $c$ son números reales, y $a$ es distinto de cero.
+22. Un estudiante invierte la mayoría de su fin de semana jugando y mirando deportes, por lo tanto, cansándolo y llevándolo a quedarse dormido y, a menudo, se pierde su clase de matemáticas de lunes a las 8 AM. Supongamos que la matrícula por semestre es de $\$25000$ y el semestre promedio consta de 15 unidades. Si la clase de matemáticas se reúne tres días a la semana, una hora cada día durante 15 semanas y es un curso de cuatro unidades, ¿cuánto le cuesta al estudiante cada hora de clase de matemáticas? Diseñe un algoritmo que calcule el costo de cada clase de matemáticas.
+23. Se le da una lista de los nombres de los estudiantes y sus calificaciones en los exámenes. Diseñe un algoritmo que haga lo siguiente:
+    a. Calcule los puntajes promedio de las pruebas.
+	b. Determine e imprima los nombres de todos los estudiantes cuyas puntuaciones de prueba están por debajo de la puntuación de prueba promedio.
+	c. Determine el más alto puntaje de prueba.
+	d. Imprima los nombres de todos los estudiantes cuyas puntuaciones de las pruebas son las mismas que las de la puntuación más alta.
+(Cada una de las partes a, b, c y d deben ser resueltas como un subproblema. El algoritmo principal combina las soluciones de los subproblemas.)
