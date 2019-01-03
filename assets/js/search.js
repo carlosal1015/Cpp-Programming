@@ -1,93 +1,108 @@
-(function () {
-    var SEARCH_BOX_ID = "search-box";
-    var NO_RESULTS_MESSAGE_ID = "not-found";
-    var SEARCH_RESULTS_CONTAINER_ID = "search-results";
-    var QUERY_VARIABLE_URL_STRING = "query";
+$(function () {
+    var query = getQuery(["q", "t", "a", "d"]);
 
-    function getQueryVariable(queryParam) {
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split("=");
-            var param = pair[0];
-            var value = pair[1];
+    var targets;
+    switch (query.key) {
+        case "t":
+            targets = ["tags"];
+            break;
+        case "a":
+            targets = ["author"];
+            break;
+        case "d":
+            targets = ["date"];
+            break;
+        case "q":
+        default:
+            targets = ["title", "tags", "author", "url", "date", "content"];
+            break;
+    }
+    showPosts(query.words, targets);
 
-            if (param === queryParam) {
-                return decodeURIComponent(value.replace(/\+/g, "%20"));
-            }
+    if (query.key == "q") {
+        $("#search").val(query.query).focus();
+    }
+});
+
+function getQuery(keys)
+{
+    var query = "";
+    var key = "";
+    var words = [];
+
+    keys.forEach(function (queryKey) {
+        var regex = RegExp("[?&]" + queryKey + "=([^&]+)", 'i');
+        var matched;
+        if (matched = window.location.search.match(regex)) {
+            query = decodeURIComponent(matched[1]).replace(/(　| |\+)+/g, ' ');
+            words = query.split(' ');
+            key = queryKey;
+            return false;  // break;
         }
-    }
+        return true;  // continue;
+    });
 
-    function getSearchTerm() {
-      return getQueryVariable(QUERY_VARIABLE_URL_STRING);
-    }
+    return { query: query, key: key, words: words };
+}
 
-    function setSearchBoxValue(searchBoxValue) {
-      document.getElementById(SEARCH_BOX_ID).setAttribute("value", searchBoxValue);
-    }
+function showPosts(words, targets)
+{
+    var getJson = function () {
 
-    function showNoResultsMessage() {
-      document.getElementById(NO_RESULTS_MESSAGE_ID).style.display = "block";
-    }
+        var dfd = $.Deferred();
+        $.ajax({
+            url: baseurl + "/search.json",
+            dataType: "json",
+            timeout: 3000,  // 3 sec
+            success: function (posts) {
+                var matchedPosts = [];
+                posts.forEach(function (post) {
 
-    function setSearchResultsHTML(innerHTML) {
-      var searchResults = document.getElementById(SEARCH_RESULTS_CONTAINER_ID);
-      searchResults.innerHTML = innerHTML;
-    }
+                    // concatenate target fields as a string.
+                    var searchee = "";
+                    for (var i = 0; i < targets.length; i++) {
+                        var target = post[targets[i]];
+                        var targetString = "";
+                        if (target instanceof Array) {
+                            for (var j = 0; j < target.length; j++) {
+                                targetString += target[j];
+                            }
+                        } else if (typeof target == "object") {
+                            for (key in target) {
+                                targetString += target[key];
+                            }
+                        } else {
+                            targetString = target;
+                        }
+                        searchee += targetString;
+                    }
 
-    function createPostListingHTML(postItem) {
-      var headingHTML = "<h2><a  class='search-link' href='" + postItem.url + "''>" + postItem.title + "</a></h2>";
-      var metaHTML = "<div class='meta'>" + postItem.date + "</div>";
-      var descriptionHTML = "<p>" + postItem.content.substring(0, 150) + "...</p>";
-      return headingHTML + metaHTML + descriptionHTML;
-    }
+                    // matching.
+                    var matched = true;
+                    words.forEach(function (word) {
+                        var regex = new RegExp(word, 'i');
+                        if (searchee.match(regex) == null) {
+                            matched = false;
+                            return false;  // break;
+                        }
+                        return true;  // continue;
+                    });
 
-    function displaySearchResults(results, store) {
-        if (results.length) {
-            var postsListingHTML = "";
-            for (var i = 0; i < results.length; i++) {
-                var postItem = store[results[i].ref];
-                postsListingHTML += createPostListingHTML(postItem);
+                    if (matched) {
+                        matchedPosts.push(post);
+                    }
+                });
+
+                dfd.resolve(matchedPosts);
             }
-            setSearchResultsHTML(postsListingHTML);
-        } else {
-          showNoResultsMessage();
-        }
-    }
+        });
 
-    function addPostToSearchIndex(lunrIndex, key, postJSON) {
-      lunrIndex.add({
-          "id": key,
-          "title": postJSON.title,
-          "author": postJSON.author,
-          "category": postJSON.category,
-          "content": postJSON.content
-      });
-    }
+        return dfd.promise();
+    };
 
-    function search(searchTerm) {
-      setSearchBoxValue(searchTerm);
-
-      var lunrIndex = lunr(function () {
-          this.field("id");
-          this.field("title", {
-              boost: 10
-          });
-          this.field("author");
-          this.field("category");
-          this.field("content");
-      });
-
-      for (var key in window.store) {
-        addPostToSearchIndex(lunrIndex, key, window.store[key])
-      }
-
-      var results = lunrIndex.search(searchTerm);
-      displaySearchResults(results, window.store);
-    }
-
-    var searchTerm = getSearchTerm();
-    if (searchTerm) {
-      search(searchTerm);
-    }
-})();
+    getJson().then(function (matchedPosts) {
+        matchedPosts.forEach(function (post) {
+            $("#search-results").find("#" + post.id).show();
+        });
+    });
+}

@@ -1,85 +1,73 @@
-# SITE CONFIGURATION
 baseurl: "/Cpp-Programming" # the subpath of your site, e.g. /blog
 url: "https://carlosal1015.github.io"
+author: Oromion
+title: C++ Programming
+description: Blog about C++ programming.
+avatar: /assets/img/ogp.png
+favicon: /assets/favicon.ico
+language: en
 
-# THEME-SPECIFIC CONFIGURATION
-theme_settings:
-  # Meta
-  title: Type Theme
-  avatar: assets/img/avatar.png
-  favicon: assets/favicon.ico
-  gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+# Icons
+icons:
+  rss: true
+  email: caznaranl@uni.pe
+  github: carlosal1015
+  twitter: carlosal1015
+  reddit: carlosal1015
+  stack_exchange: https://stackexchange.com/users/9558603/oromion
+  wordpress: blogdeoromion
+  youtube: UC0dDIu9Ppa8BMXrNksA5oYA
 
-  # Header and footer text
-  header_text: >
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+# Prettify url.
+permalink: pretty # /:categories/:year/:month/:day/:title/
 
-     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
-  header_text_feature_image:
-  footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+katex: true # Enable if using math markup
 
-  # Icons
-  rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  gitlab:
-  github: "rohanchandra/type-theme"
-  google_plus:
-  instagram:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: "twitter"
-  wordpress:
-  youtube:
+# Localizations.
+str_next: Next
+str_prev: Prev
+str_read_more: Read more ...
+str_search: Search
+str_recent_posts: Recent posts
+str_show_all_posts: Show all posts
 
-  # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  katex: true # Enable if using math markup
-  search: false # Enable the search feature
+# Recent posts.
+recent_posts_num: 5
 
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
-  str_next_post: "Next post"
-  str_previous_post: "Previous post"
-  str_next_page: "Next"
-  str_previous_page: "Prev"
-  str_continue_reading: "Continue reading"
-  str_javascript_required_disqus: "Please enable JavaScript to view comments."
-  str_search_no_results: "No results found."
+# Pagination.
+paginate: 10
+paginate_path: page/:num
 
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+ogp:
+  image_url: //carlosal1015.github.io/assets/img/ogp.png
 
-  # Post navigation
-  post_navigation: false
+# Plugins.
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jemoji
 
-# PAGINATION
-paginate: 5
-paginate_path: "blog/page:num"
+# - jekyll-multiple-languages-plugin
 
-# BUILD SETTINGS
+# Styles: see "_sass/base/_variables.scss"
+# !! Danger zone !!
+include: ["_pages"]
+
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+excerpt_separator: <!--more-->
+
 sass:
   sass_dir: _sass
-  style: :compressed
-plugins: [jekyll-paginate]
-theme: jekyll-theme-type
+  style: :compressed # or :expanded
+
 exclude:
-  - Gemfile
   - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+#languages: ["en", "de", "es"]
