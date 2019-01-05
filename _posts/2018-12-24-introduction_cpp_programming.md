@@ -85,12 +85,12 @@ Una secuencia de ocho dígitos es llamado un **byte**. Es más, $$2^{10}$$ bytes
 |:--------:|:-------:|:----------:|
 | Byte     |         | $$8$$ bits     |
 | Kilobyte | KB      | $$2^{10}$$ bytes = $$1024$$ bytes |
-| Megabyte | MB      | 1024 KB $$=2^{10}$$ KB $$=2^{20}$$ bytes = $$1048576$$ bytes |
-| Gigabyte | GB      | 1024 MB $$=2^{10}$$ MB $$=2^{30}$$ bytes = $$1073741824$$ bytes |
-| Terabyte | GB      | 1024 GB $$=2^{10}$$ GB $$=2^{40}$$ bytes = $$1099511627776$$ bytes |
-| Petabyte | TB      | 1024 TB $$=2^{10}$$ GB $$=2^{50}$$ bytes = $$1125899906842624 bytes$$ |
-| Exabyte  | EB      | 1024 MB $$=2^{10}$$ PB $$=2^{60}$$ bytes = $$1152921504606846976 bytes$$ |
-| Zettabyte| ZB      | 1024 EB $$=2^{10}$$ EB $$=2^{70}$$ bytes = $$1180591620717411303424$$ bytes |
+| Megabyte | MB      | $$1024$$ KB $$=2^{10}$$ KB $$=2^{20}$$ bytes = $$1048576$$ bytes |
+| Gigabyte | GB      | $$1024$$ MB $$=2^{10}$$ MB $$=2^{30}$$ bytes = $$1073741824$$ bytes |
+| Terabyte | GB      | $$1024$$ GB $$=2^{10}$$ GB $$=2^{40}$$ bytes = $$1099511627776$$ bytes |
+| Petabyte | TB      | $$1024$$ TB $$=2^{10}$$ GB $$=2^{50}$$ bytes = $$1125899906842624$$ bytes |
+| Exabyte  | EB      | $$1024$$ MB $$=2^{10}$$ PB $$=2^{60}$$ bytes = $$1152921504606846976$$ bytes |
+| Zettabyte| ZB      | $$1024$$ EB $$=2^{10}$$ EB $$=2^{70}$$ bytes = $$1180591620717411303424$$ bytes |
 
 Cualquier letra, número, o símbolo especial (tales como $$\ast$$ o $$\{$$) en su teclado es codificado como una secuencia de bits, cada uno tiene una única representación. La codificación comúnmente usado esquema de codificación en computadoras personales es el *siete-bit* **American Standard Code for Information Interchange (ASCII)**. El conjunto de datos ASCII consiste de $$128$$ caracteres numerados del $$0$$ al $$127$$. Esto es, en el el conjunto de datos ASCII, la posición del primer carácter es 0, la posición del segundo carácter es 1, y así. En este esquema **A** es codificado con el número binario `1000001`. De hecho, **A** es el carácter en la posición 66 en el código de caracteres ASCII, pero su posición es 65 debido a la posición del primer carácter es 0. Además, el número binario `1000001` es la representación binaria del 65. El carácter `3` es 51, entonces el carácter 3 es el carácter en la posición 52 del conjunto ASCII. También se sigue que `0110011` es la representación binaria de `51`. Para una lista completa del conjunto de caracteres imprimibles ASCII, consulte el apéndice C.
 
