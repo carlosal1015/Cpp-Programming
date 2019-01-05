@@ -23,7 +23,7 @@ En este capítulo,
 
 # Introducción
 
-Términos tales como "el internet", que fueron desconocidos justo hace 25 años ahora son comunes. Los estudiantes en la escuela elemental "surfean" regularmente el internet y usan computadoras para diseñar e implementar sus projectos de clase. Muchas personas usan el internet para buscar información y para comunicarse con otros. Todo esto es posible por el uso de una varidad de software, también conocido como programas de ordenadores. Sin el software, las computadores no pueden trabajar. El software es desarrollado por el uso de lenguajes de programación. C++ es uno de los lenguajes de programación, que es muy adecuado para desarollar software que cumplan tareas específicas. El objetivo principal del libro es ayudar que aprendas el lenguaje de programación C++ para escribir programas. Antes que inicies a programar, resulta útil entender algunas de la terminología básica y los diferentes componentes de una computadora. Empezaremos con un resumen de la historia de las computadoras.
+Términos tales como "el internet", que fueron desconocidos justo hace 25 años ahora son comunes. Los estudiantes en la escuela elemental "surfean" regularmente el internet y usan computadoras para diseñar e implementar sus projectos de clase. Muchas personas usan el internet para buscar información y para comunicarse con otros. Todo esto es posible por el uso de una varidad de software, también conocido como programas de ordenadores. Sin el software, las computadoras no pueden trabajar. El software es desarrollado por el uso de lenguajes de programación. C++ es uno de los lenguajes de programación, que es muy adecuado para desarollar software que cumplan tareas específicas. El objetivo principal del libro es ayudar que aprendas el lenguaje de programación C++ para escribir programas. Antes que inicies a programar, resulta útil entender algunas de la terminología básica y los diferentes componentes de una computadora. Empezaremos con un resumen de la historia de las computadoras.
 
 # Un breve resumen de la historia de las computadoras
 
@@ -71,7 +71,7 @@ Los **programas de aplicación** realiza una tarea específica. Los procesadores
 
 ## El lenguaje del ordenador
 
-Cuando oprime <kbd>A</kbd> en su teclado, la computadora muestra A en la pantalla. Pero, ¿qué es lo que realmente se almacena dentro de la memoria principal del ordenador? ¿Cuál es lenguaje del ordenador? ¿Cómo almacena lo que escribe en el teclado.?
+Cuando oprime <kbd>A</kbd> en su teclado, la computadora muestra A en la pantalla. Pero, ¿qué es lo que realmente se almacena dentro de la memoria principal del ordenador? ¿Cuál es lenguaje del ordenador? ¿Cómo almacena lo que escribe en el teclado?
 
 Recuerde que un ordenador es un dispositivo electrónico. Las señales eléctricas son usadas dentro de la computadora para procesar la información. Existen dos tipos de señales eléctricas: analógica y digital. Las **señales analógicas** son formas de onda que varían continuamente y se usan para representar cosas como el sonido. Las cintas de audio, por ejemplo, almacenan datos en señales analógicas. Las **señales digitales** representan información con una secuencia de ceros y unos. Un `0` representa una baja tensión, y el `1` representa una alta tensión. Las señales digitales son portadores de información más confiables que las señales analógicas y pueden ser copiados desde un dispositivo a otro con una precisión exacta. Es posible que haya notado que cuando hace una copia de una cinta de audio, la calidad del sonido de la copia no es tan buena como el de la cinta original. Por otro lado, cuando copia un CD, la copia es la misma que el original. Las computadoras usan señales digitales.
 
@@ -79,20 +79,20 @@ Porque las señales digitales son procesadas dentro de una computadora, el lengu
 
 **Bit**: Un dígito binario `0` o `1`.
 
-Una secuena de ocho dígitos es llamado un **byte**. Es más, $$2^10$$ bytes $=1024$ bytes es llamado un **kilobyte (KB)**. La Tabla 1-1 resume los términos utilizados para describir varios números de bytes.
+Una secuencia de ocho dígitos es llamado un **byte**. Es más, $$2^{10}$$ bytes $=1024$ bytes es llamado un **kilobyte (KB)**. La Tabla 1-1 resume los términos utilizados para describir varios números de bytes.
 
 | Unidad   | Símbolo | Bits/Bytes |
 |:--------:|:-------:|:----------:|
-| Byte     |         | 8 bits     |
-| Kilobyte | KB      | 2^10$ bytes = 1024 bytes |
-| Megabyte | MB      | 1024 KB $$=2^10$$ KB $$=2^20$$ bytes = 1048576 bytes |
-| Gigabyte | GB      | 1024 MB $$=2^10$$ MB $$=2^30$$ bytes = 1073741824 bytes |
-| Terabyte | GB      | 1024 GB $$=2^10$$ GB $$=2^40$$ bytes = 1099511627776 bytes |
-| Petabyte | TB      | 1024 TB $$=2^10$$ GB $$=2^50$$ bytes = 1125899906842624 bytes |
-| Exabyte  | EB      | 1024 MB $$=2^10$$ PB $$=2^60$$ bytes = 1152921504606846976 bytes |
-| Zettabyte| ZB      | 1024 EB $$=2^10$$ EB $$=2^70$$ bytes = 1180591620717411303424 bytes |
+| Byte     |         | $$8$$ bits     |
+| Kilobyte | KB      | $$2^{10}$$ bytes = $$1024$$ bytes |
+| Megabyte | MB      | 1024 KB $$=2^{10}$$ KB $$=2^{20}$$ bytes = $$1048576$$ bytes |
+| Gigabyte | GB      | 1024 MB $$=2^{10}$$ MB $$=2^{30}$$ bytes = $$1073741824$$ bytes |
+| Terabyte | GB      | 1024 GB $$=2^{10}$$ GB $$=2^{40}$$ bytes = $$1099511627776$$ bytes |
+| Petabyte | TB      | 1024 TB $$=2^{10}$$ GB $$=2^{50}$$ bytes = $$1125899906842624 bytes$$ |
+| Exabyte  | EB      | 1024 MB $$=2^{10}$$ PB $$=2^{60}$$ bytes = $$1152921504606846976 bytes$$ |
+| Zettabyte| ZB      | 1024 EB $$=2^{10}$$ EB $$=2^{70}$$ bytes = $$1180591620717411303424$$ bytes |
 
-Cualquier letra, número, o símbolo especial (tales como $$\ast$$ o $$\{$$) en su teclado es codificado como una secuencia de bits, cada uno tiene una única representación. La codificación comúnmente usado esquema de codificación en computadoras personales es el *siete-bit* **American Standard Code for Information Interchange (ASCII)**. El conjunto de datos ASCII consiste de 128 caracteres numerados del 0 al 127. Esto es, en el el conjunto de datos ASCII, la posición del primer carácter es 0, la posición del segundo carácter es 1, y así. En este esquema **A** es codificado con el número binario `1000001`. De hecho, **A** es el carácter en la posición 66 en el código de caracteres ASCII, pero su posición es 65 debido a la posición del primer carácter es 0. Además, el número binario `1000001` es la representación binaria del 65. El carácter `3` es 51, entonces el carácter 3 es el carácter en la posición 52 del conjunto ASCII. También se sigue que `0110011` es la representación binaria de `51`. Para una lista completa del conjunto de caracteres imprimibles ASCII, consulte el apéndice C.
+Cualquier letra, número, o símbolo especial (tales como $$\ast$$ o $$\{$$) en su teclado es codificado como una secuencia de bits, cada uno tiene una única representación. La codificación comúnmente usado esquema de codificación en computadoras personales es el *siete-bit* **American Standard Code for Information Interchange (ASCII)**. El conjunto de datos ASCII consiste de $$128$$ caracteres numerados del $$0$$ al $$127$$. Esto es, en el el conjunto de datos ASCII, la posición del primer carácter es 0, la posición del segundo carácter es 1, y así. En este esquema **A** es codificado con el número binario `1000001`. De hecho, **A** es el carácter en la posición 66 en el código de caracteres ASCII, pero su posición es 65 debido a la posición del primer carácter es 0. Además, el número binario `1000001` es la representación binaria del 65. El carácter `3` es 51, entonces el carácter 3 es el carácter en la posición 52 del conjunto ASCII. También se sigue que `0110011` es la representación binaria de `51`. Para una lista completa del conjunto de caracteres imprimibles ASCII, consulte el apéndice C.
 
 > Nota: El sistema numérico que usamos en nuestra vida diaria es llamado **sistema decimal**, o **base 10**. Porque todo dentro de la computadora es representada como una secuencia de ceros y unos, esto es, números binarios, el sistema numérico que la computadora usa es llamado **binario**, o **base 2**. Indicamos en el párrafo precedente que el número 1000001 es la representación binaria de 65. El Apéndice E describe cómo convertir el número desde la base 10 hacia la base 2 y viceversa.
 
