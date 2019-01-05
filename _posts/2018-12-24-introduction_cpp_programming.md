@@ -79,7 +79,7 @@ Porque las señales digitales son procesadas dentro de una computadora, el lengu
 
 **Bit**: Un dígito binario `0` o `1`.
 
-Una secuencia de ocho dígitos es llamado un **byte**. Es más, $$2^{10}$$ bytes $=1024$ bytes es llamado un **kilobyte (KB)**. La Tabla 1-1 resume los términos utilizados para describir varios números de bytes.
+Una secuencia de ocho dígitos es llamado un **byte**. Es más, $$2^{10}$$ bytes $$=1024$$ bytes es llamado un **kilobyte (KB)**. La Tabla 1-1 resume los términos utilizados para describir varios números de bytes.
 
 | Unidad   | Símbolo | Bits/Bytes |
 |:--------:|:-------:|:----------:|
