@@ -105,42 +105,38 @@ Existe otros esquemas de codificación, tales como Unicode. Unicode consiste de 
 ## La evolución de los lenguajes de programación
 
 El lenguaje más básico de una computadora, el lenguaje máquina, proporciona instrucciones del programa en bits. Aunque la mayoría de las computadoras realizan el mismo tipo de operaciones, los diseñadores de la computadora pueden haber elegido diferentes conjuntos de códigos binarios para realizar las operaciones. Por lo tanto, el lenguaje máquina de un ordenador no es necesariamente el mismo lenguaje máquina de otro ordenador. La única coherencia entre las computadoras es que en cualquier computadora moderna, todos los datos se almacenan y manipulan como códigos binarios. Las primeras computadoras fueron programadas en lenguaje máquina. Para ver cómo las instrucciones son escritas en lenguaje máquina, suponga que quiere usar la ecuación:
-
 ```
 wages = rate * hours
 ```
 para calcular salarios mensuales. Más allá, suponga que el código binario `100100` significa para cargar, `100110` significa multiplicar, y `10010` significar almacenar. En lenguaje máquina, es posible que necesite la siguiente secuencia de instrucciones para calcular los salarios semanales:
-
 ```
 100100 010001
 100110 010010
 100010 010011
 ```
-
 Para representar la ecuación de los salarios mensuales en lenguaje máquina, el programador tiene que recordar los códigos de lenguaje máquina para las operaciones diversas. También, para manipular los datos, el programador tiene que recordar las posiciones de los datos en la memoria principal. Esta necesidad de recordar códigos específicos hizo que la programación no solo fuera muy difícil, sino también propensa a errores.
 
-Los lenguajes ensambladores fueron desarrollados para hacer el trabajo del programador más fácil. En el lenguaje ensamblador, una instrucción es una forma fácil de recordar llamada **mnemotécnica**. Por ejemplo, suponga que `LOAD` significa para el código máquina `100100`, `MULT` significa para el código máquina `100110` (multiplicación), y `STOR` significa para el código máquina `100010`.
+Los lenguajes ensambladores fueron desarrollados para hacer el trabajo del programador más fácil. En el lenguaje ensamblador, una instrucción es una forma fácil de recordar llamada **mnemotécnica**. Por ejemplo, suponga que `LOAD` significa para el código máquina `100100`, `MULT` significa para el código máquina `100110` (multiplicación) y `STOR` significa para el código máquina `100010`.
 
-Usando las instrucciones del lenguaje ensamblador, puede escribir la ecuación para calcular el salio mensual como sigue:
+Usando las instrucciones del lenguaje ensamblador puede escribir la ecuación para calcular el salario mensual como sigue:
 ```
 LOAD rate
 MULT hours
 STOR wages
 ```
-Como puede ver, esto es mucho más fácil que escribir instrucciones en lenguaje ensamblador. Sin embargo, un computador no puede ejecutar las instrucciones del lenguaje ensamblador directamente. Las instrucciones primero tiene que transladarse en lenguaje máquina. Un programa llamado **ensamblador** traduce las instrucciones del lenguaje ensambadlor en lenguaje máquina.
+Como puede ver, esto es mucho más fácil que escribir instrucciones en lenguaje ensamblador. Sin embargo, un computador no puede ejecutar las instrucciones del lenguaje ensamblador directamente. Las instrucciones primero tiene que transladarse en lenguaje máquina. Un programa llamado **ensamblador** traduce las instrucciones del lenguaje ensamblador en lenguaje máquina.
 
-**Emsamblador**: Un programa que traduce un programa escrito en lenguaje ensamblador en un programa equivalente en lenguaje máquina.
+> **Ensamblador**: Un programa que traduce un programa escrito en lenguaje ensamblador en un programa equivalente en lenguaje máquina.
 
 Pasando del lenguaje máquina a el lenguaje ensamblador hace la programación más fácil, pero un programador todavía estaba obligado a pensar en términos de instrucciones de máquina individuales. El siguiente paso hacia facilitar la programación fue idear **lenguajes del alto nivel** que fueran cercanos a los lenguajes naturales, tales como el inglés, francés, alemán y español. Basic, FORTRAN, COBOL, C, C++, C#, Java, y Python son todos lenguajes de alto nivel. Aprenderás el lenguaje de alto nivel C++ en este libro.
 
 En C++, escribe la ecuación del salario semanal como sigue:
-
 ```cpp
 wages = rate * hours;
 ```
 La instrucción escrita en C++ es mucho más fácil de entender y es autoexplicativo para un usuario novato que está familiarizado con la aritmética básica. Como en el caso del lenguaje ensamblador, sin embargo, la computadora no puede directamente ejecutar instrucciones en lenguaje de alto nivel. Para ejecutar en una computadora, estas instrucciones C++ primero necesita ser traducido al lenguaje de máquina. Un programa llamado **compilador** traduce las intrucciones escritas en lenguajes de alto nivel al código máquina.
 
-**Compilador**: Un programa que traduce instrucciones escritas en un lenguaje de alto nivel en el lenguaje máquina equivalente.
+> **Compilador**: Un programa que traduce instrucciones escritas en un lenguaje de alto nivel en el lenguaje máquina equivalente.
 
 ## Procesando un programa en C++
 
@@ -157,8 +153,8 @@ int main()
 }
 {% endhighlight %}
 En este punto, no necesita estar demasiado preocupado con los detalles de este programa. Sin embargo, si corre (ejecuta) este programa, se mostrará la siguiente línea en la pantalla
-```
-My first C++ program.
+```bash
+deepin@me:~$ My first C++ program.
 ```
 Recordemos que la computadora puede entender solo lenguaje máquina. Por lo tanto, con el fin de correr el programa satisfactoriamente, el código primero debe ser traducido en lenguaje máquina. En esta sección, repasaremos los pasos que se requiere para ejecutar los programas escritos en C++.
 
@@ -170,7 +166,7 @@ Los siguientes pasos, como se muestran en la Figura 1-2, son necesarios para pro
 3. Después de procesar las directivas del preprocesador, el siguiente paso es verificar que el programa obedece las reglas del lenguaje de programación, esto es, el programa es sintácticamente correcto -- y la traducción del programa en el lenguaje máquina equivalente. El *compilador* comprueba el programa fuente en busca de errores de sintaxis y, si no se encuentra ningún error, traduce el programa en el lenguaje máquina equivalente. El programa equivalente al lenguaje máquina es llamado un **programa objeto**.
 > **Programa objeto**: La versión del lenguaje máquina de lenguaje de alto nivel.
 4. Los programas que escribe en lenguaje de alto nivel son desarrollados usando un entorno de desarrollo integrado (IDE). El IDE contiene varios programas que son útiles en la creación de su programa. Por ejemplo, contiene el código necesario (programa) para mostrar los resultados del programa y varias funciones matemáticas que hacen el trabajo del programador algo más fácil. Por lo tanto, si cierto código ya está disponible, puedes usar este código en lugar de escribir tu propio código. Una vez que el programa se haya desarrollado y compilado con éxito, aún debe llevar el código de los recursos utilizados desde el IDE a su programa para producir un programa final que la computadora pueda ejecutar. Este código pre escrito (programa) reside en un lugar llamado la **biblioteca**. Un programa llamado **enlazador** combina el programa objeto con los programas de las bibliotecas.
-> **Enlazador:**Un programa que combina el programa objeto con los otros programas en la biblioteca y es usado en el programa para crear el código ejecutable.
+> **Enlazador**: Un programa que combina el programa objeto con los otros programas en la biblioteca y es usado en el programa para crear el código ejecutable.
 5. A continuación debe cargar el programa ejecutable en la memoria principal para su ejecución. Un programa llamado **cargador** logra esta tarea.
 > **Cargador**: Un programa que carga un programa ejecutable en la memoria principal.
 6. El paso final es ejecutar el programa.
@@ -178,7 +174,7 @@ Los siguientes pasos, como se muestran en la Figura 1-2, son necesarios para pro
 ![Procesando un programa en C++](/Cpp-Programming/assets/img/figure2.png)
 Figura 1-2 muestra cómo se procesa un programa típico de C++.
 
-Como un programador, principalmente necesitas preocuparte con el paso 1. Esto es, debes aprender, entender, y dominar las reglas del lenguaje de programación para creaar programas fuentes.
+Como programador, principalmente necesitas preocuparte con el paso 1. Esto es, debes aprender, entender, y dominar las reglas del lenguaje de programación para creaar programas fuentes.
 
 Como se señaló anteriormente, los programas se desarrollan utilizando un IDE. Los IDEs conocidos utilizados para crear programas en el lenguaje de alto nivel C ++ incluyen Visual C++ Express (2013 o 2016) y Visual Studio 2015 (de Microsoft), GNU/Emacs, CLion de JetBeans y C++ Builder (de Borland). También puede usar Dev-C++ IDE de Bloodshed Software para crear y probar programas C++. Estos IDEs contiene un editor de texto para crear programas fuente, un compilador para verificar el programa fuente en busca de errores de sintaxis, un programa para enlazar el código objeto con los recursos del IDE, y un programa para ejecutar el programa.
 
@@ -188,9 +184,9 @@ Estos IDEs son muy fáciles de usar. Cuando compila su programa, el compilador n
 
 La *programación es un proceso de resolución de problemas*. Diferentes personas usan técnicas diferentes para resolver problemas. Algunas técnicas son bien delineadas y fáciles de seguir. No solo resuelven el problema, sino que también dan una idea de cómo se alcanza la solución. Estos ténicas de resolución de problemas pueden ser fácilmente modificadas si el dominio del problema cambia.
 
-Para ser un buen solucionador de problemas y bune programador, debe seguir buenas técnicas de resolución de problemas. Una técnica de resolución de problemas común incluye analizar un problema, describir los requisitos del problema y diseñar pasos, llamado un **algoritmo**, para resolver el problema.
+Para ser un buen solucionador de problemas y buen programador, debe seguir buenas técnicas de resolución de problemas. Una técnica de resolución de problemas común incluye *analizar un problema*, *describir los requisitos del problema* y *diseñar pasos*, llamado un **algoritmo**, para resolver el problema.
 
-**Algoritmo**: Un proceso de resolución de problemas paso a paso en el que se llega a una solución en un tiempo finito.
+> **Algoritmo**: Un proceso de resolución de problemas paso a paso en el que se llega a una solución en un tiempo finito.
 
 En el entorno de la programación, el proceso de resolución de problemas requiere los siguientes tres pasos:
 1. Analizar y esbozar el problema y sus requisitos de solución, y diseño de un algoritmo para resolver el problema.
@@ -201,16 +197,16 @@ En el entorno de la programación, el proceso de resolución de problemas requie
 
 La figura 1-3 resume los dos primeros pasos del proceso de programación.
 
-Para desarrollar un programa para resolver un problema, empieza por analizar el problema. Luego diseñas el algoritmo; escribe las instrucciones del programa en un lenguaje de alto nivel, o codifica el programa; y entra al programa al sistema informático. Analizando el problema es el primer paso y el más importante. Este paso requiere que haga lo siguiente:
+Para desarrollar un programa para resolver un problema, empieza por analizar el problema. Luego diseñas el algoritmo, escribe las instrucciones del programa en un lenguaje de alto nivel (o codifica el programa) y entra al programa al sistema informático. Analizar el problema es el primer paso y el más importante. Este paso requiere que haga lo siguiente:
 1. Entender completamente el problema.
 2. Entender los requerimientos del problema. Los requerimientos puede incluir si el programa requiere interacción con el usuario, si manipula los datos, si produce resultados y cómo se ve el resultado. Si el programa manipula los datos, el programador debe saber cuáles son los datos y cómo están representados. Esto es, necesita mirar datos de muestra. Si el programa muestra una salida, debe saber cómo se deben generar y formatear los resultados.
 3. Si el problema es complejo, divide el problema en subproblemas y repita los pasos 1 y 2. Esto es, para problemas complejos, necesita analizar cada subproblema y analizar los requisitos de cada uno de los subproblemas.
 
 Después que cuidadosamente analizó el problema, el siguiente paso es diseñar un algoritmo para resolver el problema. Si rompes el problema en subproblemas, necesitas diseñar un algoritmo para cada subproblema. Una vez que diseñó un algoritmo, necesita comprobar que sea correcto. A veces se puede probar la corrección de un algoritmo utilizando datos de muestra. En otras veces, es posible que necesite realizar algún análisis matemático para probar la exactitud del algoritmo.
 
-Una vez hayas diseñado el algoritmo y verificado su exactitud, el siguiente paso es convertirlo en un código de programación equivalente. A continuación, utiliza un editor de texto para ingresar el código programado o el programa en la computadora. Luego, asegúrese que el programa siga la sintaxis del lenguaje. Para verificar la exactitud de la sintaxis, corra el código mediante un compilador. Si el compilador genera mensajes de error, debe identificar los errores en el código, removerlos, y entonces correr el código mediante el compilador nuevamente. Cuando todos los errores de sintaxis fueron removidos, el compilador genera el código máquina equivalente. el enlazador enlace el código máquina con los recursos del sistema, y el cargador colocar el programa en la memoria principal para que pueda ser ejecutado.
+Una vez hayas diseñado el algoritmo y verificado su exactitud, el siguiente paso es convertirlo en un código de programación equivalente. A continuación, utiliza un editor de texto para ingresar el código programado o el programa en la computadora. Luego, asegúrese que el programa siga la sintaxis del lenguaje. Para verificar la exactitud de la sintaxis, corra el código mediante un compilador. Si el compilador genera mensajes de error, debe identificar los errores en el código, removerlos, y entonces correr el código mediante el compilador nuevamente. Cuando todos los errores de sintaxis fueron removidos, el compilador genera el código máquina equivalente. el enlazador enlaza el código máquina con los recursos del sistema, y el cargador coloca el programa en la memoria principal para que pueda ser ejecutado.
 
-El paso final es ejecutar el programa. El compilador garantiza que solo el programa siga la sintaxis del lenguaje. No garantiza que el programa se ejecutará correctamente. Durante la ejecución, el programa podría terminar anormalmente debido a errores lógicos, como la división por cero. Incluso si el programa termina normalmente, todavía puede generar resultados erróneos. Bajo estas circunstancias, Es posible que tenga que volver a examinar el código, el algoritmo o incluso el análisis del problema.
+El paso final es ejecutar el programa. El compilador garantiza que solo el programa siga la sintaxis del lenguaje. No garantiza que el programa se ejecutará correctamente. Durante la ejecución, el programa podría terminar anormalmente debido a errores lógicos, como la división por cero. Incluso si el programa termina normalmente, todavía puede generar resultados erróneos. Bajo estas circunstancias, es posible que tenga que volver a examinar el código, el algoritmo o incluso el análisis del problema.
 
 Su experiencia de programación en general será exitosa si dedica suficiente tiempo a completar el análisis del problema antes de intentar escribir las instrucciones de programación. Usualmente, haga este trabajo en papel con un bolígrafo o un lápiz. Tomando este enfoque cuidadoso de la programación tiene varias ventajas. Es mucho más fácil encontrar errores en un programa que está bien analizado y bien diseñado. Además, un programa cuidadosamente analizado y diseñado es mucho más fácil de seguir y modificar. Incluso los programadores más expertos pasan un cantidad considerable de tiempo analizando un problema y diseñando un algoritmo.
 
@@ -218,32 +214,50 @@ A lo largo de este libro, no solo aprenderá las reglas de escribir programas en
 
 A continuación, proporcionamos ejemplos de varias técnicas de análisis de problemas y de diseño de algoritmos.
 
-### Ejemplo 1-1
+## Ejemplo 1-1
 
 En este ejemplo, diseñamos un algoritmo para encontrar el perímetro y el área de un rectángulo.
 
 Para encontrar el perímetro y el área de un rectángulo, necesitas conocer el largo y ancho del rectángulo. El perímetro y el área del rectángulo luego son dadas por las siguientes fórmulas:
 ```
-perimeter = 2 $\cdot$ (length + width)
-area = length $\cdot$ width
+perimeter = 2 * (length + width)
+area = length * width
 ```
 El algoritmo para encontrar el perímetro y el área de un rectángulo es como sigue:
 1. Consigue el largo del rectángulo.
 2. Consigue el ancho del rectángulo.
 3. Encuentre el perímetro usando la siguiente ecuación:
 ```
-perimeter = 2 $\cdot$ (length + width)
+perimeter = 2 * (length + width)
 ```
 4. Encuentre el área usando la siguiente ecuación:
 ```
-area = length $\cdot$ width
+area = length * width
 ```
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+int main()
+{
+	float perimter, length, width, area;
+	cout << "Enter the length of the rectangle." << endl;
+	cin >> length;
+	cout << "Enter the with of the rectangle." << endl;
+	cin >> width;
 
-### Ejemplo 1-2
+	perimeter = 2 * (length + width);
+	area = length * width;
+	cout << "The perimter of rectangle is " << perimeter << endl;
+	cout << "The area of rectangle is " << perimeter << endl;
+	return 0;
+}
+{% endhighlight %}
+
+## Ejemplo 1-2
 
 En este ejemplo, diseñamos un algoritmo que calcula el impuesto a las ventas y el precio de un artículo vendido en un estado particular.
 
-El impuesto a las ventas es calculado como sigue: La parte del impuesto a las ventas de los estados es 4%, y la parte del impuesto a las ventas de la ciudad es del 1.5%. Si el artículo es un artículo de lujo, como un automóvil más de $50000, entonces hay un impuesto de lujo del 10%.
+El impuesto a las ventas es calculado como sigue: La parte del impuesto a las ventas de los estados es $$4\%$$, y la parte del impuesto a las ventas de la ciudad es del $$1.5\%$$. Si el artículo es un artículo de lujo, como un automóvil más de $$\$50000$$, entonces hay un impuesto de lujo del 10%.
 
 Para calcular el precio del artículo, necesitamos calcular la parte del impuesto a las ventas del estado, la parte del impuesto al impuesto a las ventas, y, si el artículo es de lujo, el impuesto de lujo. Suponga que `salePrice` denota el precio de venta del artículo, `stateSalesTax` denota el impuesto a la venta del estado, `citySalesTax` denota el impuesto a la venta de la ciudad, `luxuryTax` denota el impuesto de lujo, `salesTax`, denota el impuesto a la venta total, y `amountDue` denota el precio final del artículo.
 
@@ -251,13 +265,13 @@ Para calcular el impuesto a la venta, debemos conocer el precio de venta de cada
 
 El `stateSalesTax` y `citySalesTax` puede ser calculado usando las siguientes fórmulas:
 ```
-stateSalesTax = salePrice $\cdot$ 0.04
-citySalesTax = salePrice $\cdot$ 0.015
+stateSalesTax = salePrice * 0.04
+citySalesTax = salePrice * 0.015
 ```
 A continuación, puede determinar `luxuryTax` como sigue:
 ```
 if (item is a luxury item)
-	luxuryTax = salePrice $\cdot$ 0.1
+	luxuryTax = salePrice * 0.1
 otherwise
 	luxuryTax = 0
 ```
@@ -269,21 +283,21 @@ Finalmente, puede determinar `amountDue` como sigue:
 ```
 amountDue = salePrice + salesTax
 ```
-El algoritmo para determinar `salesTax` y `amountDue` is, therefore:
+El algoritmo para determinar `salesTax` y `amountDue` es:
 1. Conseguir el precio de venta de cada artículo.
 2. Determinar cuándo el artículo es un artículo de lujo.
 3. Encuentre la parte del impuesto a la venta del estado usando la fórmula:
 ```
-stateSalesTax = salePrice $\cdot$ 0.04
+stateSalesTax = salePrice * 0.04
 ```
 4. Encuentre la parte del impuesto a la venta de la ciudad usando la fórmula:
 ```
-citySalesTax = salePrice $\cdot$ 0.015
+citySalesTax = salePrice * 0.015
 ```
 5. Encuentre el impuesto de lujo usando la siguiente fórmula:
 ```
 if (item is a luxury item)
-	luxuryTax = salePrice $\cdot$ 0.1
+	luxuryTax = salePrice * 0.1
 otherwise
 	luxuryTax = 0
 ```
@@ -296,7 +310,26 @@ salesTax = stateSalesTax + citySalesTax + luxuryTax
 amountDue = salePrice + salesTax
 ```
 
-### Ejemplo 1-3
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+int main()
+{
+	float perimter, length, width, area;
+	cout << "Enter the length of the rectangle." << endl;
+	cin >> length;
+	cout << "Enter the with of the rectangle." << endl;
+	cin >> width;
+
+	perimeter = 2 * (length + width);
+	area = length * width;
+	cout << "The perimter of rectangle is " << perimeter << endl;
+	cout << "The area of rectangle is " << perimeter << endl;
+	return 0;
+}
+{% endhighlight %}
+
+## Ejemplo 1-3
 
 En este ejemplo, diseñamos un algoritmo que calcula el cheque mensual de un vendedor en una tienda por departamentos local.
 
