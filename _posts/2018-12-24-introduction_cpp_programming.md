@@ -153,7 +153,7 @@ int main()
 }
 {% endhighlight %}
 En este punto, no necesita estar demasiado preocupado con los detalles de este programa. Sin embargo, si corre (ejecuta) este programa, se mostrará la siguiente línea en la pantalla
-```bash
+```
 deepin@me:~$ My first C++ program.
 ```
 Recordemos que la computadora puede entender solo lenguaje máquina. Por lo tanto, con el fin de correr el programa satisfactoriamente, el código primero debe ser traducido en lenguaje máquina. En esta sección, repasaremos los pasos que se requiere para ejecutar los programas escritos en C++.
@@ -234,6 +234,7 @@ perimeter = 2 * (length + width)
 ```
 area = length * width
 ```
+
 {% highlight cpp %}
 #include <iostream>
 using namespace std;
@@ -257,7 +258,7 @@ int main()
 
 En este ejemplo, diseñamos un algoritmo que calcula el impuesto a las ventas y el precio de un artículo vendido en un estado particular.
 
-El impuesto a las ventas es calculado como sigue: La parte del impuesto a las ventas de los estados es $$4\%$$, y la parte del impuesto a las ventas de la ciudad es del $$1.5\%$$. Si el artículo es un artículo de lujo, como un automóvil más de $$\$50000$$, entonces hay un impuesto de lujo del 10%.
+El impuesto a las ventas es calculado como sigue: La parte del impuesto a las ventas de los estados es $$4$$%, y la parte del impuesto a las ventas de la ciudad es del $$1.5$$%. Si el artículo es un artículo de lujo, como un automóvil más de $$\$50000$$, entonces hay un impuesto de lujo del $$10$$%.
 
 Para calcular el precio del artículo, necesitamos calcular la parte del impuesto a las ventas del estado, la parte del impuesto al impuesto a las ventas, y, si el artículo es de lujo, el impuesto de lujo. Suponga que `salePrice` denota el precio de venta del artículo, `stateSalesTax` denota el impuesto a la venta del estado, `citySalesTax` denota el impuesto a la venta de la ciudad, `luxuryTax` denota el impuesto de lujo, `salesTax`, denota el impuesto a la venta total, y `amountDue` denota el precio final del artículo.
 
@@ -277,13 +278,13 @@ otherwise
 ```
 A continuación, puede determinar `salesTax` como sigue:
 ```
-stateSalesTax = stateSalesTax + citySalesTax + luxuryTax
+salesTax = stateSalesTax + citySalesTax + luxuryTax
 ```
 Finalmente, puede determinar `amountDue` como sigue:
 ```
 amountDue = salePrice + salesTax
 ```
-El algoritmo para determinar `salesTax` y `amountDue` es:
+El algoritmo para determinar `salesTax` y `amountDue` es, por lo tanto:
 1. Conseguir el precio de venta de cada artículo.
 2. Determinar cuándo el artículo es un artículo de lujo.
 3. Encuentre la parte del impuesto a la venta del estado usando la fórmula:
@@ -297,9 +298,9 @@ citySalesTax = salePrice * 0.015
 5. Encuentre el impuesto de lujo usando la siguiente fórmula:
 ```
 if (item is a luxury item)
-	luxuryTax = salePrice * 0.1
+		luxuryTax = salePrice * 0.1
 otherwise
-	luxuryTax = 0
+		luxuryTax = 0
 ```
 6. Encuentre `salesTax` usando la fórmula:
 ```
@@ -310,47 +311,27 @@ salesTax = stateSalesTax + citySalesTax + luxuryTax
 amountDue = salePrice + salesTax
 ```
 
-{% highlight cpp %}
-#include <iostream>
-using namespace std;
-int main()
-{
-	float perimter, length, width, area;
-	cout << "Enter the length of the rectangle." << endl;
-	cin >> length;
-	cout << "Enter the with of the rectangle." << endl;
-	cin >> width;
-
-	perimeter = 2 * (length + width);
-	area = length * width;
-	cout << "The perimter of rectangle is " << perimeter << endl;
-	cout << "The area of rectangle is " << perimeter << endl;
-	return 0;
-}
-{% endhighlight %}
-
 ## Ejemplo 1-3
 
 En este ejemplo, diseñamos un algoritmo que calcula el cheque mensual de un vendedor en una tienda por departamentos local.
 
-Cualquier vendedor tiene un salario base. El vendedor también recibe un bono al final de cada mes, basado en los siguientes criterios: Si el vendedor ha estado en la tienda por cinco años o menos, el bono es $\$10$ por cada año que él o ella ha trabajo allá. Si el vendedor ha estado trabajando en la tienda por más de cinco años, el bono es $\$20$ por acada año que él o ella ha trabajado allá. El vendedor puede ganar una bonificación adicional de la siguiente manera: Si las ventas totales realizadas por el vendedor durante el mes son al menos $\$5000$ pero menos que
-$\$10000$, él o ella recibe una comisión del 3% de la venta. Si el total de las ventas realizadas por el vendedor son por lo menos $\$10000$, él o ella reciben una comisión del 6% de la venta.
+Cualquier vendedor tiene un salario base. El vendedor también recibe un bono al final de cada mes, basado en los siguientes criterios: Si el vendedor ha estado en la tienda por cinco años o menos, el bono es $$\$10$$ por cada año que él o ella ha trabajo allá. Si el vendedor ha estado trabajando en la tienda por más de cinco años, el bono es $$\$20$$ por acada año que él o ella ha trabajado allá. El vendedor puede ganar una bonificación adicional de la siguiente manera: Si las ventas totales realizadas por el vendedor durante el mes son al menos $$\$5000$$ pero menos que $$\$10000$$, él o ella recibe una comisión del $$3$$% de la venta. Si el total de las ventas realizadas por el vendedor son por lo menos $$\$10000$$, él o ella reciben una comisión del $$6$$% de la venta.
 
-Para calcular el cheque mensual de un vendedor, necesitas conocer el salio base del número de años que el vendedor ha estado en la compañía, y las ventas total realizadas por vendedor durante el mes. Suponga que el `baseSalary` denota el salio base, `noOfServiceYears` denota el número de años que el vendedor ha estado en la tienda, `bonus` denota el bono, `totalSales` denota las ventas totales realizadas por el vendedor durante el mes, y `additionalBonus` denota el bono adicional.
+Para calcular el cheque mensual de un vendedor, necesitas conocer el salario base del número de años que el vendedor ha estado en la compañía, y las ventas total realizadas por vendedor durante el mes. Suponga que el `baseSalary` denota el salario base, `noOfServiceYears` denota el número de años que el vendedor ha estado en la tienda, `bonus` denota el bono, `totalSales` denota las ventas totales realizadas por el vendedor durante el mes, y `additionalBonus` denota el bono adicional.
 
 Puede determinar el bono como sigue:
 ```
 if (noOfServiceYears is less than or equal to five)
-	bonus = 10 $\cdot$ noOfServiceYears
+	bonus = 10 * noOfServiceYears
 otherwise
-	bonus = 20 $\cdot$ noOfServiceYears
+	bonus = 20* noOfServiceYears
 ```
 A continuación, puede determinar el bono adicional del vendedor como sigue:
 ```
 if (totalSales is greather than or equal to 5000 and totalSales is less than 10000)
-	additionalBonus = totalSales $\cdot$ (0.03)
+	additionalBonus = totalSales * (0.03)
 otherwise
-	additionalBonus = totalSales $\cdot$ (0.06)
+	additionalBonus = totalSales * (0.06)
 ```
 Siguiendo la discusión de arriba, puede ahora diseñar el algoritmo para calcular el cheque mensual de un vendedor:
 1. Consiga `baseSalary`.
@@ -358,29 +339,29 @@ Siguiendo la discusión de arriba, puede ahora diseñar el algoritmo para calcul
 3. Calcule el bono usando la siguiente fórmula:
 ```
 if (noOfServiceYears is less than or equal to five)
-	bonus = 10 $\cdot$ noOfServiceYears
+		bonus = 10 * noOfServiceYears
 otherwise
-	bonus = 20 $\cdot$ noOfServiceYears
+		bonus = 20 * noOfServiceYears
 ```
 4. Consiga `totalSales`.
 5. Calcule `additionalBonus` usando la siguiente fórmula:
 ```
 if (totalSales is less than 5000)
-	additionalBonus = 0
+		additionalBonus = 0
 otherwise
-	if (totalSales is greather than or equal to 5000 and totalSales is less than 10000)
-		additionalBonus = totalSales $\cdot$ (0.03)
-	otherwise
-		additionalBonus = totalSales $\cdot$ (0.06)
+		if (totalSales is greather than or equal to 5000 and totalSales is less than 10000)
+			additionalBonus = totalSales * (0.03)
+		otherwise
+			additionalBonus = totalSales * (0.06)
 ```
 6. Calcule `payCheck` usando la ecuación:
 ```
 payCheck = baseSalary + bonus + additionalBonus
 ```
 
-### Ejemplo 1-4
+## Ejemplo 1-4
 
-En este ejemplo, diseñamos un algoritmo para jugar un juego de adivinar números. El objetivo es generar aleatoriamente un número entero mayor o igual a 0 y menor de 100. Entonces el aviso del jugador (usuario) conjetura el número. Si el jugador adivina el número correctamente, muestra un mensaje apropiado. De lo contrario, compruebe si el número adivinado es menor que el número aleatorio, muestra el mensaje, "Tu conjetura es menor que el número. Conjetura otra vez!"; caso contrario, muestra el mensaje, "Tu conjetura es mayor que el número Conjetura otra vez!". El jugador es avisado para ingresar otro número. El jugador es avisado para adivinar el número aleatorio a menos que el jugador ingrese el número correcto.
+En este ejemplo, diseñamos un algoritmo para jugar un juego de adivinar números. El objetivo es generar aleatoriamente un número entero mayor o igual a $$0$$ y menor de $$100$$. Entonces el aviso del jugador (usuario) conjetura el número. Si el jugador adivina el número correctamente, muestra un mensaje apropiado. De lo contrario, compruebe si el número adivinado es menor que el número aleatorio, muestra el mensaje, "Tu conjetura es menor que el número. Conjetura otra vez!"; caso contrario, muestra el mensaje, "Tu conjetura es mayor que el número Conjetura otra vez!". El jugador es avisado para ingresar otro número. El jugador es avisado para adivinar el número aleatorio a menos que el jugador ingrese el número correcto.
 
 El primer paso es generar un número aleatorio, como es descrito arriba. C++ proporciona los medios para hacerlo, que se discute en el capítulo 5. Suponga que `num` representa el número aleatorio y `guess` representa el número adivinado por el jugador.
 
@@ -401,22 +382,22 @@ Puede ahora diseñar el algoritmo como sigue:
    b. Verifique el valor de `guess`.
 ```
 if (guess is equal to num)
-	Print "You guessed the correct number."
+		Print "You guessed the correct number."
 otherwise
-	if (guess is less than num)
-		Print "Your guess is lower than the number. Guess again!"
-	otherwise
-		Print "Your guess is higher than the number. Guess again!"
+		if (guess is less than num)
+			Print "Your guess is lower than the number. Guess again!"
+		otherwise
+			Print "Your guess is higher than the number. Guess again!"
 ```
 En el capítulo 5, usaremos este algoritmo para escribir un programa C++ para juegar el juego de adivinar números.
 
-### Ejemplo 1-5
+## Ejemplo 1-5
 
-Hay 10 estudiantes en una clase. Cada estudiante ha tomado cinco pruebas, y cada prueba vale 100 puntos. Queremos diseñar un algoritmo que calcule el grado para cada estudiante, así como el promedio de la clase. El grado es asignado como sigue: Si el puntaje medio de la prueba es mayor o igual que 90, el grado es `A`; si el puntaje medio de la prueba es mayor o igual que  80 y menor que 90, el grado es `B`; si el puntaje medio de la prueba es mayor o igual que  70 y menor que 80, el grado es `C`; si el puntaje medio de la prueba es mayor o igual que  60 y menor que 70, el puntaje es `D`; caso contrario, el grado es `F`. Tenga en cuenta que los datos consisten en los nombres de los estudiantes y sus puntajes de la prueba.
+Hay $$10$$ estudiantes en una clase. Cada estudiante ha tomado cinco pruebas, y cada prueba vale $$100$$ puntos. Queremos diseñar un algoritmo que calcule el grado para cada estudiante, así como el promedio de la clase. El grado es asignado como sigue: Si el puntaje medio de la prueba es mayor o igual que $$90$$, el grado es `A`; si el puntaje medio de la prueba es mayor o igual que  $$80$$ y menor que $$90$$, el grado es `B`; si el puntaje medio de la prueba es mayor o igual que $$70$$ y menor que $$80$$, el grado es `C`; si el puntaje medio de la prueba es mayor o igual que  $$60$$ y menor que $$70$$, el puntaje es `D`; caso contrario, el grado es `F`. Tenga en cuenta que los datos consisten en los nombres de los estudiantes y sus puntajes de la prueba.
 
 Este es un problema que puede ser dividio en subproblemas como sigue: Hay cinco pruebas, diseñe un algoritmo para encontrar el puntaje promedio de la prueba. A continuación, diseñe un algoritmo que determine el grado. Los dos subproblemas son para determinar el puntaje promedio de la prueba y calcular el grado.
 
-Primero diseñemos un algoritmo para determinar el puntaje medio de la prueba. para encontrar el puntaje medio de la prueba, agregue los cinco puntajes de la prueba y luego divida la suma por 5. Por lo tanto, el algorimo es como sigue:
+Primero diseñemos un algoritmo para determinar el puntaje medio de la prueba. para encontrar el puntaje medio de la prueba, agregue los cinco puntajes de la prueba y luego divida la suma por $$5$$. Por lo tanto, el algorimo es como sigue:
 1. Consiga los cinco puntajes de la prueba.
 2. Suma los cinco puntajes de la prueba. Suponga que `sum` representa la suma de los puntajes de la prueba.
 3. Suponga que `average` represent el puntaje promedio de la prueba. Entonces
@@ -426,18 +407,18 @@ average = sum / 5;
 A continuación, diseñe un algoritmo que determine el grado. Suponga que `grade` representa el grado asignado a un estudiante. El siguiente algoritmo determina el grado:
 ```
 if average is greater than or equal to 90
-	grade = A
+		grade = A
 otherwise
 	if average is greater than or equal to 80
-		grade = B
+			grade = B
 	otherwise
 		if average is greater than or equal to 70
-			grade = C
+				grade = C
 		otherwise
 			if average is greater than or equal to 60
-				grade = D
+					grade = D
 			otherwise
-				grade = F
+					grade = F
 ```
 Puede usar las soluciones de estos subproblemas para diseñar el algoritmo principal como sigue: (Suponga que `totalAverage` representa la suma de los promedios de la nota media de cada estudiante)
 1. `totalAverage = 0;`
@@ -452,7 +433,7 @@ classAverage = totalAverage / 10
 ```
 Un ejercicio de programación en el capítulo 8 le pregunta que escriba un programac C++ para calcular el puntaje promedio de la prueba y el grado de cada estudiante en una clase.
 
-> Nota> Al inicio de este capítulo se describió el análisis del problema, codificación y el ciclo de ejecución. En esta sección, ganamos varios ejemplos que ilustran el análisis del problema y el ciclo de codificación. Hay que señalar que el análisis de problemas es la parte más importante de la programación. Una vez que haya analizado el problema y haya escrito los pasos necesarios de la solución en su idioma nativo, entonces, como verá a través del texto, escribir el código C++ para implementar su solución es relativamente fácil. Además, pronto reconocerá que los pasos de sus soluciones se pueden traducir efectivamente a un código C++. Además, un buen análisis de problemas conducirá a un programa mejor y más limpio. Incluso aunque todavía no hemos introducido la sintaxis de C++, para ilustrar cómo escribir un código de C++ correspondiente a los pasos de su solución, consideremos el algoritmo diseñado en el ejemplo 1-1. Suponga `length`, `width`, `perimeter`, and `area` representa la longitud, ancho, perímetro, y área de un rectángulo. Aquí están los cuatro pasos de un algoritmo y sus correspondientes declaraciones C++:
+> Nota Al inicio de este capítulo se describió el análisis del problema, codificación y el ciclo de ejecución. En esta sección, ganamos varios ejemplos que ilustran el análisis del problema y el ciclo de codificación. Hay que señalar que el análisis de problemas es la parte más importante de la programación. Una vez que haya analizado el problema y haya escrito los pasos necesarios de la solución en su idioma nativo, entonces, como verá a través del texto, escribir el código C++ para implementar su solución es relativamente fácil. Además, pronto reconocerá que los pasos de sus soluciones se pueden traducir efectivamente a un código C++. Además, un buen análisis de problemas conducirá a un programa mejor y más limpio. Incluso aunque todavía no hemos introducido la sintaxis de C++, para ilustrar cómo escribir un código de C++ correspondiente a los pasos de su solución, consideremos el algoritmo diseñado en el ejemplo 1-1. Suponga `length`, `width`, `perimeter`, and `area` representa la longitud, ancho, perímetro, y área de un rectángulo. Aquí están los cuatro pasos de un algoritmo y sus correspondientes declaraciones C++:
 
 | Paso de algoritmo | Instrucción C++ (código) |
 | 1. Consiga la longitud del rectángulo. | `cin >> length;` |
@@ -462,7 +443,7 @@ Un ejercicio de programación en el capítulo 8 le pregunta que escriba un progr
 
 Considere la primera declaración. En C++, `cin` representa la entrada común. Durante la ejecución del programa, el código asociado a él le indica al usuario que ingrese datos y si el usuario ingresa un dato válido, ese dato se almacenará en la memoria, es decir, se convertirá en el valor de `length`. El código C++ en el paso 3 usa los valores de `length` y `width` para calcular el `perimeter`, que luego se asigna a `perimeter`.
 
-Para escribir un programa completo en C++ para calcular el área y el perímetro, necesita conocer la estructura básica de un programa en C++, el cual será introducido en el siguiente capítulo. Sin emabargo, si tiene curiosidad por saber cómo se ve el programa completo de C++, puede visitar el sitio web que acompaña a este libro y consultar el código de programación almacenado en el archivo `Ch1_Example_1-1_Code.cpp`.
+Para escribir un programa completo en C++ para calcular el área y el perímetro, necesita conocer la estructura básica de un programa en C++, el cual será introducido en el siguiente capítulo. Sin embargo, si tiene curiosidad por saber cómo se ve el programa completo de C++, puede visitar el sitio web que acompaña a este libro y consultar el código de programación almacenado en el archivo `Ch1_Example_1-1_Code.cpp`.
 
 ## Metodologías de programación
 
