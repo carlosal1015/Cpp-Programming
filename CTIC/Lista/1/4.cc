@@ -1,5 +1,7 @@
 /*
-    Resolver el ejercicio anterior para el caso general, conociendo el número de horas trabajadas, pago por hora y la tasa de impuesto.
+    Resolver el ejercicio anterior para el caso general,
+    conociendo el número de horas trabajadas, pago por hora y
+    la tasa de impuesto.
 */
 #include <iostream>
 using namespace std;

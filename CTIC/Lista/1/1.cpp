@@ -1,11 +1,15 @@
 /*
-	En el curso de programación, el promedio final se compone de los siguientes porcentajes
+	En el curso de programación, el promedio final se compone de los siguientes
+	porcentajes:
+
 	- 60% del promedio de 4 exámenes. (PE)
 	- 15% del promedio de laboratorios (PL)
 	- 15% del promedio de tareas (PT)
 	- 10% de la nota del proyecto final (PR)
 
-	Desarrolla un programa en el que solicite las notas de los cuatro exámenes, del promedio de laboratorios, del promoedio de las tareas y la nota del proyecto. En base a esto, el programa determinará la Nota final de un alumno.
+	Desarrolla un programa en el que solicite las notas de los cuatro exámenes,
+	del promedio de laboratorios, del promoedio de las tareas y la nota del proyecto.
+	En base a esto, el programa determinará la Nota final de un alumno.
 */
 #include <iostream>
 using namespace std;
@@ -35,8 +39,10 @@ int main(){
 	cout << "Ingrese la nota del proyecto:" << endl;
 	cin >> project;
 
-	finalgrade = (0.6 * ( (grade1 + grade2 + grade3 + grade4) / 4) ) + (0.15 * lab) + (0.15 * homework) + (0.1 * project);
+	finalgrade = (0.6 * ( (grade1 + grade2 + grade3 + grade4) / 4) )
+			+ (0.15 * lab) + (0.15 * homework) + (0.1 * project);
 
-    cout << "La nota del curso es " << finalgrade << "." << endl;
-    return 0;
+	cout << "La nota del curso es " << finalgrade << "." << endl;
+	
+	return 0;
 }

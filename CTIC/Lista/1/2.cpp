@@ -1,6 +1,8 @@
 /*
-	Realiza un programa que proporcione el desglose de billetes y monedas de una cantidad entera de euros.
-	Recuerda que hay billetes de 500, 200, 100, 50, 20, 10 y 5 euros; y monedas de 2 y 1 euro.
+	Realiza un programa que proporcione el desglose de billetes
+	y monedas de una cantidad entera de euros.
+	Recuerda que hay billetes de 500, 200, 100, 50, 20, 10 y 5 euros;
+	y monedas de 2 y 1 euro.
 */
 
 #include<iostream>
@@ -12,18 +14,18 @@ int main(){
 
 	cout<< "Ingrese el monto en euros:\n";
 	cin >> monto;
-	b_500 = monto/500;
-	b_200 = (monto%500) / 200;
-	b_100 = ((monto%500) % 200) / 100;
-	b_50 = (((monto%500) %200)%100) / 50;
-	b_20 = ((((monto%500) % 200)%100)%50) / 20;
-	b_10 = (((((monto%500) % 200)%100)%50)%20) / 10;
-	b_5 = ((((((monto%500) % 200)%100)%50)%20)%10) / 5;
-	m_2 = (((((((monto%500) % 200)%100)%50)%20)%10)%5) / 2;
-	m_1 = ((((((((monto%500) % 200)%100)%50)%20)%10)%5)%2) / 1;
 
-	cout<<"Puede desglosar el momto en : \n"
-	;
+	b_500 = monto / 500;
+	b_200 = (monto%500) / 200;
+	b_100 = ( (monto%500) % 200) / 100;
+	b_50 = ( ( (monto%500) % 200) % 100) / 50;
+	b_20 = ( ( ( (monto%500) % 200) % 100) % 50) / 20;
+	b_10 = ( ( ( ( (monto%500) % 200) % 100) % 50) % 20) / 10;
+	b_5 = ( ( ( ( ( (monto%500) % 200) % 100) % 50) % 20) % 10) / 5;
+	m_2 = ( ( ( ( ( ( (monto%500) % 200) % 100) % 50) % 20) % 10) % 5) / 2;
+	m_1 = ( ( ( ( ( ( ( (monto%500) % 200) %100) % 50) % 20) % 10) % 5) % 2) / 1;
+
+	cout<<"Puede desglosar el momto en : \n";
 	cout<<"\n Billetes de 500 euros:\n" << b_500;	
 	cout<<"\n Billetes de 200 euros:\n" << b_200;
 	cout<<"\n Billetes de 100 euros:\n" << b_100;

@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+¡Bienvenido al Tutor de Geometría!
+Las figuras disponibles son:
+a. Cuadrado
+b. Triángulo
+c. Círculo
+
+Elija la figura para hallar su área: a
+Ingrese el lado del cuadrado: \PYG{l+m}{8}
+¡Gracias vuelva pronto!
+\end{Verbatim}

@@ -1,8 +1,9 @@
 /*
-    Determinar el salario neto de un trabajador que trabajó 36 horas, con un pago por hora de S/50.00 soles y la tasa de impuesto del 13%.
+    Determinar el salario neto de un trabajador que trabajó 36 horas,
+    con un pago por hora de S/50.00 soles y la tasa de impuesto del 13%.
 */
 #include <iostream>
-using namespace std;
+using namespace std;    
 
 int main(){
 

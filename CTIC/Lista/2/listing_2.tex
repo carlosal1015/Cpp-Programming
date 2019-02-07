@@ -1,0 +1,210 @@
+% !TeX document-id = {1009e7ce-5d51-4851-b71b-515f3f53617f}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass[spanish,addpoints,answers,a4paper]{exam}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{libertine}
+\usepackage[tmargin=2cm,rmargin=2cm,lmargin=2cm]{geometry}
+\usepackage{amsmath,bm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{siunitx}
+\sisetup{
+	group-four-digits = true,
+	group-separator = {,}
+}
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\graphicspath{{../../../images/}}
+\pagestyle{plain}
+
+\usepackage{minted}
+\usepackage{hyperref}
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución}\par\noindent}
+\renewcommand\listingscaption{Listado}
+\newcommand{\unmarkedfntext}[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+\spanishdatedel
+\decimalpoint
+
+\def\LOGOUNI{%
+	\begin{picture}(0,0)\unitlength=1cm
+	\put (-13.5,-2.5) {\includegraphics[width=2.8cm]{logouni}}
+	\end{picture}
+}
+
+\def\LOGOCTIC{%
+	\begin{picture}(0,0)\unitlength=1cm
+	\put (-8,-1.2) {\includegraphics[height=1cm]{logocticblack}}
+	\end{picture}
+}
+
+\newcommand{\mychar}{%
+	\begingroup\normalfont
+	\includegraphics[height=\fontcharht\font`\B]{Octocat.png}%
+	\endgroup
+}
+
+\begin{document}
+
+\begin{center}
+	\sffamily\bfseries\scshape
+	{\Large UNIVERSIDAD NACIONAL DE INGENIERÍA}\LOGOUNI\\
+	Centro de Tecnologías de la Información y Comunicaciones\LOGOCTIC\\
+\end{center}
+
+\vspace{.8cm}
+
+\begin{center}\sffamily\bfseries\large
+	Programación en \texttt{C++} \\
+	TEMA $\bm{1}$: Estructuras de control \texttt{if}, \texttt{else} y \texttt{switch}.
+\end{center}
+
+\vspace{.5cm}
+\noindent
+\makebox[\textwidth]{Nombres y apellidos:\enspace\hrulefill}
+\vspace{0.2in}
+\makebox[\textwidth]{Nombres y apellidos del instructor:\enspace MSc. Víctor Melchor Espinoza.\hfill}
+
+\section*{Ejercicios de práctica}
+
+\begin{questions}
+
+\question Solicite dos valores diferentes (no validar) e intercambiarlos.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{1.cc}
+		\caption{Programa \texttt{1.cc}.}
+		\label{lst:2.1}
+	\end{listing}
+\end{solution}
+
+\question Leer del teclado dos valores positivos (no validar), sumar dichos valores y determinar si la suma es par o impar.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{2.cc}
+		\caption{Programa \texttt{2.cc}.}
+		\label{lst:2.2}
+	\end{listing}
+\end{solution}
+
+\question Calcular el promedio de tres calificaciones de un alumno. Las dos primeras notas valen $30$\% cada una y la tercera $40$\%. Si el promedio es mayor o igual a $11$ imprimirá aprobado, de lo contrario dirá desaprobado.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{3.cc}
+		\caption{Programa \texttt{3.cc}.}
+		\label{lst:1.3}
+	\end{listing}
+\end{solution}
+
+\question Debido al buen desempeño de una empresa, la gerencia decide aumentar en $15$\% el sueldo de aquellos trabajadores que ganan menos de \SI{1500.00}[S/]{} soles. Determinar el nuevo sueldo de un trabajador.\label{q:4}
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{4.cc}
+		\caption{Programa \texttt{4.cc}.}
+		\label{lst:1.4}
+	\end{listing}
+\end{solution}
+
+\question Debido a que algunos trabajadores recibieron aumento, los demás trabajadores también solicitaron aumento, ante dicho reclamo, la gerencia de la empresa del ejercicio~\ref{q:4} decide incrementar el sueldo de todos sus trabajadores bajo las siguientes condiciones. Si un trabajador gana menos de \SI{1500.00}[S/]{} soles se les aumentará en $15$\%, si gana igual o más de \SI{1500.00}[S/]{} soles se les aumentará en $13$\%. Determinar el nuevo sueldo de un trabajador.\label{q:5}
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{5.cc}
+		\caption{Programa \texttt{5.cc}.}
+		\label{lst:1.5}
+	\end{listing}
+\end{solution}
+
+\question Ante la proximidad del pago de los impuestos, el gerente de la empresa del ejercicio~\ref{q:5} decide modificar el algoritmo que calcula el sueldo de un trabajador incorporando el descuento de ley a cada trabajador que es el equivalente al $10$\% del sueldo bruto. Imprimir el sueldo bruto, el sueldo neto y el monto del descuento.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{6.cc}
+		\caption{Programa \texttt{6.cc}.}
+		\label{lst:1.6}
+	\end{listing}
+\end{solution}
+
+\question Una empresa quiere hacer una compra de varias piezas de la misma clase a una fábrica de refacciones. La empresa, dependiendo del monto total de la compra, decidirá qué hacer para pagar al fabricante.
+
+\begin{parts}
+	\part Si el monto total de la compra excede de \SI{500000.00}[S/]{} soles, la empresa tendrá la capacidad de invertir de su propio dinero un $55$\% del monto de la compra, pedir prestado al banco un $30$\% y el resto lo pagará solicitando un crédito al fabricante.
+	\part Si el monto total de la compra no excede de \SI{500000.00}[S/]{} soles, la empresa tendrá la capacidad de invertir de su propio dinero un $70$\% y el restante $30$\% lo pagará solicitando crédito al fabricante.
+\end{parts}
+
+El fabricante cobra por concepto de intereses un $20$\% sobre la cantidad que se le pague a crédito.
+
+Imprimir el monto que invertirá, el monto del préstamo al banco, el monto del crédito al fabricante y el interés del crédito.
+
+\begin{solution}
+		\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{7.cc}
+		\caption{Programa \texttt{7.cc}.}
+		\label{lst:1.7}
+	\end{listing}
+\end{solution}
+
+\end{questions}
+
+\section*{Ejercicios obligatorios}
+
+\begin{questions}
+
+\question Elabore un programa que calcule el área de una de las figuras geométricas: {\itshape cuadrado, triángulo o un círculo}. El programa debe de mostrar un menú con las tres opciones. Luego debe de solicitar al usuario que escoja una de las opciones. Una vez elegida la opción, debe de solicitar el ingreso de los datos para hallar el área de la figura escogida. Si se elige un cuadrado bastará que se ingrese un lado, si es triángulo se debe ingresar la base y la altura, y por último si es círculo se debe ingresar el radio. En caso que el usuario ingrese un dato incorrecto, el programa debe de terminar mostrando un mensaje de error.
+
+\begin{minted}{bash}
+¡Bienvenido al Tutor de Geometría!
+Las figuras disponibles son:
+a. Cuadrado
+b. Triángulo
+c. Círculo
+
+Elija la figura para hallar su área: a
+Ingrese el lado del cuadrado: 8
+¡Gracias vuelva pronto!
+\end{minted}
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{1.cpp}
+		\caption{Programa \texttt{1.cpp}.}
+		\label{lst:1.9}
+\end{listing}
+\end{solution}
+
+\question Diseñe un programa que reciba un número arábigo de dos cifras y retorne su número romano equivalente.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{2.cpp}
+		\caption{Programa \texttt{2.cpp}.}
+		\label{lst:1.10}
+\end{listing}
+\end{solution}
+
+\end{questions}
+
+\begin{flushright}\bfseries
+Centro de Tecnologías de la Información y Comunicaciones (CTIC)\\[2mm]
+\today\unmarkedfntext{Código disponible en \href{https://github.com/carlosal1015/Cpp-Programming}{\mychar{}}.}
+\end{flushright}
+
+\end{document}

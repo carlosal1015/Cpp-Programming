@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()\PYGZob{}}
+
+	\PYG{k+kt}{float} \PYG{n}{nota1}\PYG{p}{,} \PYG{n}{nota2}\PYG{p}{,} \PYG{n}{nota3}\PYG{p}{,} \PYG{n}{promedio}\PYG{p}{;}
+	\PYG{k+kt}{bool} \PYG{n}{validar}\PYG{p}{;}
+
+	\PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Ingresa las tres notas\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+	\PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{nota1} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{nota2} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{nota3}\PYG{p}{;}
+
+	\PYG{n}{validar} \PYG{o}{=} \PYG{p}{(}\PYG{n}{nota1} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{nota1} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{20}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{p}{(}\PYG{n}{nota2} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{nota2} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{20}\PYG{p}{)}
+		 \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{p}{(}\PYG{n}{nota3} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{nota3} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{20}\PYG{p}{);}
+
+	\PYG{k}{if} \PYG{p}{(}\PYG{n}{validar}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+		\PYG{n}{promedio} \PYG{o}{=} \PYG{p}{(}\PYG{n}{nota1} \PYG{o}{+} \PYG{n}{nota2} \PYG{o}{+} \PYG{n}{nota3}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{;}
+		\PYG{k}{if} \PYG{p}{(}\PYG{n}{promedio} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{11}\PYG{p}{)}
+			\PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Aprobado.\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+		\PYG{k}{else}
+			\PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Desaprobado\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{k}{else}
+		\PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Ha ingresado incorrectamente alguna nota.\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+
+	\PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

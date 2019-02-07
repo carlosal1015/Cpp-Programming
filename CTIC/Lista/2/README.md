@@ -1,17 +1,3 @@
-#include <iostream>
-using namespace std;
-int main(){
-
-	int number;
-
-	cout << "Ingrese un nümero arábigo de dos cifras" << endl;
-	cin >> number;
-
-
-
-	return 0;
-}
-
 /*
 	Capitolo 2
 	20 ejercicios de teoria (20/60)

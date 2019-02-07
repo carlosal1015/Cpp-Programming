@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/*}
+\PYG{c+cm}{	Realiza un programa que proporcione el desglose de billetes}
+\PYG{c+cm}{	y monedas de una cantidad entera de euros.}
+\PYG{c+cm}{	Recuerda que hay billetes de 500, 200, 100, 50, 20, 10 y 5 euros;}
+\PYG{c+cm}{	y monedas de 2 y 1 euro.}
+\PYG{c+cm}{*/}
+
+\PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()\PYGZob{}}
+
+	\PYG{k+kt}{int} \PYG{n}{monto}\PYG{p}{,} \PYG{n}{b\PYGZus{}500}\PYG{p}{,} \PYG{n}{b\PYGZus{}200}\PYG{p}{,} \PYG{n}{b\PYGZus{}100}\PYG{p}{,} \PYG{n}{b\PYGZus{}50}\PYG{p}{,} \PYG{n}{b\PYGZus{}20}\PYG{p}{,} \PYG{n}{b\PYGZus{}10}\PYG{p}{,} \PYG{n}{b\PYGZus{}5}\PYG{p}{,} \PYG{n}{m\PYGZus{}2}\PYG{p}{,} \PYG{n}{m\PYGZus{}1}\PYG{p}{;}
+
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Ingrese el monto en euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+	\PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{monto}\PYG{p}{;}
+
+	\PYG{n}{b\PYGZus{}500} \PYG{o}{=} \PYG{n}{monto} \PYG{o}{/} \PYG{l+m+mi}{500}\PYG{p}{;}
+	\PYG{n}{b\PYGZus{}200} \PYG{o}{=} \PYG{p}{(}\PYG{n}{monto}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{200}\PYG{p}{;}
+	\PYG{n}{b\PYGZus{}100} \PYG{o}{=} \PYG{p}{(} \PYG{p}{(}\PYG{n}{monto}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{100}\PYG{p}{;}
+	\PYG{n}{b\PYGZus{}50} \PYG{o}{=} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(}\PYG{n}{monto}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{100}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{50}\PYG{p}{;}
+	\PYG{n}{b\PYGZus{}20} \PYG{o}{=} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(}\PYG{n}{monto}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{100}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{20}\PYG{p}{;}
+	\PYG{n}{b\PYGZus{}10} \PYG{o}{=} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(}\PYG{n}{monto}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{100}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{20}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{10}\PYG{p}{;}
+	\PYG{n}{b\PYGZus{}5} \PYG{o}{=} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(}\PYG{n}{monto}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{100}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{20}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{10}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{5}\PYG{p}{;}
+	\PYG{n}{m\PYGZus{}2} \PYG{o}{=} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(}\PYG{n}{monto}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{100}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{20}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{10}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{5}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{;}
+	\PYG{n}{m\PYGZus{}1} \PYG{o}{=} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(} \PYG{p}{(}\PYG{n}{monto}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{)} \PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{100}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{20}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{10}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{5}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{1}\PYG{p}{;}
+
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}Puede desglosar el momto en : }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Billetes de 500 euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{b\PYGZus{}500}\PYG{p}{;}	
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Billetes de 200 euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{b\PYGZus{}200}\PYG{p}{;}
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Billetes de 100 euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{b\PYGZus{}100}\PYG{p}{;}
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Billetes de 50 euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{b\PYGZus{}50}\PYG{p}{;}
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Billetes de 20 euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{b\PYGZus{}20}\PYG{p}{;}
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Billetes de 10 euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{b\PYGZus{}10}\PYG{p}{;}
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Monedas de 5 euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{b\PYGZus{}5}\PYG{p}{;}
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Monedas de 2 euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{m\PYGZus{}2}\PYG{p}{;}
+	\PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{ Monedass de 1 euros:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{m\PYGZus{}1}\PYG{p}{;}
+
+	\PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

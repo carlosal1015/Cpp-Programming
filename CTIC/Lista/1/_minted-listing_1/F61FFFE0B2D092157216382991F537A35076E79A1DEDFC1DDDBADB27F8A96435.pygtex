@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Bienvenido al programa que calcula la Nota Final del curso de Programación.
+Ingrese la nota del Examen N°1: \PYG{l+m}{10}
+Ingrese la nota del Examen N°2: \PYG{l+m}{08}
+Ingrese la nota del Examen N°3: \PYG{l+m}{09}
+Ingrese la nota del Examen N°4: \PYG{l+m}{09}
+Ingrese el promedio de Laboratorios: \PYG{l+m}{10}
+Ingrese el promedio de Tareas: \PYG{l+m}{14}
+Ingrese la nota del Proyecto Final: \PYG{l+m}{14}
+
+Reporte de notas:
+Nota del Examen N°1: \PYG{l+m}{10}
+Nota del Examen N°2: \PYG{l+m}{08}
+Nota del Examen N°3: \PYG{l+m}{09}
+Nota del Examen N°4: \PYG{l+m}{09}
+Promedio de Exámenes \PYG{o}{(}PE\PYG{o}{)}: \PYG{l+m}{09}
+Promedio de Laboratorios \PYG{o}{(}PL\PYG{o}{)}: \PYG{l+m}{14}
+Promedio de Tareas \PYG{o}{(}PT\PYG{o}{)}: \PYG{l+m}{14}
+Nota del Proyecto Final \PYG{o}{(}PF\PYG{o}{)}: \PYG{l+m}{14}
+La fórmula de la Nota Final es: \PYG{n+nv}{NF}\PYG{o}{=}\PYG{l+m}{0}.60PE+0.15P.L+0.15PT+0.10PR
+Vuestra Nota Final es: \PYG{l+m}{11}
+\end{Verbatim}

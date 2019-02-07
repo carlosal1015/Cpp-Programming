@@ -1,0 +1,245 @@
+% !TeX document-id = {1009e7ce-5d51-4851-b71b-515f3f53617f}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass[spanish,addpoints,answers,a4paper]{exam}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{libertine}
+\usepackage[tmargin=2cm,rmargin=2cm,lmargin=2cm]{geometry}
+\usepackage{amsmath,bm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{siunitx}
+\sisetup{
+	group-four-digits = true,
+	group-separator = {,}
+}
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\graphicspath{{../../../images/}}
+\pagestyle{plain}
+
+\usepackage{minted}
+\usepackage{hyperref}
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución}\par\noindent}
+\renewcommand\listingscaption{Listado}
+\newcommand{\unmarkedfntext}[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+\spanishdatedel
+\decimalpoint
+
+\def\LOGOUNI{%
+	\begin{picture}(0,0)\unitlength=1cm
+	\put (-13.5,-2.5) {\includegraphics[width=2.8cm]{logouni}}
+	\end{picture}
+}
+
+\def\LOGOCTIC{%
+	\begin{picture}(0,0)\unitlength=1cm
+	\put (-8,-1.2) {\includegraphics[height=1cm]{logocticblack}}
+	\end{picture}
+}
+
+\newcommand{\mychar}{%
+	\begingroup\normalfont
+	\includegraphics[height=\fontcharht\font`\B]{Octocat.png}%
+	\endgroup
+}
+
+\begin{document}
+
+\begin{center}
+	\sffamily\bfseries\scshape
+	{\Large UNIVERSIDAD NACIONAL DE INGENIERÍA}\LOGOUNI\\
+	Centro de Tecnologías de la Información y Comunicaciones\LOGOCTIC\\
+\end{center}
+
+\vspace{.8cm}
+
+\begin{center}\sffamily\bfseries\large
+	Programación en \texttt{C++} \\
+	TEMA $\bm{1}$: Entrada y salida de datos
+\end{center}
+
+\vspace{.5cm}
+\noindent
+\makebox[\textwidth]{Nombres y apellidos:\enspace\hrulefill}
+\vspace{0.2in}
+\makebox[\textwidth]{Nombres y apellidos del instructor:\enspace MSc. Víctor Melchor Espinoza.\hfill}
+
+\section*{Ejercicios de práctica}
+
+\begin{questions}
+
+\question Elabore un programa que envíe a pantalla el saludo ``\textbf{Hola mundo}''.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{1.cc}
+		\caption{Programa \texttt{1.cc}.}
+		\label{lst:1.1}
+	\end{listing}
+\end{solution}
+
+\question Presente un ejemplo del uso de los operadores de asignación y aritméticos.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{2.cc}
+		\caption{Programa \texttt{2.cc}.}
+		\label{lst:1.2}
+	\end{listing}
+\end{solution}
+
+\question Determinar el salario neto de un trabajador que trabajó $36$ horas, con un pago por hora de \SI{50.00}[S/]{} soles y la tasa del impuesto del $13$\%.\label{q:3}
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{3.cc}
+		\caption{Programa \texttt{3.cc}.}
+		\label{lst:1.3}
+	\end{listing}
+\end{solution}
+
+\question Resolver el ejercicio~\ref{q:3} para el caso general, conociendo el número de horas trabajadas, pago por hora y la tasa de impuesto.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{4.cc}
+		\caption{Programa \texttt{4.cc}.}
+		\label{lst:1.4}
+	\end{listing}
+\end{solution}
+
+\question Escriba un programa que pida dos números enteros que representen al dividendo y divisor. Obtenga el cociente y el resto.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{5.cc}
+		\caption{Programa \texttt{5.cc}.}
+		\label{lst:1.5}
+	\end{listing}
+\end{solution}
+
+\question Dado un número de tres cifras, hallar la suma de sus cifras.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{6.cc}
+		\caption{Programa \texttt{6.cc}.}
+		\label{lst:1.6}
+	\end{listing}
+\end{solution}
+
+\question Pida un valor del radio y obtenga el área del círculo.
+
+\begin{solution}
+		\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{7.cc}
+		\caption{Programa \texttt{7.cc}.}
+		\label{lst:1.7}
+	\end{listing}
+\end{solution}
+
+\question Elabore un programa que pida un monto en dólares y obtenga el monto equivalente en soles. Defina el tipo de cambio como una constante.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{8.cc}
+		\caption{Programa \texttt{8.cc}.}
+		\label{lst:1.8}
+	\end{listing}
+\end{solution}
+
+\end{questions}
+
+\section*{Ejercicios obligatorios}
+
+\begin{questions}
+
+\question En el curso de \textbf{Programación}, el promedio final se compone de los siguientes porcentajes:
+
+\begin{itemize}[--]
+	\item $60$\% del promedio de cuatro exámenes (PE).
+	\item $15$\% del promedio de laboratorios (PL)
+	\item $15$\% del promedio de tareas (PT)
+	\item $10$\% de la nota del proyecto final (PR)
+\end{itemize}
+
+Desarrolle un programa en el que solicite las notas de los cuatro exámenes, del promedio de laboratorios, del promedio de tareas y la nota del proyecto. En base a esto, el programa determinará la nota final del alumno.
+
+\textbf{Ejemplo de salida:}
+\begin{minted}{bash}
+Bienvenido al programa que calcula la Nota Final del curso de Programación.
+Ingrese la nota del Examen N°1: 10
+Ingrese la nota del Examen N°2: 08
+Ingrese la nota del Examen N°3: 09
+Ingrese la nota del Examen N°4: 09
+Ingrese el promedio de Laboratorios: 10
+Ingrese el promedio de Tareas: 14
+Ingrese la nota del Proyecto Final: 14
+
+Reporte de notas:
+Nota del Examen N°1: 10
+Nota del Examen N°2: 08
+Nota del Examen N°3: 09
+Nota del Examen N°4: 09
+Promedio de Exámenes (PE): 09
+Promedio de Laboratorios (PL): 14
+Promedio de Tareas (PT): 14
+Nota del Proyecto Final (PF): 14
+La fórmula de la Nota Final es: NF=0.60PE+0.15P.L+0.15PT+0.10PR
+Vuestra Nota Final es: 11
+\end{minted}
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{1.cpp}
+		\caption{Programa \texttt{1.cpp}.}
+		\label{lst:1.9}
+\end{listing}
+\end{solution}
+
+\question Realiza un programa que proporcione el desglose en billetes y monedas de una cantidad entera de euros. Recuerda que hay billetes de $500$, $200$, $100$, $50$, $20$, $10$ y $5$ euros, también hay monedas de $2$ y $1$ euro.
+
+\begin{minted}{bash}
+Ingrese el importe total (en euros) = 977
+
+1 billete de 500 euros
+2 billetes de 200 euros
+1 billete de 50 euros
+1 billete de 20 euros
+0 billete de 10 euros
+1 moneda de 5 euros
+2 monedas de 1 euro
+\end{minted}
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{2.cpp}
+		\caption{Programa \texttt{2.cpp}.}
+		\label{lst:1.10}
+\end{listing}
+\end{solution}
+
+\end{questions}
+
+\begin{flushright}\bfseries
+Centro de Tecnologías de la Información y Comunicaciones (CTIC)\\[2mm]
+\today\unmarkedfntext{Código disponible en \href{https://github.com/carlosal1015/Cpp-Programming}{\mychar{}}.}
+\end{flushright}
+
+\end{document}

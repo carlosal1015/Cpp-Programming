@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/*}
+\PYG{c+cm}{    Dada un número de tres cifras, hallar la suma de sus cifras.}
+\PYG{c+cm}{*/}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()\PYGZob{}}
+
+	\PYG{k+kt}{int} \PYG{n}{number}\PYG{p}{,} \PYG{n}{unite}\PYG{p}{,} \PYG{n}{decene}\PYG{p}{,} \PYG{n}{centene}\PYG{p}{,} \PYG{n}{sum}\PYG{p}{;}
+
+	\PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Ingrese un número de tres cifras.\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+	\PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{number}\PYG{p}{;}
+
+	\PYG{n}{unite} \PYG{o}{=} \PYG{n}{number} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{10}\PYG{p}{;}
+	\PYG{n}{decene} \PYG{o}{=} \PYG{p}{(}\PYG{n}{number} \PYG{o}{/} \PYG{l+m+mi}{10}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{10}\PYG{p}{;}
+	\PYG{n}{centene} \PYG{o}{=} \PYG{p}{(}\PYG{n}{number} \PYG{o}{/} \PYG{l+m+mi}{10}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{10}\PYG{p}{;}
+	\PYG{n}{sum} \PYG{o}{=} \PYG{n}{unite} \PYG{o}{+} \PYG{n}{decene} \PYG{o}{+} \PYG{n}{centene}\PYG{p}{;}
+
+	\PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}La suma de las cifras de \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{number} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{} es \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{sum} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}.\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+
+	\PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

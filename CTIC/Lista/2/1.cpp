@@ -21,7 +21,7 @@ int main(){
 			condition = side > 0;
 
 			if (condition) {
-				cout << "El área del cuadrado es " << side * side << endl;
+				cout << "El área del cuadrado es " << side * side << " u2." << endl;
 				cout << "¡Gracias vuelva pronto!" << endl;
 			}
 			else{
@@ -35,21 +35,22 @@ int main(){
 			float base, height;
 			cout << "Ingrese la base del triángulo:" << endl;
 			cin >> base;
-			if (base < 0)
+
+			if (base < 0){
 				cout << "¡Error! Los valores deben ser positivos." << endl; break;
+				cout << "Ingrese la altura del triángulo:" << endl;
+				cin >> height;
+			}
+			
 			cout << "Ingrese la altura del triángulo:" << endl;
 			cin >> height;
+
 			if (height < 0)
 				cout << "¡Error! Los valores deben ser positivos." << endl; break;
-/*
-	TODO: Pasar en un switch al default.
-	goto default switch break
-*?
-			if (condition) {
-				cout << "El área del triángulo es " << 0.5 * base * height <<endl;
+
+				cout << "El área del triángulo es " << 0.5 * base * height << " u2." << endl;
 				cout << "¡Gracias vuelva pronto!" << endl;
-			}
-			break;
+				break;
 
 		case 'c':
 		case 'C':
@@ -59,7 +60,7 @@ int main(){
 
 			condition = radius > 0;
 			if (condition) {
-				cout << "El área del círculo es " << PI * radius * radius <<endl;
+				cout << "El área del círculo es " << PI * radius * radius << " u2." << endl;
 				cout << "¡Gracias vuelva pronto!" << endl;
 			}
 			else{
@@ -76,3 +77,8 @@ int main(){
 
 	return 0;
 }
+
+/*
+	TODO: Pasar en un switch al default.
+	goto default switch break
+*/
