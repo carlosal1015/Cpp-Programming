@@ -1,0 +1,21 @@
+// This program has variables of several of the integer types
+#include <iostream>
+using namespace std;
+
+int main(){
+
+	int checking;
+	unsigned int miles;
+	long days;
+
+	checking = 70;
+	miles = 4276;
+	days = 190000;
+
+	cout << "We have made a long journay of " << miles << " miles.";
+	cout << "\nOur checking account balance is " << checking;
+	cout << "\nAbout " << days << " days ago Columbus ";
+	cout << "stood on this spot.\n";
+
+	return 0;
+}
