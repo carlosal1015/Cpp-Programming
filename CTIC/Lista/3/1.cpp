@@ -4,23 +4,21 @@ using namespace std;
 
 int main (){
 
-	const float MAXIMO = numeric_limits<float>::max();
-	const float MINIMO = numeric_limits<float>::min();
-
 	/*
 	*************************************
-	*	Declarando variables							*
+	*	Declarando variables.							*
 	*************************************
 	*/
 
-	int sizeOfNumbers;										// Input
-	float number,													// Input
-				cumulative = 0,									// Middle
-				average, maxNumber, minNumber; 	// Output
+	int sizeOfNumbers;															// Input
+	float number, cumulative = 0,										// Middle
+				minNumber = numeric_limits<float>::max(),	// cout << minNumber << endl;
+				maxNumber = numeric_limits<float>::min(),	// cout << maxNumber << endl;
+				average;																	// Output
 
 	/*
 	*************************************
-	*	Validando entrada natural					*
+	*	Validando entrada natural.				*
 	*************************************
 	*/
 
@@ -31,7 +29,7 @@ int main (){
 
 	/*
 	*************************************
-	*	Validando entrada natural					*
+	*	Mayor, menor y promedio.					*
 	*************************************
 	*/
 
@@ -39,27 +37,22 @@ int main (){
 		cout << "Ingrese el número " << i << ":" << endl;
 		cin >> number;
 
-		maxNumber = MINIMO;
-		while(number > maxNumber){
-			maxNumber = number;
+		while(number > maxNumber){//Poner un if
+			maxNumber = number; break;
 		}
 
-		minNumber = MAXIMO;
-		while(number < minNumber){
-			minNumber = number;
+		while(number < minNumber){//Poner un if
+			minNumber = number; break;
 		}
-		
-		cumulative += number;												//Equivalente a umulative = cumulative + number;
+
+		cumulative += number;													//Equivalente a cumulative = cumulative + number;
 	}
 
-	average = (float) cumulative / sizeOfNumbers;	// Conversión a flotante.
+	average = (float) cumulative / sizeOfNumbers;		// Conversión a flotante.
 
 	cout << "El promedio de los " << sizeOfNumbers << " números es " << average << "." << endl;
 	cout << "El mayor de de los " << sizeOfNumbers << " números es " << maxNumber << "." << endl;
 	cout << "El menor de de los " << sizeOfNumbers << " números es " << minNumber << "." << endl;
-	/*
-	cout << MAXIMO << endl;
-	cout << MINIMO << endl;
-	*/
+
 	return 0;
 }
