@@ -198,7 +198,7 @@ Ejemplo 2-14 y 2-19 adelante ilustran cómo el dato es manipulado en variables.
 
 Como procedimos a lo largo del capítulo, explicaremos el significado de las partes restantes identificadas en la Figura 2-1.
 
-# Las bases de un programa en C++
+# Lo básico de un programa en C++
 
 En la sección anterior, dimos un ejemplo de un programa en C++ y también identificamos ciertas partes del programa. En general, un programa en C++ es una colección de uno o más subprogramas, llamadas funciones. Toscamente hablando, un **subprograma** o una **función** es una colección de declaraciones, y cuando este es activada, o ejectuada, esto cumple algo. Algunas funciones, llamadas **predefinidas** o funciones **estándar**, ya están escritas y son provistas como parte del sistema. Pero para cumplir muchas tareas, los programadores deben aprender a escribir sus propias funciones
 
