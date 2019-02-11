@@ -2,6 +2,7 @@
 	path = Malik2ndEdition
 	url = https://github.com/ianschafer/Malik
 	branch = master
+	ignore = dirty
 [submodule "Malik5thEdition"]
 	path = Malik5thEdition
 	url = https://github.com/mhoad/cpp_book
