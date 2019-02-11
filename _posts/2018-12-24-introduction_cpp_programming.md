@@ -580,3 +580,56 @@ pag. Todos los errores lógicos, como la división por 0, son informados por el 
 q. En el diseño orientado a objetos (OOD), un programa es una colección de objetos que interactúan. (10)
 r. Un objeto consiste en datos y operaciones en esos datos. (10)
 s. ISO significa Organización Internacional de Normalización. (11)
+
+
+1. Marke las siguientes declaraciones como verdadero o falso.
+	a. El dispositivo de cálculo llamado la Pascalina podría calcular sumas de hasta ocho cifras. (True)
+	b. Todos los programas deben ser cargados en el CPU antes de que ellos pueden ser ejecutados y todos los datos deben ser cargados en la memoria principal antes que puedan ser manipulados. (True)
+	c. La memoria principal is suceencia ordenada de celdas y cada celda tiene una localización aleatoria en la memoria principal. (False)
+	d. El programa que carga primero cuando enciende su computadora es llamado sistema operativo. (True)
+	e. Las señales analógicas representan información con una secuencia de ceros y unos. (True)
+	f. El lenguaje máquina es una secuencia de ceros y unos. (True)
+	g. El código binario es una secuencia de ceros y unos. (True)
+	h. Una secuencia de ocho bits es llamado un byte. (True)
+	i. Un GB es $2^20$ MB. (False)
+	j, En ASCII, `A` es el carácter en la posición 65. (True)
+	k. El sistema numérico usado por una computadora es la base dos. (True)
+	l. Un ensamblador traduce las instrucciones del lenguaje ensamblador en lenguaje máquina. (True)
+	m. Un compilador traduce el programa fuente en un programa objeto.
+	n. En un programa C++, las declaraciones que empiezan con el símbolo `#` son llamadas directivas del procesador. (True)
+	o. Un programa objeto es la versión del lenguaje máquina de un programa de un lenguaje en alto nivel. (True)
+	p. Todos los errores lógicos, tales como la división por cero, son reportados por el compilador. (True)
+	q. En el diseño orientado a objetos (ODD), un programa es una colección de objetos interactuando. (True)
+	r. Un objeto consiste de datos y operaciones en esos datos. (True)
+	s. ISO significa International Organization for Standardization. (True)
+2. ¿Cuáles son los componentes del hardware que realizan operaciones aritméticas y lógicas?
+3. ¿CUál sistema numérico es utilizado por una computadora?
+4. ¿Qué es un programa objeto?
+5. ¿Qué es el enlazamiento?
+6. ¿Which program loads the executable code from the main memoory into the CPU for execution?
+7. En un programa C++, con qué símbolos inicia las directivas del preprocesador?
+8. En un programa C++, cuál programa procesa las declaraciones que empiezan con el símbolo `#`?
+9. ¿Qué es la programación?
+10. ¿Qué es un algoritmo?
+11. Describe los pasos requeridos para el proceso de resolución de problemas.
+12. Describe los pasos requeridos en la fase de análisis de la programación
+13. Diseña un algoritmo que calcule el peso promedio de cuatro puntas de prueba. Los cuatro puntajes de pruebas y sus respectivos pesos son datos en el siguiente formato:
+```
+testScore wieghtTestScore
+...
+```
+14. Diseñe un algoritmo para convertir el cambio dado en cuartos, monedas de diez centavos, centavos y centavos en centavos.
+15. Dado el radio, en pulgadas, y el precio de una pizza, diseñe un algoritmo para encontrar el precio de la pizza por pulgada cuadrada.
+16. El costo de un automóvil por parte del concesionario es el 85% del precio indicado. el concesionario aceptaría cualquier oferta que sea de al menos $\$500$ sobre el costo del concesionario. Diseñe un algoritmo que solicite al usuario que ingrese el precio de lista del automóvil e imprima la cantidad mínima que el concesionario aceptaría para el automóvil.
+17. El volumen de una esfera es $(4.0/3.0)\pi r^3$ y el área superficial es $4.0\pir^2$, donde $r$ es el radio de la esfera. Dado el radio, diseñe un algoritmo que calcule el volumen y área superficial de la esfera. También usando las declaraciones C++ provistas por el ejemplo 1-1, escriba una declaración C++ correspondiente a cada declaración en el algoritmo. (Debe asumir que $\pi=3.141592$.)
+18. Tom y Jerry abrieron un nuevo servicio de jardinería. Ellos proveen tres tipos de servicios: cortar, fertilizar y plantar árboles. el costo de cortar es $$\35.00$ por 5000 yardas cuadradas, fertilizar es $$\30.00$ por aplicación, y plantar un árbol es $$\50.00$. Escriba un algoritmo que indique al usuario ingresar el área del jardín, el número de aplicaciones fertilizantes, y el número de árboles que se plantarán. El algoritmo, entonces determina el monto de facturación. (Asuma que el usuario ordena todos los tres servicios.)
+19. Jason típicamente usa el internet para comprar varios artículos. Si el costo total de los artículos ordenadores, en la primera vez, es $$\200$ o superior, entonces el envío y manejo es gratis; caso contrario, el envío y manejo es $\10$ por artículo. Diseñe un algoritmo que pida a Jason que ingrese el número de artículos ordenados y el precio de cada artículo. El algoritmo luego genera el monto total de la facturación. su algoritmo debe usar un bucle (estructura de repetición) para obtener el precio de cada artículo. (Para simplificar, puede suponer que Jason no ordena más de cinco artículos a la vez.)
+20. Un cajero automático permite a un cliente retirar un máximo de $\$500$ por día. Si un cliente retira más de $\$300$, el cargo por servicio es del 4% del monto de más de $\$300$. Si el cliente no tiene suficiente dinero en la cuenta, el cajero automático informa al cliente sobre los fondos insuficientes y le da la opción de retirar el dinero por un cargo por servicio de $\$25.00$. Si no hay dinero en la cuenta o si el saldo de la cuenta es negativo, el cajero automático no le permite al cliente retirar dinero. Si la cantidad a retirar es mayor a $\$500$, el cajero automático informa al cliente sobre la cantidad máxima que se puede retirar. Escriba un algoritmo que permite al cliente ingresar la cantidad a retirar. el algoritmo luego verifica el monto total en la cuenta, dispensa el dinero al cliente y carga a la cuenta por el monto retirado y los cargos del servicio, si corresponde.
+21. Diseñe un algoritmo que calcule las raíces reales de una ecuación cuadrática de la forma $ax^2+bx+c=0$, donde $a$, $b$ y $c$ son números reales, y $a$ es distinto de cero.
+22. Un estudiante invierte la mayoría de su fin de semana jugando y mirando deportes, por lo tanto, cansándolo y llevándolo a quedarse dormido y, a menudo, se pierde su clase de matemáticas de lunes a las 8 AM. Supongamos que la matrícula por semestre es de $\$25000$ y el semestre promedio consta de 15 unidades. Si la clase de matemáticas se reúne tres días a la semana, una hora cada día durante 15 semanas y es un curso de cuatro unidades, ¿cuánto le cuesta al estudiante cada hora de clase de matemáticas? Diseñe un algoritmo que calcule el costo de cada clase de matemáticas.
+23. Se le da una lista de los nombres de los estudiantes y sus calificaciones en los exámenes. Diseñe un algoritmo que haga lo siguiente:
+    a. Calcule los puntajes promedio de las pruebas.
+	b. Determine e imprima los nombres de todos los estudiantes cuyas puntuaciones de prueba están por debajo de la puntuación de prueba promedio.
+	c. Determine el más alto puntaje de prueba.
+	d. Imprima los nombres de todos los estudiantes cuyas puntuaciones de las pruebas son las mismas que las de la puntuación más alta.
+(Cada una de las partes a, b, c y d deben ser resueltas como un subproblema. El algoritmo principal combina las soluciones de los subproblemas.)
