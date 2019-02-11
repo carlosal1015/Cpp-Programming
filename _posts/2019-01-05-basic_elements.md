@@ -1,27 +1,29 @@
 ---
 layout: post
-title: Elementos básicos de C++
-tags: hello-world good-practics 
+title: Basic elements of C++
+tags: data iostream 
 categories: cpp
 eye_catch: https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg
 ---
 
-En este capítulo:
-1. Te harás familiar con los componentes básicos de un programa en C++, incluyendo funciones, símbolos especiales e identificadores.
-2. Explorarás tipos de datos simples
-3. Descubrirás cómo usar las operaciones aritméticas
-4. Examinarás cóom un programa evalúa las expresiones aritméticas
-5. Te harás familiar con el tipo de dato `string`
-6. Aprenderás qué es una declaración de asignación y qué es lo que hace.
-7. Aprenderás sobre la declaración de variables
-8. Descubrirás cómo ingresar los datos en la memoria usando las declaraciones de ingreso
-9. Te harás familiar con el uso de operaciones de incremento y decremento
-10. Examinarás formas de resultados de salida usando declaraciones de salida.
-11. Aprenderás cómo usar las directivas de preprocesador y porqué son necesarios
-12. Aprenderás a depurar errores de sintáxis
-13. Explorarás cómo estructura un programa apropiadamente, incluyendo usando comentarios para documentar un programa.
-14. Te harás familiar con las declaraciones compuestas
-15. Aprenderás cómo escribir un programa en C++
+En este capítulo,
+* Te harás familiar con los componentes básicos de un programa en C++, incluyendo funciones, símbolos especiales e identificadores.
+* Explorarás tipos de datos simples
+* Descubrirás cómo usar las operaciones aritméticas
+* Examinarás cóom un programa evalúa las expresiones aritméticas
+* Te harás familiar con el tipo de dato `string`
+* Aprenderás qué es una declaración de asignación y qué es lo que hace.
+* Aprenderás sobre la declaración de variables
+* Descubrirás cómo ingresar los datos en la memoria usando las declaraciones de ingreso
+* Te harás familiar con el uso de operaciones de incremento y decremento
+* Examinarás formas de resultados de salida usando declaraciones de salida.
+* Aprenderás cómo usar las directivas de preprocesador y porqué son necesarios
+* Aprenderás a depurar errores de sintáxis
+* Explorarás cómo estructura un programa apropiadamente, incluyendo usando comentarios para documentar un programa.
+* Te harás familiar con las declaraciones compuestas
+* Aprenderás cómo escribir un programa en C++
+
+<!--more-->
 
 En este capítulo aprenderás lo básico de C++. Como tu objetivo es aprender el lenguaje de programación C++, dos preguntas surgen naturalmente. Primero, ¿qué es un programa de computadora? Segundo, ¿qué es la programación? Un **programa de computadora**, o un programa, es una secuencia de enunciados cuyo objetivo es cumplir una tarea. La **programación** es un proceso de planificación y creación de un programa. Estas dos definiciones dicen la verdad, pero no toda la verdad, acerca de la programación. Es muy posible que se necesite de un libro completo para dar una definición satisfactoria de la programación. Puede obtener una mayor comprensión de la naturaleza de la programación a partir de una analogía, por lo que pasemos a un tema sobre el que casi todo el mundo tiene algún conocimiento -- cocinar--. Una recta es también un programa, y todos los que tengan alguna experiencia en la cocina puede ponerse de acuerdo sobre lo siguiente:
 1. En general, es más fácil seguir una receta que crear una.

@@ -21,11 +21,38 @@ En este capítulo,
 
 <!--more-->
 
-# Introducción
+Tabla de contenidos
+===
+1. [Introducción](#introduction)
+2. [Un breve resumen de la historia de las computadoras](#history)
+3. [Elementos de un sistema computacional](#elements)
+    1. [Hardware](#hardware)
+    2. [Unidad de procesamiento central y memoria principal](#cpu)
+    3. [Almacenamiento secundario](#secundary)
+    4. [Dispositivos de entrada/salida](#io)
+    5. [Software](#software)
+4. [El lenguaje del ordenador](#language)
+5. [La evolución de los lenguajes de programación](#evolution)
+6. [Procesando un programa en C++](#processing)
+7. [Programando con el análisis del problemas, codificación, ciclo de ejecución](#analysis)
+8. [Ejemplos](#examples)
+   1. [Ejemplo 1-1](#examples1-1)
+   2. [Ejemplo 1-2](#examples1-2)
+   3. [Ejemplo 1-3](#examples1-3)
+   4. [Ejemplo 1-4](#examples1-4)
+   5. [Ejemplo 1-5](#examples1-5)
+9. [Metodologías de programación](#methodology)
+10. [Programación estructurada](#structured)
+11. [Programación orientada a objetos](#poo)
+12. [Norma ANSI/ISO C++](#ansi)
+13. [Repaso rápido](#review)
+14. [Ejercicios](#exercises)
+
+# Introducción <a name="introduction"></a>
 
 Términos tales como "el internet", que fueron desconocidos justo hace 25 años ahora son comunes. Los estudiantes en la escuela elemental "surfean" regularmente el internet y usan computadoras para diseñar e implementar sus projectos de clase. Muchas personas usan el internet para buscar información y para comunicarse con otros. Todo esto es posible por el uso de una varidad de software, también conocido como programas de ordenadores. Sin el software, las computadoras no pueden trabajar. El software es desarrollado por el uso de lenguajes de programación. C++ es uno de los lenguajes de programación, que es muy adecuado para desarollar software que cumplan tareas específicas. El objetivo principal del libro es ayudar que aprendas el lenguaje de programación C++ para escribir programas. Antes que inicies a programar, resulta útil entender algunas de la terminología básica y los diferentes componentes de una computadora. Empezaremos con un resumen de la historia de las computadoras.
 
-# Un breve resumen de la historia de las computadoras
+# Un breve resumen de la historia de las computadoras <a name="history"></a>
 
 * El primer dispositivo conocido para llevar a cabo cálculos fue el ábaco.
 * En 1642, el filósofo francés y matemático Blaise Pascal inventó un dispositivo de cálculo llamado la Pascalina.
@@ -33,15 +60,15 @@ Términos tales como "el internet", que fueron desconocidos justo hace 25 años 
 * En 1819, Joseph Jacquard, un tejedor francés, descubrió que las instrucciones de tejer para sus telares se pueden almacenar en tarjetas con agujeros perforados.
 * A principios y mediados de 1800, Charles Babbage, un matemático inglés, diseñó dos máquinas calculadoras: la diferencia entre la máquina diferencial y la máquina analítica.
 
-# Elementos de un sistema computacional
+# Elementos de un sistema computacional <a name="elements"></a>
 
 Una computadora es un dispositivo electrónico capaz de realizar comandos. Los comandos básicos que una computadora realiza son la entrada (obtener datos), salida (mostrar el resultado), almacenamiento, y realizar operaciones artiméticas y lógicas. Existen dos componentes principales de un sistema informático: hardware y software. En las siguientes secciones, aprenderás un breve resumen de estos componentes. Veamos primero el hardware.
 
-## Hardware
+## Hardware <a name="hardware"></a>
 
 Los componentes principales incluyen la unidad de procesamiento central (CPU), memoria principal (MM), también llamado como memoria de acceso aleatorio (RAM), dispositivos de entrada/salida y el almacenamiento secundario. Algunos ejemplos de dipositivos de entrada son el teclado, el mouse y el almacenamiento secundario. Ejemplos de dispositivos de salida son la pantalla, la impresora y el almacenamiento secundario. Veamos cada uno de estos componentes en mayor detalle.
 
-### Unidad de procesamiento central y memoria principal
+## Unidad de procesamiento central y memoria principal <a name="cpu"></a>
 
 La **unidad de procesamiento central** es el "cerebro" de una computadora y la pieza más costosa del hardware de una computadora. Cuanto más poderosa sea el CPU, más rápida será el ordenador. Las operaciones aritméticas y lógicas se llevan a cabo en el CPU.
 
@@ -53,15 +80,15 @@ La memoria principal es una secuencia ordenada de celdas, llamada **celdas de me
 
 Las computadoras de hoy vienen con la memoria principal que consta de millones de billones de celda. A pesar que la Figura 1-1 (b) muestra los datos guardados en celdas, el contenido de cada celda puede ser una instrucción de programación o datos. Es más, esta figura muestra los datos como números y letras. Sin embargo, como se explicó anteriormente en este capítulo, la memoria principal guarda todo como secuencias de ceros y unos. La dirección de memoria también es expresada como secuencias de ceros y unos.
 
-### Almacenamiento secundario
+### Almacenamiento secundario <a name="secundary"></a>
 
 Porque los programas y los datos deben ser cargados en la memoria principal antes del procesamiento y porque todo en la memoria principal es perdida cuando la computadora es apagada, la información guardada en la memoria principal debe ser guardado en algún otro dispositivo para su almacenamiento permamente. El dispositivo que almacena información permanentemente (a menos que el dispositivo se vuelva inutilizable o cambia la información reescribiéndola) es llamada **almacenamiento secundario**. Para habilitar la transferencia de información desde la memoria principal hacia la memoria secundaria, estos componentes deben estar directamente conectados entre sí. Ejemplos de almacenamiento secundario son los discos duros, unidades flash y los CD-ROM.
 
-## Dispositivos de entrada/salida
+## Dispositivos de entrada/salida <a name="io"></a>
 
 Para que una computadora realice una tarea útil, debe de permiterle tomar los datos y programas y mostrar los resultados de los cálculos. Los dispositivos que alientan los datos y programas a las computadoras son llamados **dispositivos de entrada**. El teclado, el mouse, el escáner, la cámara y el almacenamiento secundario son ejemplos de dispositivos de entrada. Los dispositivos que la computadora usa para mostrar los resultados son llamados **dispositivos de salida**. El monitor, la impresora y el almacenamiento secundario son ejemplos de dispositivos de salida.
 
-## Software
+## Software <a name="software"></a>
 
 El software son programas escritos para realizar tareas específicas. Por ejemplo, los procesadores de textos son programas que usa para escribir cartas, artículos, e incluso libros. Cualquier software es escrito en lenguajes de programación. Existen dos tipos de programas: los programas del sistema y los programas de aplicación.
 
@@ -69,7 +96,7 @@ Los **programas del sistema** controla el ordenador. El programa del sistema que
 
 Los **programas de aplicación** realiza una tarea específica. Los procesadores de texto, hojas de cálculo son ejemplos de programas de aplicación. El sistema operativo es el programa que corre los programas de aplicación.
 
-## El lenguaje del ordenador
+# El lenguaje del ordenador <a name="language"></a>
 
 Cuando oprime <kbd>A</kbd> en su teclado, la computadora muestra A en la pantalla. Pero, ¿qué es lo que realmente se almacena dentro de la memoria principal del ordenador? ¿Cuál es lenguaje del ordenador? ¿Cómo almacena lo que escribe en el teclado?
 
@@ -102,7 +129,7 @@ ASCII es un código de siete bits. Por lo tanto, para representar cada carácter
 
 Existe otros esquemas de codificación, tales como Unicode. Unicode consiste de 65536 carácteres. Para almacenar un carácter perteneciente a Unicode, necesitarás 16 bits o dos bytes. Unicode fue creado para representar una variedad de caracteres y está en continua expansión. Consiste en carácteres de otros idiomas además del inglés.
 
-## La evolución de los lenguajes de programación
+# La evolución de los lenguajes de programación <a name="evolution"></a>
 
 El lenguaje más básico de una computadora, el lenguaje máquina, proporciona instrucciones del programa en bits. Aunque la mayoría de las computadoras realizan el mismo tipo de operaciones, los diseñadores de la computadora pueden haber elegido diferentes conjuntos de códigos binarios para realizar las operaciones. Por lo tanto, el lenguaje máquina de un ordenador no es necesariamente el mismo lenguaje máquina de otro ordenador. La única coherencia entre las computadoras es que en cualquier computadora moderna, todos los datos se almacenan y manipulan como códigos binarios. Las primeras computadoras fueron programadas en lenguaje máquina. Para ver cómo las instrucciones son escritas en lenguaje máquina, suponga que quiere usar la ecuación:
 ```
@@ -138,7 +165,7 @@ La instrucción escrita en C++ es mucho más fácil de entender y es autoexplica
 
 > **Compilador**: Un programa que traduce instrucciones escritas en un lenguaje de alto nivel en el lenguaje máquina equivalente.
 
-## Procesando un programa en C++
+# Procesando un programa en C++ <a name="processing"></a>
 
 En las secciones previas, discutimos el lenguaje máquina y los lenguajes de alto nivel y mostramos una declaración C++. Debido a que la computadora puede entender solo lenguaje máquina, está listo para revisar los pasos necesarios para procesar un programa escrito en C ++.
 
@@ -180,7 +207,7 @@ Como se señaló anteriormente, los programas se desarrollan utilizando un IDE. 
 
 Estos IDEs son muy fáciles de usar. Cuando compila su programa, el compilador no solo identificas los errores de sintáxis, pero también suele sugerir cómo corregirlos. Es más, con un simple comando, el código objeto es enlazado con los recursos usado desde el IDE. Por ejemplo, el comando que hace el enlace en Visual C++ Express (2013 o 2016) o Emacs o CLion o Visual Studio 2015 es **Construir** o **Reconstruir**. (Para mayor aclaración sobre el uso de estos comandos, revise la documentación de estos IDEs.) Si el programa aún no está compilado, cada uno de estos comandos primero compila el programa y luego enlaza y produce el código ejecutable.
 
-## Programando con el análisis del problemas, codificación, ciclo de ejecución
+# Programando con el análisis del problemas, codificación, ciclo de ejecución <a name="analysis"></a>
 
 La *programación es un proceso de resolución de problemas*. Diferentes personas usan técnicas diferentes para resolver problemas. Algunas técnicas son bien delineadas y fáciles de seguir. No solo resuelven el problema, sino que también dan una idea de cómo se alcanza la solución. Estos ténicas de resolución de problemas pueden ser fácilmente modificadas si el dominio del problema cambia.
 
@@ -214,8 +241,9 @@ A lo largo de este libro, no solo aprenderá las reglas de escribir programas en
 
 A continuación, proporcionamos ejemplos de varias técnicas de análisis de problemas y de diseño de algoritmos.
 
-## Ejemplo 1-1
+# Ejemplos <a name="examples"></a>
 
+## Ejemplo 1-1 <a name="example1-1"></a>
 En este ejemplo, diseñamos un algoritmo para encontrar el perímetro y el área de un rectángulo.
 
 Para encontrar el perímetro y el área de un rectángulo, necesitas conocer el largo y ancho del rectángulo. El perímetro y el área del rectángulo luego son dadas por las siguientes fórmulas:
@@ -254,7 +282,7 @@ int main()
 }
 {% endhighlight %}
 
-## Ejemplo 1-2
+## Ejemplo 1-2 <a name="example1-2"></a>
 
 En este ejemplo, diseñamos un algoritmo que calcula el impuesto a las ventas y el precio de un artículo vendido en un estado particular.
 
@@ -311,7 +339,7 @@ salesTax = stateSalesTax + citySalesTax + luxuryTax
 amountDue = salePrice + salesTax
 ```
 
-## Ejemplo 1-3
+## Ejemplo 1-3 <a name="example1-3"></a>
 
 En este ejemplo, diseñamos un algoritmo que calcula el cheque mensual de un vendedor en una tienda por departamentos local.
 
@@ -359,7 +387,7 @@ otherwise
 payCheck = baseSalary + bonus + additionalBonus
 ```
 
-## Ejemplo 1-4
+## Ejemplo 1-4 <a name="example1-4"></a>
 
 En este ejemplo, diseñamos un algoritmo para jugar un juego de adivinar números. El objetivo es generar aleatoriamente un número entero mayor o igual a $$0$$ y menor de $$100$$. Entonces el aviso del jugador (usuario) conjetura el número. Si el jugador adivina el número correctamente, muestra un mensaje apropiado. De lo contrario, compruebe si el número adivinado es menor que el número aleatorio, muestra el mensaje, "Tu conjetura es menor que el número. Conjetura otra vez!"; caso contrario, muestra el mensaje, "Tu conjetura es mayor que el número Conjetura otra vez!". El jugador es avisado para ingresar otro número. El jugador es avisado para adivinar el número aleatorio a menos que el jugador ingrese el número correcto.
 
@@ -391,7 +419,7 @@ otherwise
 ```
 En el capítulo 5, usaremos este algoritmo para escribir un programa C++ para juegar el juego de adivinar números.
 
-## Ejemplo 1-5
+## Ejemplo 1-5 <a name="example1-5"></a>
 
 Hay $$10$$ estudiantes en una clase. Cada estudiante ha tomado cinco pruebas, y cada prueba vale $$100$$ puntos. Queremos diseñar un algoritmo que calcule el grado para cada estudiante, así como el promedio de la clase. El grado es asignado como sigue: Si el puntaje medio de la prueba es mayor o igual que $$90$$, el grado es `A`; si el puntaje medio de la prueba es mayor o igual que  $$80$$ y menor que $$90$$, el grado es `B`; si el puntaje medio de la prueba es mayor o igual que $$70$$ y menor que $$80$$, el grado es `C`; si el puntaje medio de la prueba es mayor o igual que  $$60$$ y menor que $$70$$, el puntaje es `D`; caso contrario, el grado es `F`. Tenga en cuenta que los datos consisten en los nombres de los estudiantes y sus puntajes de la prueba.
 
@@ -436,6 +464,7 @@ Un ejercicio de programación en el capítulo 8 le pregunta que escriba un progr
 > Nota Al inicio de este capítulo se describió el análisis del problema, codificación y el ciclo de ejecución. En esta sección, ganamos varios ejemplos que ilustran el análisis del problema y el ciclo de codificación. Hay que señalar que el análisis de problemas es la parte más importante de la programación. Una vez que haya analizado el problema y haya escrito los pasos necesarios de la solución en su idioma nativo, entonces, como verá a través del texto, escribir el código C++ para implementar su solución es relativamente fácil. Además, pronto reconocerá que los pasos de sus soluciones se pueden traducir efectivamente a un código C++. Además, un buen análisis de problemas conducirá a un programa mejor y más limpio. Incluso aunque todavía no hemos introducido la sintaxis de C++, para ilustrar cómo escribir un código de C++ correspondiente a los pasos de su solución, consideremos el algoritmo diseñado en el ejemplo 1-1. Suponga `length`, `width`, `perimeter`, and `area` representa la longitud, ancho, perímetro, y área de un rectángulo. Aquí están los cuatro pasos de un algoritmo y sus correspondientes declaraciones C++:
 
 | Paso de algoritmo | Instrucción C++ (código) |
+|:-----------------:|:-----------------------:|
 | 1. Consiga la longitud del rectángulo. | `cin >> length;` |
 | 2. Consiga el ancho del rectángulo. | `cin >> width;` |
 | 3. Calcule el perímetro. | `perimeter = 2 * (length + width);` |
@@ -445,15 +474,15 @@ Considere la primera declaración. En C++, `cin` representa la entrada común. D
 
 Para escribir un programa completo en C++ para calcular el área y el perímetro, necesita conocer la estructura básica de un programa en C++, el cual será introducido en el siguiente capítulo. Sin embargo, si tiene curiosidad por saber cómo se ve el programa completo de C++, puede visitar el sitio web que acompaña a este libro y consultar el código de programación almacenado en el archivo `Ch1_Example_1-1_Code.cpp`.
 
-## Metodologías de programación
+# Metodologías de programación <a name="methodology"></a>
 
 Dos enfoques populares para el diseño de programación son el enfoque estructurado y el enfoque orientado a objetos, que se describen a continuación.
 
-### Programación estructurada
+## Programación estructurada <a name="structured"></a>
 
 Dividir un problema en subproblemas más pequeños se llama **diseño estructurado**. Luego se analiza cada subproblema y se obtiene una solución para resolver el subproblema. Las soluciones a todos los subproblemas se combinan para resolver el problema general. Este proceso de implementación de un diseño estructurado se denomina **programación estructurada**. El enfoque de diseño estructurado también se conoce como **diseño descendente**, **diseño ascendente**, **refinamiento por pasos** y **programación modular**.
 
-### Programación orientada a objetos
+## Programación orientada a objetos <a name="poo"></a>
 
 **Diseño orientado a objetos (ODD)** es una metodología de programación muy utilizada. En ODD, el primer paso en la resolución de problemas es identificar los componentes llamados objetos, que forman la base de la solución, y para determinar cómo estos objetos interactúan entre sí. Por ejemplo, suponga que desea escribir un programa que automatice el proceso de alquiler de DVD para una tienda de DVD local. Los dos objetos principales en este problema son el DVD y el cliente.
 
@@ -482,4 +511,72 @@ Como puede ver, necesita aprender algunas cosas antes de trabajar con la metodol
 
 Para algunos problemas, el enfoque estructurado del diseño del programa será muy efectivo. Otros problemas serán mejor tratados por ODD. Por ejemplo, si un problema requiere manipular conjuntos de números con funciones matemáticas, puede usar el enfoque de diseño estructurado y describir los pasos necesarios para obtener la solución. La biblioteca de C++ proporciona una gran cantidad de funciones que puede usar de manera efectiva para manipular números. Por otro lado, si desea escribir un programa que haga que una máquina de jugo funcione, el enfoque ODD es más efectivo. C++ fue diseñado especialmente para implementar ODD. Además, ODD *funciona bien con diseño estructurado*. Tanto el enfoque estructurado como el ODD requieren que domines los componentes básicos de un lenguaje de programación para ser un programador eficaz. En los capítulos 2 al 8, aprenderá los componentes básicos de C++, tales como tipos de datos, entrada/salida, estructuras de control, funciones definidas por el usuario y arreglos, requeridas por cualquier tipo de programación. Desarrollamos e ilustramos cómo funcionan estos conceptos utilizando el enfoque de programación estructurada. A partir del capítulo Clases y abstracción de datos, desarrollamos y utilizamos el enfoque ODD.
 
-## Mathematics :+1:
+# Norma ANSI/ISO C++ <a name="ansi"></a>
+
+El lenguaje de programación C++ evolucionó de C y fue diseñado por Bjarne Stroustrup en los Laboratorios Bell a principios de los años ochenta. Desde principios de la década de 1980 hasta principios de la de 1990, varios compiladores C++ estaban disponibles. A pesar de que las características fundamentales de C++ en todos los compiladores eran en su mayoría las mismas, el lenguaje C++ estaba evolucionando de formas ligeramente diferentes en compiladores diferentes. Como consecuencia, los programas C++ no siempre eran portátiles de un compilador a otro.
+
+Para abordar este problema, a principios de la década de $$1990$$, se estableció un comité conjunto del Instituto Nacional Estadounidense de Estándares (ANSI) y la Organización Internacional de Normalización (ISO) para estandarizar la sintaxis de C++. A mediados de 1998, se aprobaron los estándares del lenguaje ANSI/ISO C++ fueron aprobados. La mayoría de los compiladores de hoy cumplen con estos nuevos estándares. En los últimos años, el comité C++ se reunió varias veces para estandarizar aún más la sintaxis de C++. En el $$2011$$, el segundo estándar de C++ se aprobó. El principal objetivo de este estándar, denominado C++$$11$$, es hacer que el código C++ sea más limpio y más efectivo. Por ejemplo, el nuevo estándar introduce el tipo de dato `long` `long` para tratar con enteros grandes, la declaración automática de variables usando sentencias de inicialización, mejorando la funcionalidad de los bucles `for` para que funcionen efectivamente con arrays y contenedores, y nuevos algoritmos. Algunas de estas nuevas características de C++ se presentan en este libro. C++$$14$$, que es una actualización sobre C++$$11$$ fue aprobada en el 2014.
+
+Este libro se centra en la última sintaxis de C++ aprobada por ANSI/ISO, conocida como Norma ANSI/ISO C++.
+
+# Repaso rápido <a name="review"></a>
+
+1. Una computadora es un dispositivo electrónico capaz de realizar operaciones aritméticas y lógicas.
+2. Un sistema de computadoras tiene dos componentes: hardware y software.
+3. La unidad central de procesamiento (CPU) y la memoria principal son ejemplos de componentes de hardware.
+4. Todos los programas deben llevarse a la memoria principal antes de que puedan ejecutarse.
+5. Cuando se apaga la alimentación, todo lo que hay en la memoria principal se pierde.
+6. El almacenamiento secundario proporciona almacenamiento permanente para la información. Los discos duros, las unidades flash y los CD-ROM son ejemplos de almacenamiento secundario.
+7. La entrada a la computadora se realiza a través de un dispositivo de entrada. Dos dispositivos de entrada comunes son el teclado y el mouse.
+8. La computadora envía su salida a un dispositivo de salida, como la pantalla de la computadora o una impresora.
+9. Los programas son programas ejecutados por la computadora.
+10. El sistema operativo maneja la actividad general de la computadora y presta servicios.
+11. El lenguaje más básico de una computadora es una secuencia de `0s' y `1s' llamada lenguaje de máquina. Cada computadora entiende directamente su propio lenguaje de máquina.
+12. Un bit es un dígito binario, `0` o `1`.
+13. Un byte es una secuencia de ocho bits.
+14. Una secuencia de `0s` y `1s` se denomina código binario o número binario.
+15. Un kilobyte (KB) es $$2ˆ{10}=1024$$ bytes, un megabyte (MB) es $$2ˆ{20}=1048576$$ bytes, un gigabyte (GB) es $$2ˆ{30}=1073741824$$ bytes, un terabyte (TB) es $$2ˆ{40}=1099511627776$$ bytes, un petabyte (PB) es $$2ˆ{50}=1125899906842624$$ bytes, un exabyte (EB) es $$2ˆ{60}=1152921504606846976$$ bytes; y un zettabyte (ZB) es $$2ˆ{70}=1180591620717411303424$$ bytes.
+16. El lenguaje ensamblador usa instrucciones fáciles de recordar llamadas mnemónicas.
+17. Los ensambladores son programas que traducen un programa escrito en ensamblaje.
+lenguaje en lenguaje de máquina.
+18. Los compiladores son programas que traducen un programa escrito en un lenguaje de alto nivel en código de máquina, llamado código objeto.
+19. Un enlazador vincula el código objeto con otros programas proporcionados por el entorno de desarrollo integrado (IDE) y se utiliza en el programa para producir código ejecutable.
+20. Por lo general, se necesitan seis pasos para ejecutar un programa C11: editar, preprocesar, compilar, vincular, cargar y ejecutar.
+21. Un cargador transfiere el código ejecutable a la memoria principal.
+22. Un algoritmo es un proceso paso a paso de resolución de problemas en el que una solución es alcanzada en una cantidad de tiempo finito.
+23. El proceso de resolución de problemas tiene tres pasos: analizar el problema y diseñar un algoritmo, implementar el algoritmo en un lenguaje de programación y mantener el programa.
+24. En el diseño estructurado, un problema se divide en subproblemas más pequeños. Cada subproblema es resuelto, y las soluciones a todos los subproblemas se combinan para resolver el problema.
+25. En el diseño orientado a objetos (OOD), un programa es una colección de objetos que interactúan.
+26. Un objeto consiste en datos y operaciones en esos datos.
+27. La sintaxis C++ de la norma ANSI/ISO se aprobó a mediados de 1998.
+28. La segunda norma de C++, C++11, fue aprobada en 2011. C++14 fue aprobado en 2014.
+
+
+# Ejercicios <a name="exercises"></a>
+
+El número entre paréntesis al final de un ejercicio se refiere al objetivo de aprendizaje listado al comienzo del capítulo.
+
+1. Marque las siguientes afirmaciones como verdaderas o falsas.
+   1. El dispositivo de cálculo llamado Pascaline podría calcular sumas de hasta ocho cifras. (1) :ballot_box_with_check:
+   2. Todos los programas deben cargarse en la CPU antes de poder ejecutarlos y todos los datos deben cargarse en la memoria principal antes de poder manipularlos. (2) :ballot_box_with_check:
+   3. La memoria principal es una secuencia ordenada de celdas y cada celda tiene una ubicación aleatoria en la memoria principal. (2) :x:
+   4. El programa que se carga primero cuando enciendes tu computadora se llama sistema operativo. (2)
+   5. Las señales analógicas representan información con una secuencia de 0s y 1s. (3)
+   6. El lenguaje de máquina es una secuencia de 0s y 1s. (3)
+   7. Un código binario es una secuencia de 0s y 1s. (3)
+   8. Una secuencia de ocho bits se llama un byte. (3)
+   9. Un GB es de 220 MB. (3)
+   10. En ASCII, A es el 65º personaje. (3)
+   11. El sistema numérico utilizado por una computadora es base 2. (3)
+   12. Un ensamblador traduce las instrucciones en lenguaje ensamblador al lenguaje de máquina. (4)
+   13. Un compilador traduce el programa fuente a un programa objeto.
+   14. En un programa C11, las declaraciones que comienzan con el símbolo # son
+   15. Llamadas directivas de preprocesador. (7)
+   
+
+
+o. Un programa objeto es la versión en lenguaje de máquina de un programa de lenguaje de alto nivel. (9)
+pag. Todos los errores lógicos, como la división por 0, son informados por el compilador. (9)
+q. En el diseño orientado a objetos (OOD), un programa es una colección de objetos que interactúan. (10)
+r. Un objeto consiste en datos y operaciones en esos datos. (10)
+s. ISO significa Organización Internacional de Normalización. (11)
