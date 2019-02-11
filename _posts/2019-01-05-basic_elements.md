@@ -204,6 +204,168 @@ En la sección anterior, dimos un ejemplo de un programa en C++ y también ident
 
 Cualquier programa en C++ tiene una funcion principal. Así, si un programa en C++ tiene una sola función, este debe ser la función `main`. Hasta el Capítulo 6, otros que usan algunas funciones predefinidas, principalmente tratarás con la función `main`. Al final de este capítulo, habrás aprendido cómo escribir programas que consisten solo de la función `main`.
 
-Si nunca has visto un programa escrito en un lenguaje de programación, el programa en C++ en el ejemplo 2-1 podría paracer un lenguaje extranjero. Para hacer las oraciones significantes en un lenguaje extraño, debes aprender su alfabeto, palabras y su gramática. Lo mismo es cierto para un lenguaje de programación. Para escribir programas significantes, debes aprender los símbolos especiales, palabras y reglas de sintáxis. Las **reglas de sintáxis** te dicen cuáles declaraciones (instrucciones) son legales o válidas, esto es, cuáles son aceptadas por el lenguaje de programación y cuáles no. Debes también aprender las **reglas de semántica**, que determinan el significado de las instrucciones. Las reglas del lenguaje de programación, los símbolos y las palabras especiales del lenguaje de programación le permite escribir programas para resolver problemas.
+Si nunca has visto un programa escrito en un lenguaje de programación, el programa en C++ en el ejemplo 2-1 podría paracer un lenguaje extranjero. Para hacer las oraciones significantes en un lenguaje extraño, debes aprender su alfabeto, palabras y su gramática. Lo mismo es cierto para un lenguaje de programación. Para escribir programas significantes, debes aprender los símbolos especiales, palabras y reglas de sintáxis. Las **reglas de sintaxis** te dicen cuáles declaraciones (instrucciones) son legales o válidas, esto es, cuáles son aceptadas por el lenguaje de programación y cuáles no. Debes también aprender las **reglas de semántica**, que determinan el significado de las instrucciones. Las reglas del lenguaje de programación, los símbolos y las palabras especiales del lenguaje de programación le permite escribir programas para resolver problemas.
 
 **Lenguaje de programación:** Un conjunto de reglas, símbolos y palabras especiales.
+
+En el resto de esta sección, aprenderá sobre algunos de los símbolos especiales de un programa en C++. Se introducen símbolos especiales adicionales a medida que se encuentran otros conceptos en capítulos posteriores. De manera similar, las reglas de sintaxis y semánticas se presentan y discuten a lo largo del libro.
+
+## Comentarios
+
+El programa que escriba debe ser claro no solo para usted, sino también para el lector de su programa. Parte de una buena programación es la inclusión de comentarios en el programa. Por lo general, los comentarios se pueden usar para identificar a los autores del programa, dar la fecha en que se escribe o modificar el programa, dar una breve explicación del programa y explicar el significado de las declaraciones clave en un programa. En los ejemplos de programación, para los programas que escribimos, no incluiremos la fecha en que el programa está escrito, de acuerdo con la convención estándar para escribir tales libros.
+Los comentarios son para el lector, no para el compilador. Entonces, cuando un compilador compila un programa para verificar los errores de sintaxis, ignora completamente los comentarios. A lo largo de este libro, los comentarios se muestran en verde.
+
+El programa en el Ejemplo 2-1 contiene los siguientes comentarios:
+
+{% highlight cpp %}
+//**************************************************************
+// Given the length and width of a rectangle, this C++ program
+// computes and outputs the perimeter and area of the rectangle.
+//**************************************************************
+{% endhighlight %}
+
+Hay dos tipos comunes de comentarios en un programa C++: los comentarios de una sola línea y comentarios de varias líneas.
+
+Los comentarios de una sola línea comienzan con `//` y se pueden colocar en cualquier lugar de la línea. Todo lo que se encuentra en esa línea después de `//` es ignorado por el compilador. Por ejemplo, considere la siguiente declaración:
+
+{% highlight cpp %}
+cout << "7 + 8 = " << 7 + 8 << endl;
+{% endhighlight %}
+
+Puedes poner comentarios al final de esta línea de la siguiente manera:
+
+{% highlight cpp %}
+cout << "7 + 8 = " << 7 + 8 << endl; //prints: 7 + 8 = 15
+{% endhighlight %}
+
+Este comentario podría ser significativo para un programador principiante.
+
+Los comentarios de varias líneas se incluyen entre `/*` y `*/`. El compilador ignora cualquier cosa que aparezca entre `/*` y `*/`. Por ejemplo, el siguiente es un ejemplo de un comentario de varias líneas:
+
+{% highlight cpp %}
+/*
+	You can include comments that can
+	occupy several lines.
+*/
+{% endhighlight %}
+
+En los comentarios de varias líneas, muchos programadores utilizan comentarios de una sola línea en cada línea para hacer que los comentarios se destaquen más al lector (como se hizo en el programa del Ejemplo 2-1).
+
+## Símbolos especiales
+
+La unidad individual más pequeña de un programa escrito en cualquier idioma se llama **token**. Los tokens de C++ se dividen en símbolos especiales, símbolos de palabras e identificadores. Los siguientes son algunos de los símbolos especiales:
+
+|-|-|-|-|
+|__+__|__-__|__*__|__/__|
+|__.__|__;__|__?__|__,__|
+|__<=__|__!=__|__==__|__>=__|
+
+La primera fila incluye símbolos matemáticos para suma, resta, multiplicación y división. La segunda fila consta de signos de puntuación tomados de la gramática inglesa. Tenga en cuenta que la coma es también un símbolo especial. En C++, las comas se usan para separar elementos en una lista. Los puntos y comas también son símbolos especiales y se utilizan para finalizar una declaración en C++. Tenga en cuenta que un espacio en blanco, que no se muestra arriba, también es un símbolo especial. Usted crea un símbolo en blanco presionando la barra espaciadora (solo una vez) en el teclado. La tercera fila consta de fichas compuestas por dos caracteres que se consideran como un solo símbolo. Ningún carácter puede aparecer entre los dos caracteres en el token, ni siquiera un espacio en blanco.
+
+## Palabras reservadas (palabras clave)
+
+Una segunda categoría de fichas es símbolos de palabras reservadas. Algunos de los símbolos de palabras reservados incluyen los siguientes
+
+{% highlight cpp %}
+int, float, double, char, const, void, return
+{% endhighlight %}
+
+Las palabras reservadas también son llamadas **palabras clave**. Las letras que componen una palabra reservadas son siempre en minúscula. Como los símbolos especiales, cada una es considerada como un símbolo único. Además, las palabras reservadas no pueden ser redefinidas dentro de cualquier programa, esto es, ellos 
+no puede ser utilizado para nada más que su uso previsto. Para una lista completa de palabras reservadas, vea.
+
+|-|-|-|-|
+| `and_eq`     | `double`       | `new`              | `switch`   |
+| `and`        | `dynamic_cast` | `not_eq`           | `template` |
+| `asm`        | `else`         | `not`              | `this`     |
+| `auto`       | `enum`         | `nullptr`          | `throw`    |
+| `bitand`     | `explicit`     | `operator`         | `true`     |
+| `bitor`      | `export`       | `or_eq`            | `try`      |
+| `bool`       | `extern`       | `or`               | `typedef`  |
+| `break`      | `false`        | `private`          | `typeid`   |
+| `case`       | `float`        | `protected`        | `typename` |
+| `catch`      | `for`          | `public`           | `union`    |
+| `char`       | `friend`       | `register`         | `unsigned` |
+| `class`      | `goto`         | `reinterpret_cast` | `using`    |
+| `compl`      | `if`           | `return`           | `virtual`  |
+| `const_cast` | `inline`       | `short`            | `void`     |
+| `const`      | `int`          | `signed`           | `volatile` |
+| `continue`   | `long`         | `sizeof`           | `wchar_t`  |
+| `default`    | `mutable`      | `static_cast`      | `while`    |
+| `delete`     | `namespace`    | `static`           | `xor_eq`   |
+| `do`         |                | `struct`            | `xor`     |
+
+> A lo largo de este libro, las palabras reservadas son mostradas de azul.
+
+## Identificadores
+
+Una tercera categoría de símbolo son los identificadores. Los identificadores son los nombres de cosas que aparecen en los programas, como las variables, constantes y funciones. Todos los identificadores deben obedecer las reglas de C++ para identificadores.
+
+**Identificador**: Un identificador en C++ consiste de letras, dígitos, el carácter guion bajo (\_) y debe empezar con un letras o guion bajo.
+
+Algunos identificadores son predefinidos, otros son definidos por el usuario. En un programa en C++ en el Ejemplo 2-1, `cout` es un identificador predefinido y `length` es un identificador definido por el usuario. Dos identificadores que ya habrás encontrado familiar son `cout` y `cin`. Ya hemos visto el efecto de `cout`. Más adelante en este capítulo, aprenderás cómo trabaja `cin` que es usado para ingresar datos. A diferencia de las palabras reservadas, los identificadores predefinidos pueden ser redefinidos, pero no sería prudente hacerlo.
+
+Los identificadores puede estar formado por solo caracteres, dígitos, y el carácter guion bajo (\_); ningún otro símbolo es permitido para formar un identificador.
+
+> C++ distingue mayúsculas y minúsculas, letras mayúsculas y letras minúsculas son consideradas diferentes. Por lo tanto el identificador `NUMBER` no es lo mismo que el identificador `number`. De igual forma, `X` y `x` son diferentes.
+
+En C++, los identificadores pueden tener cualquier longitud.
+
+## Ejemplo 2-2
+
+Los siguientes son identificadores válidos en C++:
+
+{% highlight cpp %}
+first
+conversion
+payRate
+counter1
+{% endhighlight %}
+
+La tabla 2-1 muestra algunos identificadores inválidos y explica por qué son inválidos y también da un identificador válido.
+
+| Identificador inválido | Razón | Un identificador válido |
+| `employee Salary` | No puede haber espacio entre `employee` y `Salary`. |`employeeSalary` |
+| `Hello!` | El signo de exclamación no puede ser usado como un identificador. | `Hello` |
+| `one + two` | El símbolo `+` no puede ser usado como un identificador. | `onePlusTwo` |
+| `2nd` | Un identificador no puede empezar con un dígito. | `second` |
+
+> Los proveedores de compiladores generalmente comienzan ciertos identificadores con un guion bajo (\_). Cuando el enlazador vincula el programa objeto con los recursos del sistema proporcionados por el entorno de desarrollo integrado (IDE), ciertos errores podrían ocurrir. Por lo tanto, se recomienda que no inicie un identificador con un guion bajo (\_).
+
+## Espacios en blanco
+
+Cualquier programa en C++ contiene espacios en blanco. Los espacios en blanco incluyen espacios en blanco, tabulaciones y caracteres de nueva línea. En un programa en C++, los espacios en blanco se utilizan para separar símbolos espciales, palabras reservadas e identificadores. Los espacios en blanco no son imprimibles en el sentido que cuando ellos son impresos en un retazo de papel, los espacios entre símbolos especiales, palabras reservadas e identificadores es blanco. La utilización apropiada de espacios en blanco es importante. Ellos ayudan a hacer el programa más legible.
+
+## Tipos de datos
+
+El objetivo de un programa en C++ es manipular datos. Las 
+
+El objetivo de un programa de C ++ es manipular los datos. Diferentes programas manipulan los datos. Diferentes programas manipulan diferentes datos. se agregará un programa diseñado para calcular el sueldo de un empleado,
+
+{% highlight tex %}
+\documentclass[tikz, border=1mm]{standalone}
+\usetikzlibrary{calc,arrows,babel}
+\begin{document}
+	\begin{tikzpicture}
+	\draw[color=red, dotted, line width=3pt] (0,0) rectangle (2.5,2.5);
+	\end{tikzpicture}
+
+	\begin{tikzpicture}
+	\shade[bottom color = cyan, top color = blue, ball color = green] (0,0) -- (3,0) -- (0,3) -- cycle;
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\draw[step = .5, gray!75] (-2,2) grid (9,4);
+	\end{tikzpicture}
+
+\begin{tikzpicture}
+	\draw[thick, ->, >=stealth] (-2,-2) arc[start angle = 0, end angle = 45, radius = 1];
+\end{tikzpicture}
+
+\begin{tikzpicture}
+;
+\end{tikzpicture}
+
+\end{document}
+
+La unidad por defecto es el cm
+{% endhighlight %}
