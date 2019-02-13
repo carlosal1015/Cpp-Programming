@@ -5,6 +5,7 @@ permalink: /appendex/
 order: 1
 ---
 
-* [Appendex A](A.md)
-* [Appendex B](B.md)
-* [Appendex C](C.md)
+* [Appendex A]({{site.url}}{{site.baseurl}}/appendex/A)
+* [Appendex B]({{site.url}}{{site.baseurl}}/appendex/B)
+* [Appendex C]({{site.url}}{{site.baseurl}}/appendex/C)
+

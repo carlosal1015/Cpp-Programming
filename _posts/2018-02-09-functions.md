@@ -6,7 +6,9 @@ categories: cpp
 eye_catch: https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg
 ---
 
-En este capítulo, aprednerás
+En este capítulo, aprenderás
+
+<!--more-->
 
 En el Capítulo 2, aprendiste que un programa en C++ es una colección de funciones. Uno como la función `main`. Los programas en los Capítulos 1 hasta el Capítulo 5 usa solo la función `main`; las instrucciones de programación son comprimidos dentro de una función. Esta técnica, sin embargo, es buena solo para programas cortos. Para programas largos, esto no es práctico (a pesar de que es posible) de colocar las instrucciones de programación enteras. Debes aprender a romper el problema dentro piezas manejables. Este capítulo primero discute las funciones previamente definidas y entonces discute las funciones definidas por el usuario.
 
