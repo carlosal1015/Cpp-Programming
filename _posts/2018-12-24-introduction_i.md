@@ -65,7 +65,7 @@ Los componentes principales incluyen la unidad de procesamiento central (CPU), m
 
 La **unidad de procesamiento central** es el "cerebro" de una computadora y la pieza más costosa del hardware de una computadora. Cuanto más poderosa sea el CPU, más rápida será el ordenador. Las operaciones aritméticas y lógicas se llevan a cabo en el CPU.
 
-![Componentes del hardware de una computadora y la memoria principal](/Cpp-Programming/assets/img/figure1.png)
+![Componentes del hardware de una computadora y la memoria principal](/Cpp-Programming/assets/img/figure1_1.png)
 
 La **memoria principal**, o la **memoria de acceso aleatorio**, es conectada directamente al CPU. Todos los programas deben ser cargadas en la memoria principal antes de que ellos sean ejecutados. Similarmente, todos los datos deben ser llevados a la memoria principal antes que un programa puede ser manipulado. Cuando la computadora se apaga, todo en la memoria principal se pierde.
 
@@ -191,7 +191,7 @@ Los siguientes pasos, como se muestran en la Figura 1-2, son necesarios para pro
 > **Cargador**: Un programa que carga un programa ejecutable en la memoria principal.
 6. El paso final es ejecutar el programa.
 
-![Procesando un programa en C++](/Cpp-Programming/assets/img/figure2.png)
+![Procesando un programa en C++](/Cpp-Programming/assets/img/figure1_2.png)
 Figura 1-2 muestra cómo se procesa un programa típico de C++.
 
 Como programador, principalmente necesitas preocuparte con el paso 1. Esto es, debes aprender, entender, y dominar las reglas del lenguaje de programación para creaar programas fuentes.
@@ -213,7 +213,7 @@ En el entorno de la programación, el proceso de resolución de problemas requie
 2. Implementar el algoritmo en un lenguaje de programación, tal como C++, y verificar que el algoritmo funciona.
 3. Mantener el programa usándolo y modificándolo si el dominio del problema cambia.
 
-![El ciclo del problema del análisis, codificación y ejecución](/Cpp-Programming/assets/img/figure3.png)
+![El ciclo del problema del análisis, codificación y ejecución](/Cpp-Programming/assets/img/figure1_3.png)
 
 La figura 1-3 resume los dos primeros pasos del proceso de programación.
 
