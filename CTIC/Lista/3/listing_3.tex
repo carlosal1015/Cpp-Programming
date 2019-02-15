@@ -1,0 +1,134 @@
+% arara: clean: {extensions: ['log','aux','synctex.gz','out']}
+% arara: pdflatex: { shell: yes }
+% arara: pdflatex: { shell: yes }
+% arara: clean: {extensions: ['log','aux','synctex.gz','out']}
+\documentclass[spanish,addpoints,answers,a4paper]{exam}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{libertine}
+\usepackage[tmargin=2cm,rmargin=2cm,lmargin=2cm]{geometry}
+\usepackage{amsmath,bm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{siunitx}
+\sisetup{
+	group-four-digits = true,
+	group-separator = {,}
+}
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\graphicspath{{../../../images/}}
+\pagestyle{plain}
+
+\usepackage{minted}
+\setminted[cpp]{tabsize=2}
+\usepackage{hyperref}
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución}\par\noindent}
+\renewcommand\listingscaption{Listado}
+\newcommand{\unmarkedfntext}[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+\spanishdatedel
+\decimalpoint
+
+\def\LOGOUNI{%
+	\begin{picture}(0,0)\unitlength=1cm
+	\put (-13.5,-2.5) {\includegraphics[width=2.8cm]{logouni}}
+	\end{picture}
+}
+
+\def\LOGOCTIC{%
+	\begin{picture}(0,0)\unitlength=1cm
+	\put (-8,-1.2) {\includegraphics[height=1cm]{logocticblack}}
+	\end{picture}
+}
+
+\newcommand{\mychar}{%
+	\begingroup\normalfont
+	\includegraphics[height=\fontcharht\font`\B]{Octocat.png}%
+	\endgroup
+}
+
+\begin{document}
+
+\begin{center}
+	\sffamily\bfseries\scshape
+	{\Large UNIVERSIDAD NACIONAL DE INGENIERÍA}\LOGOUNI\\
+	Centro de Tecnologías de la Información y Comunicaciones\LOGOCTIC\\
+\end{center}
+
+\vspace{.8cm}
+
+\begin{center}\sffamily\bfseries\large
+	Programación en \texttt{C++} \\
+	TEMA $\bm{3}$: Estructuras de repetición \mintinline{cpp}{while} y \mintinline{cpp}{for}.
+\end{center}
+
+\vspace{.5cm}
+\noindent
+\makebox[\textwidth]{Nombres y apellidos:\enspace\hrulefill}
+\vspace{0.2in}
+\makebox[\textwidth]{Nombres y apellidos del instructor:\enspace MSc. Víctor Melchor Espinoza.\hfill}
+%
+%\section*{Ejercicios de práctica}
+%
+%\begin{questions}
+%
+%\question Solicite dos valores diferentes (no validar) e intercambiarlos.
+%
+%\begin{solution}
+%	\begin{listing}[H]
+%		\footnotesize
+%		\inputminted{cpp}{1.cc}
+%		\caption{Programa \texttt{1.cc}.}
+%		\label{lst:2.1}
+%	\end{listing}
+%\end{solution}
+%
+%\end{questions}
+
+\section*{Ejercicios obligatorios}
+
+\begin{questions}
+
+\question Elabore un programa que pida al usuario un entero positivo $n$. Luego, el programa debe pedir al usuario $n$ enteros usando un ciclo. El programa deberá encontrar el mayor, menor, y promedio de los valores dados por el usuario e imprimirlos al final.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{1.cpp}
+		\caption{Programa \texttt{1.cpp}.}
+		\label{lst:1.9}
+\end{listing}
+\end{solution}
+
+\question Desarrolle un programa que mantenga una cuenta. El programa ofrecerá al usuario un menú de opciones:
+
+\begin{minted}{bash}
+0: Limpiar la cuenta.
+1: Depositar dinero a la cuenta.
+2: Retirar dinero de la cuenta.
+3: Mostrar el saldo actual.
+4: Salir del programa.
+\end{minted}
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{2.cpp}
+		\caption{Programa \texttt{2.cpp}.}
+		\label{lst:1.10}
+\end{listing}
+\end{solution}
+
+\end{questions}
+
+\begin{flushright}\bfseries
+Centro de Tecnologías de la Información y Comunicaciones (CTIC)\\[2mm]
+\today\unmarkedfntext{Código disponible en \href{https://github.com/carlosal1015/Cpp-Programming}{\mychar{}}.}
+\end{flushright}
+
+\end{document}

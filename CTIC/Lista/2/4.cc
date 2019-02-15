@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 int main (){
@@ -13,10 +14,9 @@ int main (){
 			sueldo += 0.15 * sueldo;
 			cout << "Su sueldo es " << sueldo << " soles." << endl;
 		}
-		else
-			cout << "Su sueldo es " << sueldo << " soles." << endl;
+		else	cout << "Su sueldo es " << sueldo << " soles." << endl;
 	}
-	else
-		cout << "Ha ingresado incorrectamente." << endl;
+	else	cout << "Ha ingresado incorrectamente." << endl;
+
 	return 0;
 }

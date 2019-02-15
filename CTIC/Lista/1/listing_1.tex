@@ -1,5 +1,7 @@
-% !TeX document-id = {1009e7ce-5d51-4851-b71b-515f3f53617f}
-% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+% arara: clean: {extensions: ['log','aux','synctex.gz','out']}
+% arara: pdflatex: { shell: yes }
+% arara: pdflatex: { shell: yes }
+% arara: clean: {extensions: ['log','aux','synctex.gz','out']}
 \documentclass[spanish,addpoints,answers,a4paper]{exam}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
@@ -19,6 +21,7 @@
 \pagestyle{plain}
 
 \usepackage{minted}
+\setminted[cpp]{tabsize=2}
 \usepackage{hyperref}
 \renewcommand{\solutiontitle}{\noindent\textbf{Solución}\par\noindent}
 \renewcommand\listingscaption{Listado}

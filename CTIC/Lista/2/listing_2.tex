@@ -1,5 +1,7 @@
-% !TeX document-id = {1009e7ce-5d51-4851-b71b-515f3f53617f}
-% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+% arara: clean: {extensions: ['log','aux','synctex.gz','out']}
+% arara: pdflatex: { shell: yes }
+% arara: pdflatex: { shell: yes }
+% arara: clean: {extensions: ['log','aux','synctex.gz','out']}
 \documentclass[spanish,addpoints,answers,a4paper]{exam}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
@@ -19,6 +21,7 @@
 \pagestyle{plain}
 
 \usepackage{minted}
+\setminted[cpp]{tabsize=2}
 \usepackage{hyperref}
 \renewcommand{\solutiontitle}{\noindent\textbf{Solución}\par\noindent}
 \renewcommand\listingscaption{Listado}
@@ -61,7 +64,7 @@
 
 \begin{center}\sffamily\bfseries\large
 	Programación en \texttt{C++} \\
-	TEMA $\bm{1}$: Estructuras de control \texttt{if}, \texttt{else} y \texttt{switch}.
+	TEMA $\bm{2}$: Estructuras de control \mintinline{cpp}{if}, \mintinline{cpp}{else} y \mintinline{cpp}{switch}.
 \end{center}
 
 \vspace{.5cm}

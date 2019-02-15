@@ -12,6 +12,7 @@
 	En base a esto, el programa determinará la Nota final de un alumno.
 */
 #include <iostream>
+
 using namespace std;
 
 int main(){
@@ -40,7 +41,7 @@ int main(){
 	cin >> project;
 
 	finalgrade = (0.6 * ( (grade1 + grade2 + grade3 + grade4) / 4) )
-			+ (0.15 * lab) + (0.15 * homework) + (0.1 * project);
+							+ (0.15 * lab) + (0.15 * homework) + (0.1 * project);
 
 	cout << "La nota del curso es " << finalgrade << "." << endl;
 	

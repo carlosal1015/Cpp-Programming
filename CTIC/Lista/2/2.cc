@@ -1,12 +1,11 @@
 #include <iostream>
+
 using namespace std;
 
 int main(){
-	
+
 	int number1, number2, sum;
-	/*
-		TODO: No puede ser flotante.
-	*/
+
 	cout << "Ingrese dos valores positivos:" << endl;
 	cin >> number1 >> number2;
 
@@ -14,5 +13,7 @@ int main(){
 
 	if (sum % 2 == 0)	cout << "La suma es par." << endl;
 	else	cout << "La suma es impar." << endl;
+
+	return 0;
 
 }

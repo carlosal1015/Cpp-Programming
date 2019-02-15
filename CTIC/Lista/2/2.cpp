@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 int main(){
@@ -13,6 +14,7 @@ int main(){
 
 	if (condition) {
 		cout << "El número romano es ";
+
 		decene = number / 10;
 		unit = number % 10;
 
@@ -39,8 +41,9 @@ int main(){
 			case 8:	cout << "VIII"; break;
 			case 9:	cout << "IX"; break;
 		}
-		cout << "." <<endl;
+		cout << "." << endl;
 	}
 	else cout << "¡Entrada inválida!" << endl;
+
 	return 0;
 }

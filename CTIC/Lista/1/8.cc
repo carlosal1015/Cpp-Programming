@@ -1,9 +1,10 @@
 /*
-    Elabore un programa que pida un monto en dólares
-    y obtenga el monto equivalente en soles.
-    Defina el tipo de cambio como una constante.
+	Elabore un programa que pida un monto en dólares
+	y obtenga el monto equivalente en soles.
+	Defina el tipo de cambio como una constante.
 */
 #include <iostream>
+
 using namespace std;
 
 int main(){

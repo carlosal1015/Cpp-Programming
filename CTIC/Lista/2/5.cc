@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 int main(){
 
 	float sueldo;
@@ -17,8 +19,7 @@ int main(){
 			cout << "Su sueldo es " << sueldo << " soles." << endl;
 		}	
 	}
-	else
-		cout << "Ha ingresado incorrectamente." << endl;
-		
+	else	cout << "Ha ingresado incorrectamente." << endl;
+
 	return 0;
 }

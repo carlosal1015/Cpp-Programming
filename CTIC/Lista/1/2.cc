@@ -1,7 +1,8 @@
 /*
-    Presente un ejemplo del uso de los operadores de asignación y aritméticos.
+	Presente un ejemplo del uso de los operadores de asignación y aritméticos.
 */
 #include <iostream>
+
 using namespace std;
 
 int main(){

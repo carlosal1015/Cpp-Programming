@@ -1,16 +1,10 @@
 #include <iostream>
+
 using namespace std;
 
 int main (){
 
-	/*
-	*************************************
-	*	Declarando variables.							*
-	*************************************
-	*/
-
-	short int number;
-	float mount = 0, deposit = 0, withdraw = 0;
+	int number; float mount = 0, deposit = 0, withdraw = 0;
 
 	while(number != 4){
 		cout << "\n**************** Menú de opciones ****************\n"
@@ -25,8 +19,7 @@ int main (){
 		switch (number){
 			case 0:
 				cout << "Se ha borrado los valores de su cuenta." << endl;
-				deposit = 0, withdraw = 0;
-			break;
+				deposit = 0, withdraw = 0; break;
 
 			case 1:
 			do{
@@ -35,8 +28,7 @@ int main (){
 			} while (deposit <= 0);
 			
 			mount += deposit;
-			cout << "Se ha depositado S/"	<< deposit << " a su cuenta." << endl;
-			break;
+			cout << "Se ha depositado S/"	<< deposit << " a su cuenta." << endl; break;
 
 			case 2:
 			do{
@@ -50,16 +42,13 @@ int main (){
 			}
 			else
 				cout << "No está permitido retirar montos mayores a su saldo actual.\n"
-								"Verifique su saldo en la opción 3." << endl;
-			break;
+								"Verifique su saldo en la opción 3." << endl; break;
 
 			case 3:
-				cout << "Su saldo actual es S/" << mount << "." <<endl;
-			break;
+				cout << "Su saldo actual es S/" << mount << "." <<endl; break;
 
 			case 4:
-				cout << "Ha salido del programa con éxito." << endl;
-			break;
+				cout << "Ha salido del programa con éxito." << endl; break;
 
 			default: cout << "Ingrese una opción:" << endl;
 		}
