@@ -1,0 +1,139 @@
+% arara: clean: {extensions: ['log','aux','synctex.gz','out']}
+% arara: pdflatex: { shell: yes }
+% arara: pdflatex: { shell: yes }
+% arara: clean: {extensions: ['log','aux','synctex.gz','out']}
+\documentclass[spanish,addpoints,answers,a4paper]{exam}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{libertine}
+\usepackage[tmargin=2cm,rmargin=2cm,lmargin=2cm]{geometry}
+\usepackage{amsmath,bm,amssymb}
+\usepackage[shortlabels]{enumitem}
+\usepackage{siunitx}
+\sisetup{
+	group-four-digits = true,
+	group-separator = {,}
+}
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\graphicspath{{../../../images/}}
+\pagestyle{plain}
+
+\usepackage{minted}
+\setminted[cpp]{tabsize=2}
+\usepackage{hyperref}
+\renewcommand{\solutiontitle}{\noindent\textbf{Solución}\par\noindent}
+\renewcommand\listingscaption{Listado}
+\newcommand{\unmarkedfntext}[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+\spanishdatedel
+\decimalpoint
+
+\def\LOGOUNI{%
+	\begin{picture}(0,0)\unitlength=1cm
+	\put (-13.5,-2.5) {\includegraphics[width=2.8cm]{logouni}}
+	\end{picture}
+}
+
+\def\LOGOCTIC{%
+	\begin{picture}(0,0)\unitlength=1cm
+	\put (-8,-1.2) {\includegraphics[height=1cm]{logocticblack}}
+	\end{picture}
+}
+
+\newcommand{\mychar}{%
+	\begingroup\normalfont
+	\includegraphics[height=\fontcharht\font`\B]{Octocat.png}%
+	\endgroup
+}
+
+\begin{document}
+
+\begin{center}
+	\sffamily\bfseries\scshape
+	{\Large UNIVERSIDAD NACIONAL DE INGENIERÍA}\LOGOUNI\\
+	Centro de Tecnologías de la Información y Comunicaciones\LOGOCTIC\\
+\end{center}
+
+\vspace{.8cm}
+
+\begin{center}\sffamily\bfseries\large
+	Programación en \texttt{C++} \\
+	TEMA $\bm{4}$: Funciones definidas por el usuario: \mintinline{cpp}{void}.
+\end{center}
+
+\vspace{.5cm}
+\noindent
+\makebox[\textwidth]{Nombres y apellidos:\enspace\hrulefill}
+\vspace{0.2in}
+\makebox[\textwidth]{Nombres y apellidos del instructor:\enspace MSc. Víctor Melchor Espinoza.\hfill}
+%
+%\section*{Ejercicios de práctica}
+%
+%\begin{questions}
+%
+%\question Solicite dos valores diferentes (no validar) e intercambiarlos.
+%
+%\begin{solution}
+%	\begin{listing}[H]
+%		\footnotesize
+%		\inputminted{cpp}{1.cc}
+%		\caption{Programa \texttt{1.cc}.}
+%		\label{lst:2.1}
+%	\end{listing}
+%\end{solution}
+%
+%\end{questions}
+
+\section*{Ejercicios obligatorios}
+
+\begin{questions}
+
+\question Elabore un programa que pida el valor de los coeficientes $a$, $b$ y $c$ de la ecuación cuadrática:
+\begin{equation*}
+ax^2+bx+c=0,\quad\forall\,\{a, b, c\}\subset\mathbb{R}, a\neq 0.
+\end{equation*}
+Y a continuación muestre las raíces de dicha ecuación. Para ello deberá calcular el discriminante $\Delta = b^2-4ac$\linebreak e implementar tres funciones:
+\begin{minted}{cpp}
+realesDiferentes (float a, float b, float Delta);
+realesIguales (float a, float b);
+complejas (float a, float b, float Delta);
+\end{minted}
+que mostrarán las raíces según el valor que asuma $\Delta$.
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{1.cc}
+		\caption{Programa \texttt{1.cc}.}
+		\label{lst:1.9}
+\end{listing}
+\end{solution}
+
+\question Usa la función del ejercicio anterior para determinar el valor de $e$ usando la siguiente serie.
+\begin{equation*}
+\sum_{n=0}^\infty\frac{1}{n!}=\frac{1}{1}+\frac{1}{1}+\frac{1}{2}+\frac{1}{6}+\frac{1}{24}+\frac{1}{120}+\cdots=e
+\end{equation*}
+
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{2.cc}
+		\caption{Programa \texttt{2.cc}.}
+		\label{lst:1.10}
+\end{listing}
+\end{solution}
+
+\end{questions}
+
+\begin{flushright}\bfseries
+Centro de Tecnologías de la Información y Comunicaciones (CTIC)\\[2mm]
+\today\unmarkedfntext{Código disponible en \href{https://github.com/carlosal1015/Cpp-Programming}{\mychar{}}.}
+\end{flushright}
+
+\end{document}

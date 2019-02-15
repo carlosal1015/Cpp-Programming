@@ -3,15 +3,9 @@
 
 using namespace std;
 
-/*
-*************************************
-*	Prototipo de las funciones.				*
-*************************************
-*/
-
-void realesDiferentes(float a, float b, float Delta);
-void realesIguales(float a, float b);
-void complejas(float a, float b, float Delta);
+void realesDiferentes(float, float, float);
+void realesIguales(float, float);
+void complejas(float, float, float);
 
 int main (){
 
@@ -22,44 +16,31 @@ int main (){
 		cin >> a >> b >> c;
 	} while (a == 0);
 
-	realesDiferentes(a, b, Delta);
-	realesIguales(a, b);
-	complejas(a, b, Delta);
+	Delta = b*b - 4*a*c;
+
+	if (Delta > 0)	realesDiferentes(a, b, Delta);
+	else if (Delta == 0)	realesIguales(a, b);
+	else complejas(a, b, Delta);
 
 	return 0;
 }
 
 void realesDiferentes(float a, float b, float Delta){
-	float  c, x1, x2, realPart, imaginaryPart;
-	Delta = b*b - 4*a*c;
-	if (Delta > 0) {
-		x1 = (-b + sqrt(Delta)) / (2*a);
-    x2 = (-b - sqrt(Delta)) / (2*a);
-		//return 	false;
-		cout << "Las raíces son " << x1 << " y " << x2 << "." << endl;
-	}
+	float x1 = (-b + sqrt(Delta)) / (2*a);
+	float x2 = (-b - sqrt(Delta)) / (2*a);
+	cout << "Las raíces son diferentes: " << x1 << " y " << x2 << "." << endl;
 }
 
 void realesIguales(float a, float b){
-	float c, x1, x2, Delta, realPart, imaginaryPart;
-	Delta = b*b - 4*a*c;
-	if (Delta == 0) {
-		cout << "Roots are real and same." << endl;
-    x1 = (-b + sqrt(Delta)) / (2*a);
-  	//return false;
-		cout << "x1 = x2 =" << x1 << endl;
-	}
+	float x = -b / (2*a);
+		cout << "Las raíces son iguales: x1=x2= " << x << endl;
 }
 
 void complejas(float a, float b, float Delta){
-	float c, x1, x2, realPart, imaginaryPart;
-	Delta = b*b - 4*a*c;
-	if (Delta < 0) {
+	float x1, x2, realPart, imaginaryPart;
 		realPart = -b/(2*a);
     imaginaryPart =sqrt(-Delta)/(2*a);
-		//return false;
-    cout << "Roots are complex and different."  << endl;
+    cout << "Las raíces son complejas."  << endl;
     cout << "x1 = " << realPart << "+" << imaginaryPart << "i" << endl;
     cout << "x2 = " << realPart << "-" << imaginaryPart << "i" << endl;
-	}
 }
