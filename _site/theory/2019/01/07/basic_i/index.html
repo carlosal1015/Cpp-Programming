@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.css" integrity="sha384-xNwWFq3SIvM4dq/1RUyWumk8nj/0KFg4TOnNcfzUU4X2gNn3WoRML69gO7waf3xh" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.js" integrity="sha384-UP7zD+aGyuDvxWQEDSRYcvoTxJSD82C6VvuEBktJZGo25CVhDstY9sCDHvyceo9L" crossorigin="anonymous"></script>
+    
+
+    
+
+
+
+    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Basic elements of C++ (T) | C++ Programming</title>
+
+    <meta name="description" content="En este capítulo,  Te harás familiar con los componentes básicos de un programa en C++, incluyendo funciones, símbolos especiales e identificadores.  Explora...">
+    
+    <link rel="shortcut icon" href="/Cpp-Programming/assets/img/favicon.png" type="image/x-icon">
+    <link rel="canonical" href="https://carlosal1015.github.io/Cpp-Programming/theory/2019/01/07/basic_i/">
+    <link rel="alternate" type="application/atom+xml" title="C++ Programming" href="/Cpp-Programming/feed.xml" />
+
+    
+
+    <meta property="og:title" content="Basic elements of C++ (T) | C++ Programming" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" />
+    <meta property="og:url" content="https://carlosal1015.github.io/Cpp-Programming/theory/2019/01/07/basic_i/" />
+    <meta property="og:site_name" content="C++ Programming" />
+    <meta property="og:description" content="En este capítulo,  Te harás familiar con los componentes básicos de un programa en C++, incluyendo funciones, símbolos especiales e identificadores.  Explora..." />
+
+    <script src="https://use.fontawesome.com/1f5f360d80.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet">
+
+    <link href="/Cpp-Programming/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <script src="/Cpp-Programming/assets/js/katex_init.js"></script>
+
+    <header class="site-header">
+    <div class="inner clearfix">
+        
+        <a href="/Cpp-Programming/">
+            <img class="avatar" src="/Cpp-Programming/assets/img/ogp.png" alt=""/>
+        </a>
+        
+        <h1 class="clearfix">
+            <a class="title " href="/Cpp-Programming/">C++ Programming</a>
+            <br><span class="description">Blog about C++ programming.</span>
+        </h1>
+    </div>
+</header>
+
+<div class="site-container">
+    <div class="site-content">
+        <div class="article-wrapper">
+    <article>
+        
+
+<header>
+    <div class="panel">
+        <h1>
+            
+            Basic elements of C++ (T)
+            
+        </h1>
+
+        <ul class="tags">
+            
+            
+            <li><i class="fa fa-tags"></i></li>
+            
+            
+            <li>
+                <a class="tag" href="/Cpp-Programming/search/?t=data">#data</a>
+            </li>
+            
+            <li>
+                <a class="tag" href="/Cpp-Programming/search/?t=iostream">#iostream</a>
+            </li>
+            
+        </ul>
+
+        <div class="clearfix">
+            <ul class="meta">
+                
+                <li>
+                    <i class="fa fa-calendar"></i>
+                    2019-01-07
+                </li>
+                
+
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <p style="text-align: center">
+        <img class="eye-catch" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"/>
+    </p>
+    
+</header>
+        <section class="post-content">
+            <p>En este capítulo,</p>
+<ul>
+  <li>Te harás familiar con los componentes básicos de un programa en C++, incluyendo funciones, símbolos especiales e identificadores.</li>
+  <li>Explorarás tipos de datos simples</li>
+  <li>Descubrirás cómo usar las operaciones aritméticas</li>
+  <li>Examinarás cóom un programa evalúa las expresiones aritméticas</li>
+  <li>Te harás familiar con el tipo de dato <code class="highlighter-rouge">string</code></li>
+  <li>Aprenderás qué es una declaración de asignación y qué es lo que hace.</li>
+  <li>Aprenderás sobre la declaración de variables</li>
+  <li>Descubrirás cómo ingresar los datos en la memoria usando las declaraciones de ingreso</li>
+  <li>Te harás familiar con el uso de operaciones de incremento y decremento</li>
+  <li>Examinarás formas de resultados de salida usando declaraciones de salida.</li>
+  <li>Aprenderás cómo usar las directivas de preprocesador y porqué son necesarios</li>
+  <li>Aprenderás a depurar errores de sintáxis</li>
+  <li>Explorarás cómo estructura un programa apropiadamente, incluyendo usando comentarios para documentar un programa.</li>
+  <li>Te harás familiar con las declaraciones compuestas</li>
+  <li>Aprenderás cómo escribir un programa en C++</li>
+</ul>
+
+<!--more-->
+
+<p>En este capítulo aprenderás lo básico de C++. Como tu objetivo es aprender el lenguaje de programación C++, dos preguntas surgen naturalmente. Primero, ¿qué es un programa de computadora? Segundo, ¿qué es la programación? Un <strong>programa de computadora</strong>, o un programa, es una secuencia de enunciados cuyo objetivo es cumplir una tarea. La <strong>programación</strong> es un proceso de planificación y creación de un programa. Estas dos definiciones dicen la verdad, pero no toda la verdad, acerca de la programación. Es muy posible que se necesite de un libro completo para dar una definición satisfactoria de la programación. Puede obtener una mayor comprensión de la naturaleza de la programación a partir de una analogía, por lo que pasemos a un tema sobre el que casi todo el mundo tiene algún conocimiento – cocinar–. Una recta es también un programa, y todos los que tengan alguna experiencia en la cocina puede ponerse de acuerdo sobre lo siguiente:</p>
+<ol>
+  <li>En general, es más fácil seguir una receta que crear una.</li>
+  <li>Hay buenas rectas y hay malas recetas.</li>
+  <li>Algunas recetas son fáciles de seguir y otras no son fáciles de seguir.</li>
+  <li>Algunas recetas producen resultados confiables y otras no.</li>
+  <li>Debe tener algún conocimiento de cómo usar las herramientas de cocina para seguir una receta hasta completarla.</li>
+  <li>Para crear buenas recetas nuevas, debe tener muchos conocimientos y una buena comprensión de la cocina.</li>
+</ol>
+
+<p>Estos mismos seis puntos también son ciertos sobre la programación. Tomemos un paso más la analogía de la cocina. Supongamos que necesitas enseñarle a alguien cómo convertirse en chef. ¿Cómo lo harías? ¿Primero le presentarías a la persona una buena comida, esperando que desarrolle el gusto por la buena comida? ¿Le pediría a la persona que siguiera recta tras receta con la esperanza que algo de eso se borre? ¿O primero le enseñaría el uso de las herramientas y la naturaleza de los ingredientes, los alimentos y las especias, y explicaría cómo encajan? Al igual que hay desacuerdo sobre cómo enseñar programación. Aprender un lenguaje de programación es como aprender a ser chef o aprender a aprender tocar un instrumento musical. Los tres requieren interacción directa con las herramientas. No puedes convertirte en un buen chef solo leyendo recetas. Del mismo modo, no puede convertise en un músico leyendo libros sobre instrumentos musicales. Lo mismo ocurre con la programación. Debe tener un conocimiento fundamental del idioma y debe probar sus programas en la computadora para asegurarse de que cada programa haga lo que se supone que debe hacer.</p>
+
+<h1 id="una-mirada-rápida-a-un-programa-en-c">Una mirada rápida a un programa en C++</h1>
+
+<p>En este capítulo, aprenderás los elementos básicos y conceptos del lenguaje de programación C++ para crear programas en C++. Además de dar ejemplos para ilustrar varios conceptos, también mostramos programas en C++ para clarificar estos conceptos. En esta sección, proveemos un ejemplode un programa en C++ que calcula el perímetro y el área de un rectángulo. En este punto, no debe preocuparse demasiado por los detalles de este programa. Solo neceista conocer el efecto de una declaración de salida, que se introduce en este programa.</p>
+
+<p>En el ejemplo 1-1 (Capítulo 1), diseñamos un algoritmo para encontrar el perímetro y el área de un rectángulo. Dado el largo y el ancho de un rectángulo. Dado el largo y el ancho de un rectángulo, el programa en C++, en el ejemplo 2-1 calcula y muestra el perímetro y el área.</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">double</span> <span class="n">length</span><span class="p">;</span>
+	<span class="kt">double</span> <span class="n">width</span><span class="p">;</span>
+	<span class="kt">double</span> <span class="n">area</span><span class="p">;</span>
+	<span class="kt">double</span> <span class="n">perimeter</span><span class="p">;</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Program to compute and output the perimeter and"</span>
+			 <span class="o">&lt;&lt;</span> <span class="s">"area of a rectangle."</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+	<span class="n">length</span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">;</span>
+	<span class="n">width</span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">;</span>
+	<span class="n">perimeter</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">width</span><span class="p">);</span>
+	<span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span><span class="p">;</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Length = "</span> <span class="o">&lt;&lt;</span> <span class="n">length</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Width = "</span> <span class="o">&lt;&lt;</span> <span class="n">width</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Area = "</span> <span class="o">&lt;&lt;</span> <span class="n">area</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><strong>Ejecución de muestra</strong>: (Cuando compilas y ejecuta este programa, las siguientes cinco líneas son mostradas en la pantalla.)</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Programa to compute and output the perimeter and area of a rectangle.
+Length <span class="o">=</span> 6
+Width <span class="o">=</span> 4
+Perimeter <span class="o">=</span> 20
+Area <span class="o">=</span> 24</code></pre></figure>
+
+<p>Estas líneas son mostradas por la ejecución de las siguientes declaraciones:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Program to compute and output the perimeter and "</span>
+		 <span class="o">&lt;&lt;</span> <span class="s">"area of a rectangle."</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Length = "</span> <span class="o">&lt;&lt;</span> <span class="n">length</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Width = "</span> <span class="o">&lt;&lt;</span> <span class="n">width</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Perimeter = "</span> <span class="o">&lt;&lt;</span> <span class="n">perimeter</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Area = "</span> <span class="o">&lt;&lt;</span> <span class="n">area</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span></code></pre></figure>
+
+<p>Luego explicaremos cómo esto ocurre. Consideremos primero la siguiente declaración:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Program to compute and output the perimeter and "</span>
+		 <span class="o">&lt;&lt;</span> <span class="s">"area of a rectangle."</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span></code></pre></figure>
+
+<p>Este es un ejemplo de declaración de salida en C++. Hace que la computadora evalúe la expresión después del par de símbolos <code class="highlighter-rouge">&lt;&lt;</code> y muestre el resultado en la pantalla. Un programa en C++ puede contener varios tipos de expresiones como aritmética o cadenas.</p>
+
+<p>Por ejemplo, <code class="highlighter-rouge">length + width</code> es una expresión aritmética. Cualquier cosa entre comillas dobles es una cadena. Por ejemplo, <code class="highlighter-rouge">Program to comoute and output the perimeter and </code> es una cadena. Del mismo modo, <code class="highlighter-rouge">area of a rectangle</code> es también una cadena. Normalmente, una cadena se evalúa a sí misma. Las expresiones aritméticas se evalúan de acuerdo a las reglas de las operaciones aritméticas que normalmente se aprende en un curso de aritmética. Más adelante en este capítulo, explicaremos cómo se forman y evalúan las expresiones aritméticas y las cadenas. También tenga en cuenta que en una declaración de salida, <code class="highlighter-rouge">endl</code> hace que el punto de inserción se mueva al principio de la línea siguiete. (Tenga en cuenta que <code class="highlighter-rouge">endl</code>, la última letra es ele minúscula. También, en la pantalla, el punto de inserción es donde está el cursor.) Por lo tanto, la declaración anterior hace que el sistema muestra la siguiente línea en la pantalla.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Program to compute and output the area and perimeter of a rectangle.</code></pre></figure>
+
+<p>Ahora consideremos la siguiente declaración:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Length = "</span> <span class="o">&lt;&lt;</span> <span class="n">length</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span></code></pre></figure>
+
+<p>Esta declaración de salida consta de dos expresiones. La primera expresión, (después del primer <code class="highlighter-rouge">&lt;&lt;</code>), es <code class="highlighter-rouge">Length = </code> y la segunda expresión, (después del segundo <code class="highlighter-rouge">&lt;&lt;</code>), consta del identificador <code class="highlighter-rouge">length</code>. La expresión <code class="highlighter-rouge">"Length= "</code> es una cadena y evalúa a sí misma. (Note el espacio después de <code class="highlighter-rouge">=</code>.) La segunda expresión, que consta del identificador <code class="highlighter-rouge">length</code>, se evalúa como cualquiera que sea el valor de <code class="highlighter-rouge">length</code> es. Porque el valor asignado a <code class="highlighter-rouge">length</code> es <code class="highlighter-rouge">6.0</code>. Por lo tanto, la salida de la declaraación anterior es:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Length <span class="o">=</span> 6</code></pre></figure>
+
+<p>Note que el valor de <code class="highlighter-rouge">length</code> se muestra como <code class="highlighter-rouge">6</code>, no como <code class="highlighter-rouge">6.0</code>. Lo explicaremos en el siguiente capítulo cómo forzar al programa a generar el valor de <code class="highlighter-rouge">length</code> como <code class="highlighter-rouge">6.0</code>. El significado de las declaraciones de salida restantes es similar.</p>
+
+<p>La última declaración, es decir, <code class="highlighter-rouge">return 0;</code> devuelve el valor <code class="highlighter-rouge">0</code> al sistema operativo cuando el programa termina. Daremos más detalles sobre esta declaración más adelante en este capítulo. Antes de identificar varias partes de un programa en C++, echemos un vistazo a una declaración más de salida. Considere la siguiente declaración:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"7 + 8 = "</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span></code></pre></figure>
+
+<p>En esta declaración de salida, la expresión <code class="highlighter-rouge">"7 + 8 = "</code>, que es una cadena, se evalúa a sí misma. Consideremos la segunda expresión, <code class="highlighter-rouge">7 + 8</code>. Esta expresión consiste de números <code class="highlighter-rouge">7</code> y <code class="highlighter-rouge">8</code>, y la operador aritmética <code class="highlighter-rouge">+</code> de C++. Por lo tanto, el resultado de la expresión <code class="highlighter-rouge">7 + 8</code> es la suma de <code class="highlighter-rouge">7</code> y <code class="highlighter-rouge">8</code>, que es <code class="highlighter-rouge">15</code>. Así, la salida de la declaración anterior es:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">7 + 8 <span class="o">=</span> 15</code></pre></figure>
+
+<p>En este capítulo, hasta que expliquemos cómo construir correctamente un programa en C++, estaremos utilizando declaraciones de salida como las anteriores para explicar varios conceptos. Después al finalizar el Capítulo 2, deberías poder escribir programas en C++ lo suficientemente bien como para hacer algunos cálculos y mostrar los resultados. A continuación, notemos lo siguiente sobre el programa anterior en C++. Un programa en C++ es una colección de funciones, una de las cuales es la función principal. En términos generales, una función es un conjunto de afirmaciones cuyo objetivo es lograr algo. El programa anterior se compone de la única función principal; todos los programas de C++ requieren de una función principal.</p>
+
+<p>Las primeras cuatro líneas de un programa empieza con el par de símbolos <code class="highlighter-rouge">//</code> (se muestra en verde), que son comentarios. Los comentarios son para el usuario, normalmente explican el propósito de los programas, es decir, el significado de las declaraciones. (Vamos a detallar cómo incluir comentarios en un programa más adelante en este capítulo). La siguient línea del programa, es decir,</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &lt;iostream&gt;</span></code></pre></figure>
+
+<p>nos permite usar el (objeto predefinido) <code class="highlighter-rouge">cout</code> para generar saluda y el (manipulador) <code class="highlighter-rouge">endl</code>. La declaración</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span></code></pre></figure>
+
+<p>le permite usar el <code class="highlighter-rouge">cout</code> y el <code class="highlighter-rouge">endl</code> sin el prefijo <code class="highlighter-rouge">std::</code>. Esto significa que si no incluye esta declaración, entonces <code class="highlighter-rouge">cout</code> debería ser usado como <code class="highlighter-rouge">std::cout</code> y <code class="highlighter-rouge">endl</code> debería ser usado como `std::endl.  Elaboraremos esto al final de este capítulo.</p>
+
+<p>Ahora consideremos la siguiente línea:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="n">main</span><span class="p">()</span></code></pre></figure>
+
+<p>Esta es la cabezera de la función <code class="highlighter-rouge">main</code>. La siguiente línea consiste de una llave izquierda. Esto marca el inicio del (cuerpo) de la función <code class="highlighter-rouge">main</code>. La llave derecha (al final de última línea del programa) coincide con esta llave izquierda y marca el fin del cuerpo de la función <code class="highlighter-rouge">main</code>. Explicaremos el significado de los otros términos, tales como aquellos mostrados en azul, después en este libro. Note que en C++, <code class="highlighter-rouge">&lt;&lt;</code> es un operador llamado el <em>stream insertion operator</em>.</p>
+
+<p>Antes de finalizar esta sección, permítanos identificar cietas partes de un programa en C++ en la Figura 2-1.</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="c1">//*************************************************************
+// Given the length and width of a rectangle, this C++ program
+// computes and outputs the perimeter and area of the rectangle.
+//*************************************************************
+</span><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">double</span> <span class="n">length</span><span class="p">;</span>
+	<span class="n">dobule</span> <span class="n">width</span><span class="p">;</span>
+	<span class="kt">double</span> <span class="n">area</span><span class="p">;</span>
+	<span class="kt">double</span> <span class="n">perimeter</span><span class="p">;</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Program to compute and output the perimeter and "</span>
+			 <span class="o">&lt;&lt;</span> <span class="s">"area of a rectangle."</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+	<span class="n">length</span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">;</span>
+
+	<span class="n">width</span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">;</span>
+	<span class="n">perimeter</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">width</span><span class="p">);</span>
+
+	<span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span><span class="p">;</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Length = "</span> <span class="o">&lt;&lt;</span> <span class="n">length</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Width = "</span> <span class="o">&lt;&lt;</span> <span class="n">width</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Perimter = "</span> <span class="o">&lt;&lt;</span> <span class="n">perimeter</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Area = "</span> <span class="o">&lt;&lt;</span> <span class="n">area</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Uno de los términos que encontrarás a lo largo del texto y que es también identificado en la Figura 2-1 es una <em>variable</em>. Por lo tanto, introducimos este término en esta sección. Recordemos del Capítulo 1 que todos los datos deben ser cargados en la memoria principal antes que puedan ser manipulados. Por ejemplo, dado la longitud y el ancho, el programa en la Figura 2-1 calcula y muestra el área y el perímetro de un rectángulo. Esto significa que el valor de la longitud y el ancho debe ser guardado en la memoria principal. También, recordemos del Capítulo 1 que la memoria principal es una secuencia ordenada de celdas y cada celda tiene una dirección. Dentro de la computadora, la dirección de memoria está en binario. Una vez que almacenamos el valor de la longitud y el ancho, y porque estos valores podrían ser necesitados en más de un lugar en un program, nos gustaría conocer cómo las ubicaciones donde estos valores on guardados y cómo acceder a estas ubicaciones. C++ hace esto facil para un programador al especificar estas ubicaciones porque el programador puede otorgar un nombre alfabético para cada una de estas ubicaciones. Por supuesto, debemos seguir las reglas para especificar los nombres. Por ejemplo, en el programa en la Figura 2-1, le decimos al sistema que almacene cuatro espacios de memoria y los nombre ``length, <code class="highlighter-rouge">width</code>, <code class="highlighter-rouge">area</code> y <code class="highlighter-rouge">perimter</code>, respectivamente. (Explicaremos el significado de la palabra <code class="highlighter-rouge">double</code>, mostrado en azul luego en este capítulo.) Esencialmente, una <em>variable</em> es la ubicación de memoria cuyo contenido puede cambiar. Así <code class="highlighter-rouge">length</code>, <code class="highlighter-rouge">width</code>, <code class="highlighter-rouge">area</code> y <code class="highlighter-rouge">perimeter</code> son variables. También durante la ejecución de un programa, el sistema almacenará cuatro ubicaciones de memoria lo suficientemente grande para almacenar números decimales y estas ubicaciones de memoria son llamados <code class="highlighter-rouge">length</code>, <code class="highlighter-rouge">width</code>, <code class="highlighter-rouge">area</code> y <code class="highlighter-rouge">perimeter</code>, respectivamente. (vea Figura 2-2).</p>
+
+<p>La declaración <code class="highlighter-rouge">length = 6.0</code>; llamará al sistema para almacenar <code class="highlighter-rouge">6.0</code> en la ubicación de memoria asociado con el nombre (o identificado por el nombre) <code class="highlighter-rouge">length</code>, vea Figura 2-3.</p>
+
+<p>Ejemplo 2-14 y 2-19 adelante ilustran cómo el dato es manipulado en variables.</p>
+
+<p>Como procedimos a lo largo del capítulo, explicaremos el significado de las partes restantes identificadas en la Figura 2-1.</p>
+
+<h1 id="lo-básico-de-un-programa-en-c">Lo básico de un programa en C++</h1>
+
+<p>En la sección anterior, dimos un ejemplo de un programa en C++ y también identificamos ciertas partes del programa. En general, un programa en C++ es una colección de uno o más subprogramas, llamadas funciones. Toscamente hablando, un <strong>subprograma</strong> o una <strong>función</strong> es una colección de declaraciones, y cuando este es activada, o ejectuada, esto cumple algo. Algunas funciones, llamadas <strong>predefinidas</strong> o funciones <strong>estándar</strong>, ya están escritas y son provistas como parte del sistema. Pero para cumplir muchas tareas, los programadores deben aprender a escribir sus propias funciones</p>
+
+<p>Cualquier programa en C++ tiene una funcion principal. Así, si un programa en C++ tiene una sola función, este debe ser la función <code class="highlighter-rouge">main</code>. Hasta el Capítulo 6, otros que usan algunas funciones predefinidas, principalmente tratarás con la función <code class="highlighter-rouge">main</code>. Al final de este capítulo, habrás aprendido cómo escribir programas que consisten solo de la función <code class="highlighter-rouge">main</code>.</p>
+
+<p>Si nunca has visto un programa escrito en un lenguaje de programación, el programa en C++ en el ejemplo 2-1 podría paracer un lenguaje extranjero. Para hacer las oraciones significantes en un lenguaje extraño, debes aprender su alfabeto, palabras y su gramática. Lo mismo es cierto para un lenguaje de programación. Para escribir programas significantes, debes aprender los símbolos especiales, palabras y reglas de sintáxis. Las <strong>reglas de sintaxis</strong> te dicen cuáles declaraciones (instrucciones) son legales o válidas, esto es, cuáles son aceptadas por el lenguaje de programación y cuáles no. Debes también aprender las <strong>reglas de semántica</strong>, que determinan el significado de las instrucciones. Las reglas del lenguaje de programación, los símbolos y las palabras especiales del lenguaje de programación le permite escribir programas para resolver problemas.</p>
+
+<p><strong>Lenguaje de programación:</strong> Un conjunto de reglas, símbolos y palabras especiales.</p>
+
+<p>En el resto de esta sección, aprenderá sobre algunos de los símbolos especiales de un programa en C++. Se introducen símbolos especiales adicionales a medida que se encuentran otros conceptos en capítulos posteriores. De manera similar, las reglas de sintaxis y semánticas se presentan y discuten a lo largo del libro.</p>
+
+<h2 id="comentarios">Comentarios</h2>
+
+<p>El programa que escriba debe ser claro no solo para usted, sino también para el lector de su programa. Parte de una buena programación es la inclusión de comentarios en el programa. Por lo general, los comentarios se pueden usar para identificar a los autores del programa, dar la fecha en que se escribe o modificar el programa, dar una breve explicación del programa y explicar el significado de las declaraciones clave en un programa. En los ejemplos de programación, para los programas que escribimos, no incluiremos la fecha en que el programa está escrito, de acuerdo con la convención estándar para escribir tales libros.
+Los comentarios son para el lector, no para el compilador. Entonces, cuando un compilador compila un programa para verificar los errores de sintaxis, ignora completamente los comentarios. A lo largo de este libro, los comentarios se muestran en verde.</p>
+
+<p>El programa en el Ejemplo 2-1 contiene los siguientes comentarios:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="c1">//**************************************************************
+// Given the length and width of a rectangle, this C++ program
+// computes and outputs the perimeter and area of the rectangle.
+</span><span class="o">//**************************************************************</span></code></pre></figure>
+
+<p>Hay dos tipos comunes de comentarios en un programa C++: los comentarios de una sola línea y comentarios de varias líneas.</p>
+
+<p>Los comentarios de una sola línea comienzan con <code class="highlighter-rouge">//</code> y se pueden colocar en cualquier lugar de la línea. Todo lo que se encuentra en esa línea después de <code class="highlighter-rouge">//</code> es ignorado por el compilador. Por ejemplo, considere la siguiente declaración:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"7 + 8 = "</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span></code></pre></figure>
+
+<p>Puedes poner comentarios al final de esta línea de la siguiente manera:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"7 + 8 = "</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="o">//</span><span class="n">prints</span><span class="o">:</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">15</span></code></pre></figure>
+
+<p>Este comentario podría ser significativo para un programador principiante.</p>
+
+<p>Los comentarios de varias líneas se incluyen entre <code class="highlighter-rouge">/*</code> y <code class="highlighter-rouge">*/</code>. El compilador ignora cualquier cosa que aparezca entre <code class="highlighter-rouge">/*</code> y <code class="highlighter-rouge">*/</code>. Por ejemplo, el siguiente es un ejemplo de un comentario de varias líneas:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cm">/*
+	You can include comments that can
+	occupy several lines.
+*/</span></code></pre></figure>
+
+<p>En los comentarios de varias líneas, muchos programadores utilizan comentarios de una sola línea en cada línea para hacer que los comentarios se destaquen más al lector (como se hizo en el programa del Ejemplo 2-1).</p>
+
+<h2 id="símbolos-especiales">Símbolos especiales</h2>
+
+<p>La unidad individual más pequeña de un programa escrito en cualquier idioma se llama <strong>token</strong>. Los tokens de C++ se dividen en símbolos especiales, símbolos de palabras e identificadores. Los siguientes son algunos de los símbolos especiales:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>+</strong></td>
+      <td><strong>-</strong></td>
+      <td><strong>*</strong></td>
+      <td><strong>/</strong></td>
+    </tr>
+    <tr>
+      <td><strong>.</strong></td>
+      <td><strong>;</strong></td>
+      <td><strong>?</strong></td>
+      <td><strong>,</strong></td>
+    </tr>
+    <tr>
+      <td><strong>&lt;=</strong></td>
+      <td><strong>!=</strong></td>
+      <td><strong>==</strong></td>
+      <td><strong>&gt;=</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>La primera fila incluye símbolos matemáticos para suma, resta, multiplicación y división. La segunda fila consta de signos de puntuación tomados de la gramática inglesa. Tenga en cuenta que la coma es también un símbolo especial. En C++, las comas se usan para separar elementos en una lista. Los puntos y comas también son símbolos especiales y se utilizan para finalizar una declaración en C++. Tenga en cuenta que un espacio en blanco, que no se muestra arriba, también es un símbolo especial. Usted crea un símbolo en blanco presionando la barra espaciadora (solo una vez) en el teclado. La tercera fila consta de fichas compuestas por dos caracteres que se consideran como un solo símbolo. Ningún carácter puede aparecer entre los dos caracteres en el token, ni siquiera un espacio en blanco.</p>
+
+<h2 id="palabras-reservadas-palabras-clave">Palabras reservadas (palabras clave)</h2>
+
+<p>Una segunda categoría de fichas es símbolos de palabras reservadas. Algunos de los símbolos de palabras reservados incluyen los siguientes</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">int</span><span class="p">,</span> <span class="kt">float</span><span class="p">,</span> <span class="kt">double</span><span class="p">,</span> <span class="kt">char</span><span class="p">,</span> <span class="k">const</span><span class="p">,</span> <span class="kt">void</span><span class="p">,</span> <span class="k">return</span></code></pre></figure>
+
+<p>Las palabras reservadas también son llamadas <strong>palabras clave</strong>. Las letras que componen una palabra reservadas son siempre en minúscula. Como los símbolos especiales, cada una es considerada como un símbolo único. Además, las palabras reservadas no pueden ser redefinidas dentro de cualquier programa, esto es, ellos 
+no puede ser utilizado para nada más que su uso previsto. Para una lista completa de palabras reservadas, vea.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">and_eq</code></td>
+      <td><code class="highlighter-rouge">double</code></td>
+      <td><code class="highlighter-rouge">new</code></td>
+      <td><code class="highlighter-rouge">switch</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">and</code></td>
+      <td><code class="highlighter-rouge">dynamic_cast</code></td>
+      <td><code class="highlighter-rouge">not_eq</code></td>
+      <td><code class="highlighter-rouge">template</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">asm</code></td>
+      <td><code class="highlighter-rouge">else</code></td>
+      <td><code class="highlighter-rouge">not</code></td>
+      <td><code class="highlighter-rouge">this</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">auto</code></td>
+      <td><code class="highlighter-rouge">enum</code></td>
+      <td><code class="highlighter-rouge">nullptr</code></td>
+      <td><code class="highlighter-rouge">throw</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">bitand</code></td>
+      <td><code class="highlighter-rouge">explicit</code></td>
+      <td><code class="highlighter-rouge">operator</code></td>
+      <td><code class="highlighter-rouge">true</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">bitor</code></td>
+      <td><code class="highlighter-rouge">export</code></td>
+      <td><code class="highlighter-rouge">or_eq</code></td>
+      <td><code class="highlighter-rouge">try</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">bool</code></td>
+      <td><code class="highlighter-rouge">extern</code></td>
+      <td><code class="highlighter-rouge">or</code></td>
+      <td><code class="highlighter-rouge">typedef</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">break</code></td>
+      <td><code class="highlighter-rouge">false</code></td>
+      <td><code class="highlighter-rouge">private</code></td>
+      <td><code class="highlighter-rouge">typeid</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">case</code></td>
+      <td><code class="highlighter-rouge">float</code></td>
+      <td><code class="highlighter-rouge">protected</code></td>
+      <td><code class="highlighter-rouge">typename</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">catch</code></td>
+      <td><code class="highlighter-rouge">for</code></td>
+      <td><code class="highlighter-rouge">public</code></td>
+      <td><code class="highlighter-rouge">union</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">char</code></td>
+      <td><code class="highlighter-rouge">friend</code></td>
+      <td><code class="highlighter-rouge">register</code></td>
+      <td><code class="highlighter-rouge">unsigned</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">class</code></td>
+      <td><code class="highlighter-rouge">goto</code></td>
+      <td><code class="highlighter-rouge">reinterpret_cast</code></td>
+      <td><code class="highlighter-rouge">using</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">compl</code></td>
+      <td><code class="highlighter-rouge">if</code></td>
+      <td><code class="highlighter-rouge">return</code></td>
+      <td><code class="highlighter-rouge">virtual</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">const_cast</code></td>
+      <td><code class="highlighter-rouge">inline</code></td>
+      <td><code class="highlighter-rouge">short</code></td>
+      <td><code class="highlighter-rouge">void</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">const</code></td>
+      <td><code class="highlighter-rouge">int</code></td>
+      <td><code class="highlighter-rouge">signed</code></td>
+      <td><code class="highlighter-rouge">volatile</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">continue</code></td>
+      <td><code class="highlighter-rouge">long</code></td>
+      <td><code class="highlighter-rouge">sizeof</code></td>
+      <td><code class="highlighter-rouge">wchar_t</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">default</code></td>
+      <td><code class="highlighter-rouge">mutable</code></td>
+      <td><code class="highlighter-rouge">static_cast</code></td>
+      <td><code class="highlighter-rouge">while</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">delete</code></td>
+      <td><code class="highlighter-rouge">namespace</code></td>
+      <td><code class="highlighter-rouge">static</code></td>
+      <td><code class="highlighter-rouge">xor_eq</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">do</code></td>
+      <td> </td>
+      <td><code class="highlighter-rouge">struct</code></td>
+      <td><code class="highlighter-rouge">xor</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>A lo largo de este libro, las palabras reservadas son mostradas de azul.</p>
+</blockquote>
+
+<h2 id="identificadores">Identificadores</h2>
+
+<p>Una tercera categoría de símbolo son los identificadores. Los identificadores son los nombres de cosas que aparecen en los programas, como las variables, constantes y funciones. Todos los identificadores deben obedecer las reglas de C++ para identificadores.</p>
+
+<p><strong>Identificador</strong>: Un identificador en C++ consiste de letras, dígitos, el carácter guion bajo (_) y debe empezar con un letras o guion bajo.</p>
+
+<p>Algunos identificadores son predefinidos, otros son definidos por el usuario. En un programa en C++ en el Ejemplo 2-1, <code class="highlighter-rouge">cout</code> es un identificador predefinido y <code class="highlighter-rouge">length</code> es un identificador definido por el usuario. Dos identificadores que ya habrás encontrado familiar son <code class="highlighter-rouge">cout</code> y <code class="highlighter-rouge">cin</code>. Ya hemos visto el efecto de <code class="highlighter-rouge">cout</code>. Más adelante en este capítulo, aprenderás cómo trabaja <code class="highlighter-rouge">cin</code> que es usado para ingresar datos. A diferencia de las palabras reservadas, los identificadores predefinidos pueden ser redefinidos, pero no sería prudente hacerlo.</p>
+
+<p>Los identificadores puede estar formado por solo caracteres, dígitos, y el carácter guion bajo (_); ningún otro símbolo es permitido para formar un identificador.</p>
+
+<blockquote>
+  <p>C++ distingue mayúsculas y minúsculas, letras mayúsculas y letras minúsculas son consideradas diferentes. Por lo tanto el identificador <code class="highlighter-rouge">NUMBER</code> no es lo mismo que el identificador <code class="highlighter-rouge">number</code>. De igual forma, <code class="highlighter-rouge">X</code> y <code class="highlighter-rouge">x</code> son diferentes.</p>
+</blockquote>
+
+<p>En C++, los identificadores pueden tener cualquier longitud.</p>
+
+<h2 id="ejemplo-2-2">Ejemplo 2-2</h2>
+
+<p>Los siguientes son identificadores válidos en C++:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">first</span>
+<span class="n">conversion</span>
+<span class="n">payRate</span>
+<span class="n">counter1</span></code></pre></figure>
+
+<p>La tabla 2-1 muestra algunos identificadores inválidos y explica por qué son inválidos y también da un identificador válido.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Identificador inválido</td>
+      <td>Razón</td>
+      <td>Un identificador válido</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">employee Salary</code></td>
+      <td>No puede haber espacio entre <code class="highlighter-rouge">employee</code> y <code class="highlighter-rouge">Salary</code>.</td>
+      <td><code class="highlighter-rouge">employeeSalary</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Hello!</code></td>
+      <td>El signo de exclamación no puede ser usado como un identificador.</td>
+      <td><code class="highlighter-rouge">Hello</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">one + two</code></td>
+      <td>El símbolo <code class="highlighter-rouge">+</code> no puede ser usado como un identificador.</td>
+      <td><code class="highlighter-rouge">onePlusTwo</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">2nd</code></td>
+      <td>Un identificador no puede empezar con un dígito.</td>
+      <td><code class="highlighter-rouge">second</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Los proveedores de compiladores generalmente comienzan ciertos identificadores con un guion bajo (_). Cuando el enlazador vincula el programa objeto con los recursos del sistema proporcionados por el entorno de desarrollo integrado (IDE), ciertos errores podrían ocurrir. Por lo tanto, se recomienda que no inicie un identificador con un guion bajo (_).</p>
+</blockquote>
+
+<h2 id="espacios-en-blanco">Espacios en blanco</h2>
+
+<p>Cualquier programa en C++ contiene espacios en blanco. Los espacios en blanco incluyen espacios en blanco, tabulaciones y caracteres de nueva línea. En un programa en C++, los espacios en blanco se utilizan para separar símbolos espciales, palabras reservadas e identificadores. Los espacios en blanco no son imprimibles en el sentido que cuando ellos son impresos en un retazo de papel, los espacios entre símbolos especiales, palabras reservadas e identificadores es blanco. La utilización apropiada de espacios en blanco es importante. Ellos ayudan a hacer el programa más legible.</p>
+
+<h2 id="tipos-de-datos">Tipos de datos</h2>
+
+<p>El objetivo de un programa en C++ es manipular datos. Las</p>
+
+<p>El objetivo de un programa de C ++ es manipular los datos. Diferentes programas manipulan los datos. Diferentes programas manipulan diferentes datos. se agregará un programa diseñado para calcular el sueldo de un empleado,</p>
+
+<figure class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\documentclass</span><span class="na">[tikz, border=1mm]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usetikzlibrary</span><span class="p">{</span>calc,arrows,babel<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+	<span class="nt">\begin{tikzpicture}</span>
+	<span class="k">\draw</span><span class="na">[color=red, dotted, line width=3pt]</span> (0,0) rectangle (2.5,2.5);
+	<span class="nt">\end{tikzpicture}</span>
+
+	<span class="nt">\begin{tikzpicture}</span>
+	<span class="k">\shade</span><span class="na">[bottom color = cyan, top color = blue, ball color = green]</span> (0,0) -- (3,0) -- (0,3) -- cycle;
+	<span class="nt">\end{tikzpicture}</span>
+	
+	<span class="nt">\begin{tikzpicture}</span>
+	<span class="k">\draw</span><span class="na">[step = .5, gray!75]</span> (-2,2) grid (9,4);
+	<span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\begin{tikzpicture}</span>
+	<span class="k">\draw</span><span class="na">[thick, -&gt;, &gt;=stealth]</span> (-2,-2) arc[start angle = 0, end angle = 45, radius = 1];
+<span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\begin{tikzpicture}</span>
+;
+<span class="nt">\end{tikzpicture}</span>
+
+<span class="nt">\end{document}</span>
+
+La unidad por defecto es el cm</code></pre></figure>
+
+
+        </section>
+    </article>
+</div>
+    </div>
+
+    <aside class="site-aside">
+        <div class="inner">
+            <div class="block">
+                <form action="/Cpp-Programming/search">
+                    <input type="search" id="search" name="q" placeholder="Search" />
+                </form>
+            </div>
+            <ul>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a class="page-link" href="/Cpp-Programming/about/">About</a></li>
+                
+                
+                
+                <li><a class="page-link" href="/Cpp-Programming/appendex/">Appendex</a></li>
+                
+                
+                
+                <li><a class="page-link" href="/Cpp-Programming/tags/">Tags</a></li>
+                
+                
+                
+                <li><a class="page-link" href="/Cpp-Programming/archives/">Archives</a></li>
+                
+                
+            </ul>
+            <ul class="icons">
+                
+
+
+<li>
+    <a href="/Cpp-Programming/feed.xml">
+        <i class="fa fa-fw fa-rss"></i>
+    </a>
+</li>
+
+
+
+<li>
+    <a href="mailto:caznaranl@uni.pe">
+        <i class="fa fa-fw fa-envelope"></i>
+    </a>
+</li>
+
+
+
+<li>
+    <a href="https://github.com/carlosal1015">
+        <i class="fa fa-fw fa-github"></i>
+    </a>
+</li>
+
+
+
+
+<li>
+    <a href="https://twitter.com/carlosal1015">
+        <i class="fa fa-fw fa-twitter"></i>
+    </a>
+</li>
+
+
+
+
+
+<li>
+    <a href="https://www.reddit.com/user/carlosal1015">
+        <i class="fa fa-fw fa-reddit"></i>
+    </a>
+</li>
+
+
+
+<li>
+    <a href="https://stackexchange.com/users/9558603/oromion">
+        <i class="fa fa-fw fa-stack-exchange"></i>
+    </a>
+</li>
+
+
+
+<li>
+    <a href="https://blogdeoromion.wordpress.com/">
+        <i class="fa fa-fw fa-wordpress"></i>
+    </a>
+</li>
+
+
+
+<li>
+    <a href="https://www.youtube.com/channel/UC0dDIu9Ppa8BMXrNksA5oYA">
+        <i class="fa fa-fw fa-youtube"></i>
+    </a>
+</li>
+
+                <video controls="" autoplay="" name="media">
+    <source src="https://streamer.radio.co/s06b196587/listen" type="audio/mpeg">
+</video>
+            </ul>
+            <hr class="with-no-margin margin-bottom"/>
+
+            <div class="block sticky">
+                <h2>Recent posts</h2>
+                <ul>
+                    
+                    
+                    
+                    
+                    <li><a href="/Cpp-Programming/practice/2019/02/04/control_structures_ii/">Control structures (P)</a></li>
+                    
+                    <li><a href="/Cpp-Programming/theory/2019/01/28/control_structures_i/">Control structures (T)</a></li>
+                    
+                    <li><a href="/Cpp-Programming/theory/2019/01/21/input_output_i/">Input/Output (T)</a></li>
+                    
+                    <li><a href="/Cpp-Programming/practice/2019/01/21/input_output_ii/">Input/Output (P)</a></li>
+                    
+                    <li><a href="/Cpp-Programming/practice/2019/01/14/basic_ii/">Basic elements of C++ (P)</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<footer class="site-footer">
+    <div class="inner">
+        <span>Powered by </span><a href="https://khan.github.io/">Khan Academy</a><span> and Oromion.</span>
+    </div>
+</footer>
+
+<script src="/Cpp-Programming/assets/lib/garand-sticky/jquery.sticky.js"></script>
+<script src="/Cpp-Programming/assets/js/script.js"></script>
+
+
+<script src="/Cpp-Programming/assets/js/header-link.js"></script>
+
+
+
+
+<script src="/Cpp-Programming/assets/js/katex_init.js"></script>
+
+
+</body>
+</html>
