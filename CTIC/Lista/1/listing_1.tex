@@ -73,6 +73,175 @@
 \vspace{0.2in}
 \makebox[\textwidth]{Nombres y apellidos del instructor:\enspace MSc. Víctor Melchor Espinoza.\hfill}
 
+\section*{Ejercicios de ejemplo}
+
+\subsection*{Primera parte}
+
+\begin{questions}
+
+\question Convertir en expresiones aritméticas algorítmicas las siguientes expresiones algebraicas:
+\begin{multicols}{2}
+	\begin{parts}
+			\part $5(x+y)$
+			\part $a^2+b^2$
+			\part $\frac{x+y}{u+\frac{v}{w}}$
+			\part $\frac{x}{y}(v+w)$
+	\end{parts}
+\end{multicols}
+
+\begin{solution}
+
+\end{solution}
+
+\question Escribir las siguientes expresiones algorítmicas como expresiones algebraicas:
+\begin{multicols}{2}
+	\begin{parts}
+			\part \texttt{b**2 - 4*a*c}
+			\part \texttt{3*x**4 - 5*x**3 + 12*x - 17}
+			\part \texttt{(b + d)/(c + 4)}
+			\part \texttt{(x**2 + y**2)**(1/2)}
+	\end{parts}
+\end{multicols}
+
+\begin{solution}
+
+\end{solution}
+
+\question Determine los resultados que se obtienen al aplicar la función correspondiente:
+\begin{multicols}{2}
+	\begin{parts}
+			\part \texttt{raizcua(25)}
+			\part \texttt{redondeo(6.5)}
+			\part \texttt{redondeo(3.1)}
+			\part \texttt{redondeo(-3.2)}
+			\part \texttt{trunc(5.6)}
+			\part \texttt{trunc(3.1)}
+			\part \texttt{trunc(-3.8)}
+			\part \texttt{cuadrado(7)}
+			\part \texttt{abs(19.3)}
+			\part \texttt{abs(-15)}
+	\end{parts}
+\end{multicols}
+
+\begin{solution}
+
+\end{solution}
+
+\question ¿Cuáles son los valores de \mintinline{cpp}{A}, \mintinline{cpp}{B} y \mintinline{cpp}{C} después de las siguientes operaciones?
+
+\begin{minted}{cpp}
+A = 3;
+B = 4;
+C = A + 2*B;
+B = C - A;
+A = B*C;
+\end{minted}
+
+\begin{solution}
+
+\end{solution}
+
+\question ¿Cuál es el valor de \mintinline{cpp}{x} después de las siguientes operaciones?
+
+\begin{minted}{cpp}
+x = 2;
+x = cuadrado(x + x);
+x = raizcua(16 + raizcua(x) + 5);
+\end{minted}
+
+\begin{solution}
+
+\end{solution}
+
+\question Encontrar el valor de la variable \mintinline{cpp}{RESUL} después de la ejecución de las siguientes operaciones:
+\begin{multicols}{2}
+\begin{parts}
+\part
+\begin{minted}{cpp}
+X = 3;
+Y = 2;
+RESUL = X**Y - Y
+\end{minted}
+\part
+\begin{minted}{cpp}
+RESUL = 5;
+X = 3;
+RESUL = RESUL*X + RESUL - X;
+\end{minted}
+\end{parts}
+\end{multicols}
+
+\begin{solution}
+
+\end{solution}
+
+\question ¿Cuál es el resultado de evaluar las siguientes expresiones?
+\begin{multicols}{3}
+\begin{parts}
+	\part \mintinline{cpp}{3 + 6*14 - 18/3;}
+	\part \mintinline{cpp}{8 + 7*3 - 4*6;}
+	\part \mintinline{cpp}{-4*7 + 2**3/4 - 5;}
+\end{parts}
+\end{multicols}
+\question Calcule el valor de las siguientes expresiones:
+\begin{multicols}{2}
+\begin{parts}
+	\part \mintinline{cpp}{8 + 7*3 + 4*5;}
+	\part \mintinline{cpp}{-2**3 + 16 DIV 5;}
+	\part \mintinline{cpp}{(32 + 3*4)/5 - (19 MOD 7) DIV 3;}
+	\part \mintinline{cpp}{(2**2*3)- 3 MOD 5 + 4^3;}
+	\part \mintinline{cpp}{3 + 2*(18 - 4**2);}
+	\part \mintinline{cpp}{16*6 - 3*2 -12;}
+\end{parts}
+\end{multicols}
+
+\begin{solution}
+
+\end{solution}
+
+\end{questions}
+
+\subsection*{Segunda parte}
+
+Para los siguientes ejercicios, elabore los algoritmos en diagrama de flujo y luego en pseudocódigo. Recuerde que debe usar la sintáxis y el estilo establecido en el curso.
+
+\begin{questions}
+
+\question Determinar el área de un cuadrado conociendo su lado.
+\question Determinar el área de un triángulo conociendo su base y su altura.
+\question Determinar el área de un trapecio conociendo sus bases y su altura.
+\question Convertir grados \textbf{Centígrados} a grados \textbf{Farenheit} a partir de la siguiente fórmula:
+
+{\centering \mintinline{cpp}{GradosFar = 1.8*GradosCent + 32}\par}
+
+\begin{solution}
+
+\end{solution}
+
+\question Una señora de una tienda compra un artículo a determinado precio, y lo vende con una ganancia del 18\%. Determinar el precio final de venta.
+
+\begin{solution}
+
+\end{solution}
+
+\question Todos los lunes, miércoles y viernes; una persona corre la misma ruta y cronometra los tiempos obtenidos. Determinar el tiempo promedio que la persona tarda en recorrer la ruta en una semana cualesquiera.
+
+\begin{solution}
+
+\end{solution}
+
+\question Calcule e imprima el número de segundos que hay en número \mintinline{cpp}{X} de días.
+
+\begin{solution}
+
+\end{solution}
+
+\question En una determinada gasolinera, los surtidores miden y registran en galones, pero el precio de la gasolina está en litros. Calcular e imprimir lo que hay que cobrarle al cliente en soles.
+
+\textbf{Consideraciones}: Cada galón tiene \SI{3.785}{\litre} y \SI[per-mode=symbol]{15}[S/]{\per\litre}.
+
+\end{questions}
+
 \section*{Ejercicios de práctica}
 
 \begin{questions}

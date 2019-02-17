@@ -2,7 +2,7 @@
 // http://www.mediafire.com/file/ovkcbqdwkc9jkks/basicos_pseint_5.zip
 // http://subefotos.com/ver/?1910810df9f184ac7ab2a9aec52f3c83o.jpg
 Proceso digital_clock
-	horas <- 0
+	horas <- 0	
 	minutos <- 59
 	segundos <- 55
 	
