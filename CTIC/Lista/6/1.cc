@@ -34,5 +34,6 @@ int main(){
 
 	cout << "Candidato A: " << (float) contA / LENGTH * 100 << "%" << endl;
 	cout << "Candidato B: " << (float) contB / LENGTH * 100 << "%" << endl;
+
 	return 0;
 }
