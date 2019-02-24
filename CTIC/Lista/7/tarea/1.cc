@@ -32,21 +32,21 @@ int main(){
 				}	break;
 		case 2:
 			cout << "Por favor ingrese la contraseña para ingresar al sistema:\n";
+			cin.ignore();
 			getline(cin, user_password);
 
-			do{
-				if (password.compare(user_password) == 0) {	attempt ++;
-					cout << "¡Bienvenido al sistema!" << endl; break;	
-				}
-			else{	attempt ++;
+			do{ attempt ++;
+				if (password.compare(user_password) == 0) break;
+			else{
 				cout << "Le queda " << MAX_ATTEMPT - attempt << " intento(s)." << endl;
 				cout << "¡Contraseña incorrecta!" << endl << "Ingrese nuevamente:" << endl;
 				getline(cin, user_password);
 			}
 		} while (attempt < 2); break;
-		
-		if (attempt == 2)	cout << "Cuenta bloqueada." << endl;	break;
 	}
+
+	if (attempt < 4)	cout << "¡Bienvenido al sistema!" << endl;
+	else cout << "Cuenta bloqueada." << endl;
 
 	return 0;
 }
