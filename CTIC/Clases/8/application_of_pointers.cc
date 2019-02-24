@@ -7,7 +7,7 @@ int Longitud(char *ptr){
 	int lon = 0;
 	while(*ptr!= '\0'){
 		lon++;
-		ptr++;
+		ptr++;						//Accediendo al siguiente casillero
 	}
 	return lon;
 }
@@ -17,11 +17,11 @@ int main(){
 	char *ptr;
 	int n;
 	cout << "Ingrese una frase: ";
-	cin.get(cad,TAM);	//No usar gets(cad);
+	cin.get(cad,TAM);			//No usar gets(cad);
 	ptr =& cad[0];
 	ptr = cad;
 	n = Longitud(ptr);
-	cout << "Longitud" << n<< endl;
+	cout << "La longitud de " << cad << " es " << n << "." <<  endl;
 
 	return 0;
 }

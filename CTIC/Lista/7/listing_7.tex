@@ -64,7 +64,7 @@
 
 \begin{center}\sffamily\bfseries\large
 	Programación en \texttt{C++} \\
-	TEMA $\bm{6}$: Arreglos.
+	TEMA $\bm{7}$: Arreglo de caracteres.
 \end{center}
 
 \vspace{.5cm}
@@ -77,27 +77,24 @@
 
 \begin{questions}
 
-\question En el balneario de Pucusana se han presentado dos candidatos a la alcaldía y se desea implementar un programa que agilice el conteo de votos.
-
-Por tal motivo, le han encomendado que elabore un programa que pueda utilizarse en una mesa electoral, luego de culminadas las elecciones se deberá solicitar la cantidad de electores y luego contabilizar el voto que realizó cada elector.
-
-El programa debe mostrar finalmente los resultados estadísticos indicando:
-
-\begin{enumerate}[i.]
-	\item Total de votos obtenidos por el candidato $1$.
-	\item Total de votos obtenidos por el candidato $2$.
-	\item Total de votos viciados.
-	\item Candidato ganador.
-	\item Porcentaje de votos obtenidos por el candidato $1$.
-	\item Porcentaje de votos obtenidos por el candidato $2$.
-\end{enumerate}
+\question Elabore un programa que solicite una contraseña para el acceso a un sistema. Cada vez que el usuario no adivine se mostrará el mensaje. \textcolor{green}{!Contraseña incorrecta¡}. El usuario tiene tres oportunidades para adivinar la clave. Si adivina la clave se mostrará el mensaje \textcolor{green}{Bienvenido al sistema} y se terminará el programa. En el caso que tenga tres intentos fallidos, entonces debe mostrar el mensaje \textcolor{green}{Cuenta bloqueada} y a continuación finaliza el programa.
 
 \begin{solution}
 	\begin{listing}[H]
 		\footnotesize
 		\inputminted{cpp}{1.cc}
 		\caption{Programa \texttt{1.cc}.}
-		\label{lst:6.1}
+		\label{lst:7.1}
+\end{listing}
+\end{solution}
+
+\question 
+\begin{solution}
+	\begin{listing}[H]
+		\footnotesize
+		\inputminted{cpp}{5.cc}
+		\caption{Programa \texttt{5.cc}.}
+		\label{lst:7.2}
 \end{listing}
 \end{solution}
 
