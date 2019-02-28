@@ -27,7 +27,7 @@ Las funciones son frecuentemente llamados **módulos**. Elos son como programas 
 
 ## Funciones predefinidas
 
-Antes de discutir formalmente las funciones predefinidas en C++, permítanos revisar el concepto de un curso de álgebra escolar. En álgebra, una función es considerada una regla o correspondencia entre valores, llamados los *argumnetos de la función*, y los valores son únicos de la función asociado con los argumentos. Así, si $$f(x)=2x+5$$, entonces $$f(1)=7$$, $$f(2)$$
+Antes de discutir formalmente las funciones predefinidas en C++, permítanos revisar el concepto de un curso de álgebra escolar. En álgebra, una función es considerada una regla o correspondencia entre valores, llamados los *argumnetos de la función*, y los valores son únicos de la función asociado con los argumentos. Así, si $$f(x)=2x+5$$, entonces $$f(1)=7$$, $$f(2)$$.
 
 
 Capitulo 6
