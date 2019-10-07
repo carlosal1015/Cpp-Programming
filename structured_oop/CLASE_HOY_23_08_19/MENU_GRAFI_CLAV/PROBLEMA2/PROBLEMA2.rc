@@ -1,0 +1,616 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Modern) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Acerca de PROBLEMA2"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "PROBLEMA2 Versión 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "Aceptar",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PROBLEMA2_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "APLICACION CON CLAVE DE ACCESO"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&SALIR",IDCANCEL,38,130,50,14
+    LTEXT           "UNA APLICACION CON CLAVE DE ACCESO",
+                    IDS_APLICATION_CLAVE,94,22,121,8
+    GROUPBOX        "ACCESO",IDS_G_ACCESO,139,63,139,95
+    LTEXT           "USUARIO",IDS_USUARIO,149,83,40,14
+    EDITTEXT        IDE_USUARIO,197,79,59,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_PASSWORD,197,110,56,14,ES_PASSWORD | ES_AUTOHSCROLL
+    ICON            IDI_ICON1,IDI_LLAVE,156,105,20,20
+    GROUPBOX        "OPERACIONES",IDS_G_OPERACIONES,22,64,89,93
+    PUSHBUTTON      "&ACCEDER",IDB_ACCEDER,37,94,50,14
+    ICON            IDI_ICON2,IDI_IK1,56,19,20,20
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "0C0A04B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Aplicación MFC PROBLEMA2\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "PROBLEMA2\0"
+            VALUE "LegalCopyright", "Copyright (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "PROBLEMA2.EXE\0"
+            VALUE "ProductName", "Aplicación PROBLEMA2\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0xc0a, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&Acerca de PROBLEMA2..."
+END
+
+#endif    // Spanish (Modern) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Castilian) (unknown sub-lang: 0xA) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESR)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, 0xA
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 10, 3\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PROBLEMA2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.esp\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\PROBLEMA2.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\SECUR02B.ICO"
+IDI_ICON2               ICON    DISCARDABLE     "res\\NET08.ICO"
+IDI_ICON3               ICON    DISCARDABLE     "res\\NET05.ICO"
+IDI_ICON4               ICON    DISCARDABLE     "res\\HANDSHAK.ICO"
+IDI_ICON5               ICON    DISCARDABLE     "res\\EYE.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BIENVENIDO DIALOG DISCARDABLE  0, 0, 186, 110
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HOLA"
+FONT 10, "RomanT"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,105,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,29,74,50,14
+    CTEXT           "Usuario y Password correctos",IDS_USUARIO_CORRECTO,45,
+                    34,92,21
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 320, 175
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VENTANAS CON MENU INICIA"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,263,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,24,50,14
+    ICON            IDI_ICON4,IDI_IK3,62,71,20,20
+    ICON            IDI_ICON3,IDI_IK4,137,71,21,20
+    ICON            IDI_ICON5,IDI_IK5,221,71,20,20
+END
+
+IDD_FACTORIAL DIALOG DISCARDABLE  0, 0, 275, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HALLAR EL FACTORIAL DE UN NUMERO ENTERO"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,171,105,50,14
+    GROUPBOX        "DATO",IDS_DATO,16,18,226,54
+    LTEXT           "N =",IDS_N,27,41,12,8
+    EDITTEXT        IDE_N,61,39,40,14,ES_AUTOHSCROLL
+    LTEXT           "N! =",IDS_N_FACTORIAL,129,42,14,8
+    EDITTEXT        IDE_FACTORIAL,164,39,55,14,ES_AUTOHSCROLL
+    GROUPBOX        "OPERACIONES",IDS_OPERACIONES,17,80,226,50
+    PUSHBUTTON      "&NUEVO",IDB_NUEVO,105,106,50,14
+    PUSHBUTTON      "OPERAR",IDB_OPERAR,37,106,50,14
+END
+
+IDD_INVERTIR DIALOG DISCARDABLE  0, 0, 305, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OPERACIONES CON LAS CIFRAS DE UN NUMERO"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,233,45,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,234,96,50,14
+    GROUPBOX        "DATOS",IDC_STATIC,24,14,189,41
+    LTEXT           "NUMERO =",IDS_NUMERO,31,33,39,8
+    EDITTEXT        IDE_NUMERO,124,30,60,14,ES_AUTOHSCROLL
+    GROUPBOX        "RESULTADOS",IDS_RESULTADOS,25,65,188,75
+    LTEXT           "SUMA DE CIFRAS =",IDS_SUMA_CIFRAS,34,80,64,8
+    LTEXT           "NUMERO DE CIFRAS =",IDS_NUMERO_CIFRAS,31,100,78,8
+    LTEXT           "CIFRAS INVERTIDAS =",IDS_CIFRAS_INVERTIDAS,31,118,78,8
+    EDITTEXT        IDE_SUMA_CIFRAS,123,76,63,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_NUMERO_CIFRAS,124,96,63,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_CIFRAS_INVERTIDAS,124,115,63,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&LIMPIAR",IDB_LIMPIAR,233,72,50,14
+END
+
+IDD_FIBONACIO DIALOG DISCARDABLE  0, 0, 244, 139
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "FIBONACCIO Y OPERACIONES"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,187,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,187,24,50,14
+END
+
+IDD_VOL_CONO DIALOG DISCARDABLE  0, 0, 298, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VOLUMEN DE UN CONO"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,241,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,241,87,50,14
+    LTEXT           "RADIO DE LA BASE DEL CONO =",IDS_RADIO,24,37,112,8
+    EDITTEXT        IDE_RADIO,145,31,40,14,ES_AUTOHSCROLL
+    LTEXT           "ALTURA DEL CONO =",IDS_ALTURA,24,62,74,8
+    EDITTEXT        IDE_ALTURA,145,56,40,14,ES_AUTOHSCROLL
+    LTEXT           "VOLUMEN DEL CONO =",IDS_VOLUMEN,24,129,81,8
+    EDITTEXT        IDE_VOLUMEN,145,123,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Limpiar",IDB_LIMPIAR,241,56,50,14
+    GROUPBOX        "INGRESE DATOS",IDS_INGRESE,15,19,186,69
+END
+
+IDD_VOL_CILINDRO DIALOG DISCARDABLE  0, 0, 280, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VOLUMEN DE UN CILINDRO"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Calcular",IDOK,223,16,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,223,66,50,14
+    LTEXT           "RADIO DE LA BASE",IDS_RADIO_BASE,23,21,67,8
+    EDITTEXT        IDE_RADIO_BASE,142,18,40,14,ES_AUTOHSCROLL
+    LTEXT           "ALTURA DEL CILINDRO",IDS_ALTURA_CILINDRO,23,47,82,8
+    EDITTEXT        IDE_VOLUMEN,142,66,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_ALTURA,142,41,40,14,ES_AUTOHSCROLL
+    LTEXT           "VOLUMEN  DEL CILINDRO",IDS_VOLUMEN_CILINDRO,23,72,90,8
+    PUSHBUTTON      "&Limpiar",IDB_LIMPIAR,223,41,50,14
+END
+
+IDD_VOL_PIRAMIDE DIALOG DISCARDABLE  0, 0, 318, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VOLUMEN DE UNA PIRAMIDE REGULAR"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,251,36,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,251,86,50,14
+    LTEXT           "LONGITUD DEL LADO DE LA BASE",IDC_STATIC,28,25,120,14
+    EDITTEXT        IDE_LADO,162,23,40,14,ES_AUTOHSCROLL
+    LTEXT           "N° DE LADOS DE LA BASE ",IDS_NUMERO_LADOS,28,52,92,8
+    EDITTEXT        IDE_NUMERO_LADOS,162,50,40,14,ES_AUTOHSCROLL
+    LTEXT           "ALTURA ",IDS_ALTURA,28,81,32,8
+    EDITTEXT        IDE_ALTURA,162,79,40,14,ES_AUTOHSCROLL
+    LTEXT           "VOLUMEN DE LA PIRAMIDE",IDS_VOLUMEN,28,130,96,8
+    EDITTEXT        IDE_VOLUMEN,162,127,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Limpiar",IDB_LIMPIAR,251,61,50,14
+END
+
+IDD_ARE_TRIANGULO DIALOG DISCARDABLE  0, 0, 324, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AREA DE UN TRIANGULO"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,93,123,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,161,123,50,14
+    CONTROL         "CONOCIENDO LOS TRES LADOS DEL TRIANGULO",IDR_1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,34,28,187,10
+    CONTROL         "CONOCIENDO LA BASE Y LA ALTURA DEL TRIÁNGULO",IDR_2,
+                    "Button",BS_AUTORADIOBUTTON,34,47,203,10
+    CONTROL         "CONOCIENDO DOS LADOS Y EL ANGULO QUE FORMAN ENTRE ELLOS",
+                    IDR_3,"Button",BS_AUTORADIOBUTTON,34,66,258,10
+    GROUPBOX        "OPCIONES",IDS_OPCIONES,21,16,280,77
+END
+
+IDD_ARE_POLIGONO DIALOG DISCARDABLE  0, 0, 323, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AREA POLIGONO REGULAR"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,257,55,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,258,105,50,14
+    LTEXT           "LADO DEL POLIGONO  =",IDS_LADO,29,34,84,8
+    EDITTEXT        IDE_LADO,130,32,40,14,ES_AUTOHSCROLL
+    LTEXT           "NUMERO DE LADOS =",IDS_NUMERO_LADOS,30,54,77,8
+    EDITTEXT        IDE_NUMERO_LADOS,129,51,40,14,ES_AUTOHSCROLL
+    LTEXT           "AREA DEL POLIGONO = ",IDS_AREA,29,93,84,8
+    EDITTEXT        IDE_AREA,129,88,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Limpiar",IDB_LIMPIAR,260,82,50,14
+END
+
+IDD_ARE_CORONA_CIRCULAR DIALOG DISCARDABLE  0, 0, 372, 185
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AREA DE UNA CORONA CIRCULAR "
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,315,33,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,315,86,50,14
+    LTEXT           "RADIO MAYOR =",IDS_RADIO_MAYOR,28,31,58,8
+    EDITTEXT        IDE_RMAYOR,140,28,40,14,ES_AUTOHSCROLL
+    LTEXT           "RADIO MENOR =",IDS_RADIO_MENOR,29,67,58,8
+    EDITTEXT        IDE_RMENOR,140,64,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_AREA,140,107,40,14,ES_AUTOHSCROLL
+    LTEXT           "AREA DE LA CORONA =",IDS_AREA,31,108,82,8
+    PUSHBUTTON      "&Limpiar",IDB_LIMPIAR,315,59,50,14
+END
+
+IDD_AREA_TRIANGULO_1 DIALOG DISCARDABLE  0, 0, 337, 145
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AREA DE UN TRIANGULO OPCION 1"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,37,114,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,233,114,50,14
+    LTEXT           "Lado A =",IDS_LADO_A,27,30,30,8
+    EDITTEXT        IDE_LADO_A,63,29,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_LADO_B,63,57,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_LADO_C,63,82,40,14,ES_AUTOHSCROLL
+    LTEXT           "Lado B =",IDS_LADO_B,28,59,30,8
+    LTEXT           "Lado C =",IDS_LADO_C,27,84,30,8
+    LTEXT           "AREA DEL TRIANGULO =",IDS_AREA_TRIANGULO,136,31,86,8
+    EDITTEXT        IDE_AREA,237,28,54,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Limpiar",IDB_LIMPIAR,126,114,57,14
+END
+
+IDD_AREA_TRIANGULO_2 DIALOG DISCARDABLE  0, 0, 285, 151
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AREA DE UN TRIANGULO OPCION 2"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Calcular",IDOK,38,115,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,115,50,14
+    LTEXT           "BASE =",IDS_BASE,26,30,26,8
+    EDITTEXT        IDE_BASE,72,29,40,14,ES_AUTOHSCROLL
+    LTEXT           "ALTURA =",IDS_ALTURA,23,58,36,8
+    EDITTEXT        IDE_ALTURA,72,55,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Limpiar",IDB_LIMPIAR,106,115,50,14
+    LTEXT           "AREA =",IDS_AREA,24,86,26,8
+    EDITTEXT        IDE_AREA,72,81,40,14,ES_AUTOHSCROLL
+END
+
+IDD_AREA_TRIANGULO_3 DIALOG DISCARDABLE  0, 0, 307, 169
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AREA DE UN TRIANGULO OPCION 3"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Calcular",IDOK,223,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,223,118,50,14
+    PUSHBUTTON      "&Limpiar",IDB_LIMPIAR,223,81,50,14
+    LTEXT           "LADO A =",IDS_LADO_A,22,27,33,8
+    EDITTEXT        IDE_LADO_A,59,24,40,14,ES_AUTOHSCROLL
+    LTEXT           "LADO B =",IDS_LADO_B,21,54,33,8
+    EDITTEXT        IDE_LADO_B,59,50,40,14,ES_AUTOHSCROLL
+    CTEXT           "ANGULO  FORMADO POR LOS LADOS A  Y LADO B EN GRADOS SEXAGESIMALES",
+                    IDS_ANGULO,14,72,94,37
+    EDITTEXT        IDE_ANGULO,119,81,51,14,ES_AUTOHSCROLL
+    LTEXT           "AREA =",IDS_AREA,25,127,26,8
+    EDITTEXT        IDE_AREA,63,124,47,14,ES_AUTOHSCROLL
+    GROUPBOX        "OPERACIONES",IDC_STATIC,213,26,74,117
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_FACTORIAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_FIBONACIO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+
+    IDD_VOL_CONO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        VERTGUIDE, 24
+        VERTGUIDE, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+        HORZGUIDE, 45
+        HORZGUIDE, 70
+        HORZGUIDE, 137
+    END
+
+    IDD_VOL_CILINDRO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        VERTGUIDE, 23
+        VERTGUIDE, 142
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+        HORZGUIDE, 32
+        HORZGUIDE, 55
+        HORZGUIDE, 80
+    END
+
+    IDD_VOL_PIRAMIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 311
+        VERTGUIDE, 28
+        VERTGUIDE, 162
+        VERTGUIDE, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_ARE_TRIANGULO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_ARE_POLIGONO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 316
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_ARE_CORONA_CIRCULAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 365
+        VERTGUIDE, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_AREA_TRIANGULO_1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_AREA_TRIANGULO_2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_AREA_TRIANGULO_3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        VERTGUIDE, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    MENUITEM "&ARCHIVO",                    65535
+    POPUP "&MENSAJES"
+    BEGIN
+        MENUITEM "MENSAJE DE ERROR",            MNU_MEN_ERROR
+        MENUITEM "MENSAJE DE INFORMACION",      MNU_MEN_INFORMACION
+        MENUITEM "MENSAJE DE INTERROGACION",    MNU_MEN_INTERROGACION
+    END
+    POPUP "&OPERACIONES"
+    BEGIN
+        POPUP "MATEMATICAS"
+        BEGIN
+            MENUITEM "FACTORIAL",                   MNU_OPE_MAT_FACTORIAL
+            MENUITEM "INVERSO DE UN NUMERO",        MNU_OPE_MAT_INVERSO
+            MENUITEM "FIBONACCIO",                  MNU_OPE_MAT_FIBONACCI
+        END
+        POPUP "GEOMETRIA"
+        BEGIN
+            POPUP "AREAS"
+            BEGIN
+                MENUITEM "TRIANGULO",                   MNU_OPE_GEO_ARE_TRI
+                MENUITEM "POLIGONO REGULAR",            MNU_OPE_GEO_ARE_POLIG
+
+                MENUITEM "CORONA CIRCULAR",             MNU_OPE_GEO_ARE_CORN
+            END
+            POPUP "VOLUMENES"
+            BEGIN
+                MENUITEM "CILINDRO",                    MNU_OPE_GEO_VOL_CILIN
+
+                MENUITEM "CONO",                        MNU_OPE_GEO_VOL_CONO
+                MENUITEM "PIRAMIDE",                    MNU_OPE_GEO_VOL_PIRA
+            END
+        END
+        MENUITEM "SERIES",                      MNU_OPE_SERIES
+        MENUITEM "INTEGRALES",                  MNU_OPE_INTEGRALES
+        MENUITEM "ECUACION DE TERCER GRADO",    MNU_OPE_ECUA_3GRD
+        MENUITEM "GRAFICOS",                    MNU_OPE_GRAFICOS
+    END
+    POPUP "&AYUDA"
+    BEGIN
+        MENUITEM "ACERCA",                      MNU_AYU_ACERCA
+    END
+END
+
+#endif    // Spanish (Castilian) (unknown sub-lang: 0xA) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE 10, 3
+#pragma code_page(1252)
+#endif //_WIN32
+//#include "res\PROBLEMA2.rc2"  // non-Microsoft Visual C++ edited resources
+//#include "l.esp\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

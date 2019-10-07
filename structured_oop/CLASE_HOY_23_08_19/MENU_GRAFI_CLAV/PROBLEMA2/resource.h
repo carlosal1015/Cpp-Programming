@@ -1,0 +1,124 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Developer Studio generated include file.
+// Used by PROBLEMA2.rc
+//
+#define IDM_ABOUTBOX                    0x0010
+#define IDD_ABOUTBOX                    100
+#define IDS_ABOUTBOX                    101
+#define IDD_PROBLEMA2_DIALOG            102
+#define IDR_MAINFRAME                   128
+#define IDI_ICON1                       129
+#define IDI_ICON2                       130
+#define IDD_BIENVENIDO                  132
+#define IDD_DIALOG1                     133
+#define IDR_MENU1                       134
+#define IDD_FACTORIAL                   135
+#define IDD_INVERTIR                    136
+#define IDD_FIBONACIO                   137
+#define IDD_VOL_CONO                    138
+#define IDD_VOL_CILINDRO                139
+#define IDD_VOL_PIRAMIDE                140
+#define IDD_ARE_TRIANGULO               141
+#define IDD_ARE_POLIGONO                142
+#define IDD_ARE_CORONA_CIRCULAR         143
+#define IDI_ICON3                       144
+#define IDI_ICON4                       145
+#define IDI_ICON5                       146
+#define IDD_AREA_TRIANGULO_1            147
+#define IDD_AREA_TRIANGULO_2            148
+#define IDD_AREA_TRIANGULO_3            149
+#define IDS_APLICATION_CLAVE            1000
+#define IDS_G_ACCESO                    1001
+#define IDS_USUARIO                     1002
+#define IDE_USUARIO                     1003
+#define IDE_PASSWORD                    1004
+#define IDI_LLAVE                       1005
+#define IDS_G_OPERACIONES               1006
+#define IDB_ACCEDER                     1007
+#define IDI_IK1                         1008
+#define IDS_USUARIO_CORRECTO            1009
+#define IDI_IK3                         1010
+#define IDI_IK4                         1011
+#define IDI_IK5                         1012
+#define IDS_DATO                        1013
+#define IDE_N                           1014
+#define IDE_FACTORIAL                   1015
+#define IDS_N_FACTORIAL                 1016
+#define IDS_N                           1017
+#define IDS_OPERACIONES                 1018
+#define IDB_NUEVO                       1019
+#define IDB_OPERAR                      1020
+#define IDS_NUMERO                      1021
+#define IDE_NUMERO                      1022
+#define IDS_RESULTADOS                  1023
+#define IDS_NUMERO_CIFRAS               1024
+#define IDS_SUMA_CIFRAS                 1025
+#define IDS_CIFRAS_INVERTIDAS           1026
+#define IDE_NUMERO_CIFRAS               1028
+#define IDE_CIFRAS_INVERTIDAS           1029
+#define IDE_SUMA_CIFRAS                 1030
+#define IDB_LIMPIAR                     1031
+#define IDR_1                           1032
+#define IDR_2                           1033
+#define IDR_3                           1034
+#define IDS_OPCIONES                    1035
+#define IDE_LADO_A                      1036
+#define IDE_LADO_B                      1037
+#define IDE_LADO_C                      1038
+#define IDS_LADO_A                      1039
+#define IDS_LADO_C                      1040
+#define IDS_LADO_B                      1041
+#define IDE_AREA                        1042
+#define IDS_AREA_TRIANGULO              1043
+#define IDE_BASE                        1045
+#define IDE_ALTURA                      1046
+#define IDS_BASE                        1049
+#define IDS_ALTURA                      1050
+#define IDS_AREA                        1051
+#define IDE_ANGULO                      1055
+#define IDS_ANGULO                      1056
+#define IDE_LADO                        1058
+#define IDS_LADO                        1059
+#define IDS_NUMERO_LADOS                1060
+#define IDE_NUMERO_LADOS                1061
+#define IDE_RMAYOR                      1064
+#define IDE_RMENOR                      1065
+#define IDS_RADIO_MAYOR                 1067
+#define IDS_RADIO_MENOR                 1068
+#define IDE_RADIO_BASE                  1070
+#define IDE_VOLUMEN                     1071
+#define IDS_RADIO_BASE                  1073
+#define IDS_ALTURA_CILINDRO             1074
+#define IDS_VOLUMEN_CILINDRO            1075
+#define IDE_RADIO                       1077
+#define IDS_VOLUMEN                     1080
+#define IDS_RADIO                       1081
+#define IDS_INGRESE                     1083
+#define MNU_MEN_ERROR                   32771
+#define MNU_MEN_INFORMACION             32772
+#define MNU_MEN_INTERROGACION           32773
+#define MNU_OPE_SERIES                  32776
+#define MNU_OPE_INTEGRALES              32777
+#define MNU_OPE_ECUA_3GRD               32778
+#define MNU_OPE_GRAFICOS                32779
+#define MNU_OPE_MAT_FACTORIAL           32780
+#define MNU_OPE_MAT_INVERSO             32781
+#define MNU_OPE_MAT_FIBONACCI           32782
+#define MNU_AYU_ACERCA                  32783
+#define MNU_OPE_GEO_ARE_TRI             32786
+#define MNU_OPE_GEO_ARE_POLIG           32787
+#define MNU_OPE_GEO_ARE_CORN            32788
+#define MNU_OPE_GEO_VOL_CILIN           32789
+#define MNU_OPE_GEO_VOL_CONO            32790
+#define MNU_OPE_GEO_VOL_PIRA            32791
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        150
+#define _APS_NEXT_COMMAND_VALUE         32792
+#define _APS_NEXT_CONTROL_VALUE         1086
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif
