@@ -7,3 +7,6 @@
 [submodule "taking_notes/Malik/Malik6thEdition"]
 	path = taking_notes/Malik/Malik6thEdition
 	url = https://github.com/pyjac/CppProgrammingExercises
+[submodule "taking_notes/Malik/MalikExamples"]
+	path = taking_notes/Malik/MalikExamples
+	url = https://github.com/jled7/Cengage-C-Plus-Plus
