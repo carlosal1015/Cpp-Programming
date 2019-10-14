@@ -1,3 +1,9 @@
 [submodule "taking_notes/Malik/Malik2ndEdition"]
 	path = taking_notes/Malik/Malik2ndEdition
 	url = https://github.com/ianschafer/Malik
+[submodule "taking_notes/Malik/Malik5thEdition"]
+	path = taking_notes/Malik/Malik5thEdition
+	url = https://github.com/mhoad/cpp_book
+[submodule "taking_notes/Malik/Malik6thEdition"]
+	path = taking_notes/Malik/Malik6thEdition
+	url = https://github.com/pyjac/CppProgrammingExercises
