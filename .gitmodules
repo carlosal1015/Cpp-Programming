@@ -10,3 +10,12 @@
 [submodule "taking_notes/Malik/MalikExamples"]
 	path = taking_notes/Malik/MalikExamples
 	url = https://github.com/jled7/Cengage-C-Plus-Plus
+[submodule "taking_notes/draft-latex"]
+	path = taking_notes/draft-latex
+	url = https://github.com/cplusplus/draft
+[submodule "taking_notes/cplusplus-beginners"]
+	path = taking_notes/cplusplus-beginners
+	url = https://github.com/caveofprogramming/cplusplus-beginners
+[submodule "taking_notes/advanced-cplusplus"]
+	path = taking_notes/advanced-cplusplus
+	url = https://github.com/caveofprogramming/advanced-cplusplus
